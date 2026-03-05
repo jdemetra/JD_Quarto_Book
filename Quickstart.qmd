@@ -63,9 +63,6 @@ These specifications can be saved and reused across series.
 ![**JD3 with specifications open**](All_images/JDspecification.png)  
 
 
-
-DO WE WANT TO DISCUSS PLUG-INS HERE?
-
 ## Data import
 
 From Excel
@@ -80,9 +77,18 @@ From Excel
 
 Full documentation of the Seats method can be found [here](https://jdemetra-new-documentation.netlify.app/m-x11-decomposition), while all details on X-11 can be found [here](https://jdemetra-new-documentation.netlify.app/m-x11-decomposition).
 
+## Specifications
+
+Discuss reference spec vs current spec
 
 ## Export the data
 
 To export the data you can choose xlsx, csv
+
+## Plug-ins and other resources
+
+## Cheatsheet
+Screenshot of JDemetra+ with arrows to important parts will explanations
+
 
 
