@@ -6,20 +6,6 @@ A pdf version of this documentation is available [here](https://github.com/annas
 
 ![](All_images/JD+-Eurostat-COSA.png)
 
-## User Support / Useful links
-
-If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
-
-For specific questions related to **production of seasonally** adjusted series you can look up [these pages](https://saproductionwithjdemetraandr.netlify.app/)
-
-To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://jdemetra-universe-blog.netlify.app/)
-
-You can also [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
-
-
-
-
-
 ## Main Features
 
 JDemetra+ provides [algorithms](#part-A) for:
@@ -44,7 +30,7 @@ The latest release in version 2 family can be found [here](https://github.com/jd
 
 The highest version using Java 8 is v2.2.4.
 
-## User Support / Useful links
+## User Support and Useful links
 
 If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
 

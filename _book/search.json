@@ -7,13 +7,6 @@
     "text": "What is JDemetra+?\nJDemetra+ is an open source software for seasonal adjustment and time series analysis, developed by the National Bank of Belgium with the support of the Bundesbank, Insee and the partners of the COSA, (COfidentiality Seasonal Adjustment and time series), project co-founded by Eurostat. JDemetra+ has been officially recommended by Eurostat to the members of the European Statistical System since 2015. It is unique in its combination of very fast Java routines, a Graphical User Interface and an ecosystem of R packages (rjdverse). The graphical interface provides structured visual feedback suitable for refined analysis and training. R tools allow to combine the capabilities of JDemetra+ with the versatility of the R world, be it for statistical functions or data wrangling. A pdf version of this documentation is available here"
   },
   {
-    "objectID": "index.html#user-support-useful-links",
-    "href": "index.html#user-support-useful-links",
-    "title": "JDemetra+ documentation",
-    "section": "User Support / Useful links",
-    "text": "User Support / Useful links\nIf you need user support, please raise an issue in this repository\nFor specific questions related to production of seasonally adjusted series you can look up these pages\nTo keep up with all JDemetra+ related news head over to the JDemetra+ Universe Blog\nYou can also browse and watch tutorials for JDemetra+. On this YouTube channel you will also find JDemetra+ related webinars."
-  },
-  {
     "objectID": "index.html#main-features",
     "href": "index.html#main-features",
     "title": "JDemetra+ documentation",
@@ -28,11 +21,11 @@
     "text": "Currently available versions\nThe latest release in version 3 family can be found here.\nVersion 3.x family provides, among other things, extended features for seasonal adjustment and trend estimation, including high frequency data.\nThe latest release in version 2 family can be found here.\nThe highest version using Java 8 is v2.2.4."
   },
   {
-    "objectID": "index.html#user-support-useful-links-1",
-    "href": "index.html#user-support-useful-links-1",
+    "objectID": "index.html#user-support-and-useful-links",
+    "href": "index.html#user-support-and-useful-links",
     "title": "JDemetra+ documentation",
-    "section": "User Support / Useful links",
-    "text": "User Support / Useful links\nIf you need user support, please raise an issue in this repository\nFor specific questions related to production of seasonally adjusted series you can look up these pages\nTo keep up with all JDemetra+ related news head over to the JDemetra+ Universe Blog\nYou can also browse and watch tutorials for JDemetra+. On this YouTube channel you will also find JDemetra+ related webinars."
+    "section": "User Support and Useful links",
+    "text": "User Support and Useful links\nIf you need user support, please raise an issue in this repository\nFor specific questions related to production of seasonally adjusted series you can look up these pages\nTo keep up with all JDemetra+ related news head over to the JDemetra+ Universe Blog\nYou can also browse and watch tutorials for JDemetra+. On this YouTube channel you will also find JDemetra+ related webinars."
   },
   {
     "objectID": "index.html#background",
