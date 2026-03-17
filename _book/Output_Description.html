@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>JDemetra+ documentation - Output description</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./P-Use-Cases.html" rel="next">
+<link href="./M-revision-analysis.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Output_Description.html">Output description</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">JDemetra+ documentation</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/annasmyk/JD_Quarto_Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is JDemetra+?</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-how-to-use-this-book.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to use this book</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-news-v3-vs-v2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">New Features in v 3.x family</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-jd-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JDemetra+ History</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P_Algorithms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithms</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-RegArima-Tramo-Modelling-Overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modelling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seasonal Adjustment (SA) Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-pre-treatment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: Pre-Treatment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-X11-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: X11 Decomposition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-seats-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: Seats Decomposition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-rev-policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: Revision policies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-hf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA of high-frequency data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-x12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: X12+ and MX12+</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-stl-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: STL+ and MSTL+</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-sa-bsm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA: STS and MSTS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-outlier-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier detection and external regressors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-calendar-correction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calendar correction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-benchmarking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Benchmarking and temporal disagreggation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-trend-cycle-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trend-cycle estimation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-revision-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Revision Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A-nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nowcasting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P_Tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-GUI-Overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graphical User Interface (GUI): Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-GUI-Data-Viz-TS-Tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GUI: data visualization and time series tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-GUI-SA-Modelling-Features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GUI: SA and Modelling Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-GUI-Output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GUI: Generating output</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-plug-ins.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Plug-ins (GUI extensions)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-Production-tools-cruncher-QR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cruncher and quality report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./T-r-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R packages</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P_Methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Methods</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-spectral-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spectral Analysis Concepts and Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-reg-arima-modelling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reg-ARIMA models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-X11-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">X11 decomposition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-SEATS-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Seats decomposition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-sa-hf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA of high-frequency data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-STL-decomposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">STL: Local regression decomposition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-Temp-Disagg-Bench.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Benchmarking and Temporal disaggregation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./M-revision-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Revision Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Output_Description.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Output description</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P-Use-Cases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Use cases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-forecasting-nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting and Nowcasting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-outlier-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier detection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-refreshing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refreshing data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#in-this-chapter" id="toc-in-this-chapter" class="nav-link active" data-scroll-target="#in-this-chapter">In this chapter</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use Cases</a></li>
+  <li><a href="#sa-related-algorithms-hf-included" id="toc-sa-related-algorithms-hf-included" class="nav-link" data-scroll-target="#sa-related-algorithms-hf-included">SA related algorithms (HF included ?)</a></li>
+  <li><a href="#what-is-displayed-or-generated" id="toc-what-is-displayed-or-generated" class="nav-link" data-scroll-target="#what-is-displayed-or-generated">What is displayed or generated ?</a>
+  <ul class="collapse">
+  <li><a href="#jdemetra-output-3-types-of-objects" id="toc-jdemetra-output-3-types-of-objects" class="nav-link" data-scroll-target="#jdemetra-output-3-types-of-objects">JDemetra+ Output: 3 types of objects</a></li>
+  <li><a href="#how-to-identify-an-output-object-given-an-algortithm" id="toc-how-to-identify-an-output-object-given-an-algortithm" class="nav-link" data-scroll-target="#how-to-identify-an-output-object-given-an-algortithm">How to identify an output object given an algortithm</a></li>
+  <li><a href="#where-is-output-displayed" id="toc-where-is-output-displayed" class="nav-link" data-scroll-target="#where-is-output-displayed">Where is output displayed ?</a></li>
+  <li><a href="#how-can-output-be-generated" id="toc-how-can-output-be-generated" class="nav-link" data-scroll-target="#how-can-output-be-generated">How can output be generated ?</a></li>
+  </ul></li>
+  <li><a href="#differences-between-v2-and-v3" id="toc-differences-between-v2-and-v3" class="nav-link" data-scroll-target="#differences-between-v2-and-v3">Differences between V2 and V3</a></li>
+  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a>
+  <ul class="collapse">
+  <li><a href="#table-structure" id="toc-table-structure" class="nav-link" data-scroll-target="#table-structure">Table structure !</a></li>
+  <li><a href="#final-sa-series" id="toc-final-sa-series" class="nav-link" data-scroll-target="#final-sa-series">Final SA series</a></li>
+  <li><a href="#preadjustement-modelling" id="toc-preadjustement-modelling" class="nav-link" data-scroll-target="#preadjustement-modelling">Preadjustement / modelling</a></li>
+  <li><a href="#x-11-decomposition-start-1" id="toc-x-11-decomposition-start-1" class="nav-link" data-scroll-target="#x-11-decomposition-start-1">X-11 decomposition (start 1)</a></li>
+  <li><a href="#seats-decomposition-2" id="toc-seats-decomposition-2" class="nav-link" data-scroll-target="#seats-decomposition-2">Seats decomposition (2)</a></li>
+  </ul></li>
+  <li><a href="#diagnostics" id="toc-diagnostics" class="nav-link" data-scroll-target="#diagnostics">Diagnostics</a>
+  <ul class="collapse">
+  <li><a href="#tests-on-residuals" id="toc-tests-on-residuals" class="nav-link" data-scroll-target="#tests-on-residuals">Tests on residuals</a></li>
+  <li><a href="#seasonality-tests" id="toc-seasonality-tests" class="nav-link" data-scroll-target="#seasonality-tests">Seasonality tests</a></li>
+  </ul></li>
+  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters">Parameters</a></li>
+  <li><a href="#cruncher-output-special" id="toc-cruncher-output-special" class="nav-link" data-scroll-target="#cruncher-output-special">Cruncher Output (special)</a></li>
+  <li><a href="#r-packages-strmodel-output" id="toc-r-packages-strmodel-output" class="nav-link" data-scroll-target="#r-packages-strmodel-output">R packages (str(model)) output</a></li>
+  <li><a href="#non-sa-related-algorithms" id="toc-non-sa-related-algorithms" class="nav-link" data-scroll-target="#non-sa-related-algorithms">Non SA related algorithms</a></li>
+  <li><a href="#r-packages-strmodel-output-1" id="toc-r-packages-strmodel-output-1" class="nav-link" data-scroll-target="#r-packages-strmodel-output-1">R packages (str(model)) output</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/annasmyk/JD_Quarto_Book/edit/main/Output_Description.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/annasmyk/JD_Quarto_Book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="output-chap" class="quarto-section-identifier">Output description</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="in-this-chapter" class="level2">
+<h2 class="anchored" data-anchor-id="in-this-chapter">In this chapter</h2>
+<!-- obj add links to relevant parts  -->
+<!-- add link in index/user support : sa chap + another chap  -->
+<!-- ADD output links to readme pages / R doc  -->
+<ul>
+<li><p>what kind of output is produced ?</p></li>
+<li><p>How to identify an output object given an algorithm ? what is uniquely defined</p></li>
+<li><p>What are the output format ?</p></li>
+<li><p>Where is the output available ?</p></li>
+<li><p>How to navigate it ?</p></li>
+<li><p>How to generate it ?</p></li>
+<li><p>List of displayed/generated series (), e.g</p></li>
+<li><p>List of displayed/generated diagnostics, e.g</p></li>
+<li><p>List of displayed/generated parameters, e.g</p></li>
+<li><p>R packages output specificities (str(m))</p></li>
+</ul>
+<p>in R difference between user-defined and default default means : directly retrievable from sa_model</p>
+</section>
+<section id="scope" class="level2">
+<h2 class="anchored" data-anchor-id="scope">Scope</h2>
+<p>SA algorithms vs the rest</p>
+<p>here SA related output, set up specific chapter add HF to HF of SA - rjd3…: str(m) - GUI display</p>
+<p>generating output from GUI possible only when workspace withh multi-documents</p>
+<p>and add non sa related output list of algos - terror - bench and TD -</p>
+<p>how does it occur - plug ins R packages</p>
+</section>
+<section id="use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
+<p>use case 1</p>
+<p>use case 2</p>
+<p>and search advices</p>
+</section>
+<section id="sa-related-algorithms-hf-included" class="level2">
+<h2 class="anchored" data-anchor-id="sa-related-algorithms-hf-included">SA related algorithms (HF included ?)</h2>
+</section>
+<section id="what-is-displayed-or-generated" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-displayed-or-generated">What is displayed or generated ?</h2>
+<section id="jdemetra-output-3-types-of-objects" class="level3">
+<h3 class="anchored" data-anchor-id="jdemetra-output-3-types-of-objects">JDemetra+ Output: 3 types of objects</h3>
+<ul>
+<li><p>series (final and intermediate)</p></li>
+<li><p>parameters</p></li>
+<li><p>diagnostics</p></li>
+</ul>
+</section>
+<section id="how-to-identify-an-output-object-given-an-algortithm" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-identify-an-output-object-given-an-algortithm">How to identify an output object given an algortithm</h3>
+<p>what is uniquely defined</p>
+<ul>
+<li>CODE= concept*algo</li>
+</ul>
+<p>ex preadjut = reg-arima or tramo</p>
+<p>Example</p>
+<ul>
+<li><p>diagnostic, some are general, some are algo specific ex F test vs m7</p></li>
+<li><p>series</p></li>
+<li><p>paremeter</p></li>
+</ul>
+</section>
+<section id="where-is-output-displayed" class="level3">
+<h3 class="anchored" data-anchor-id="where-is-output-displayed">Where is output displayed ?</h3>
+<p>displayed : you have it vs generated you must act</p>
+<ul>
+<li><p>gui</p></li>
+<li><p>R packages</p></li>
+</ul>
+<section id="how-to-navigate-it" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-navigate-it">How to navigate it</h4>
+</section>
+</section>
+<section id="how-can-output-be-generated" class="level3">
+<h3 class="anchored" data-anchor-id="how-can-output-be-generated">How can output be generated ?</h3>
+<p>dictionaries</p>
+<!-- maj java dicos  -->
+<p>generated to files or R objects (lists of lists)</p>
+<ul>
+<li>gui</li>
+</ul>
+<p>Gathered in 2 data structures</p>
+<ul>
+<li><p>time series organised in data tables</p></li>
+<li><p>individual data (for each series: parameters and diagnostics)</p></li>
+</ul>
+<section id="how-to-generate-it" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-generate-it">How to generate it</h4>
+<p>How to identify an output object given an algortithm what is uniquely defined</p>
+<ul>
+<li>concept*algo</li>
+</ul>
+<p>ex predajsutment = reg-arima or ttramo</p>
+<p>Example</p>
+<ul>
+<li><p>diagnostic</p></li>
+<li><p>series</p></li>
+<li><p>paremeter</p></li>
+</ul>
+<p>How to identify an output object given an algortithm what is uniquely defined</p>
+<ul>
+<li>concept*algo</li>
+</ul>
+<p>ex predajsutment = reg-arima or ttramo</p>
+<p>Example</p>
+<ul>
+<li><p>diagnostic</p></li>
+<li><p>series</p></li>
+<li><p>paremeter</p></li>
+</ul>
+</section>
+<section id="cruncher" class="level4">
+<h4 class="anchored" data-anchor-id="cruncher">Cruncher</h4>
+<p>here output code, input = cruncher params, table is in cruncher chapter (link )</p>
+<p>X13-Arima</p>
+<ul>
+<li>signal what is out but not relevant</li>
+</ul>
+<p>Tramo seats</p>
+</section>
+<section id="r-dicos-r-user-defined-output" class="level4">
+<h4 class="anchored" data-anchor-id="r-dicos-r-user-defined-output">R Dicos /R user defined output</h4>
+<p>HERE</p>
+<p>rjd3x13, rjd3tramoseats</p>
+<p>link to doc in rjdverse..</p>
+<section id="filtering-useless-output" class="level5">
+<h5 class="anchored" data-anchor-id="filtering-useless-output">Filtering useless output</h5>
+<p>TS only in X13 and vice versa ?</p>
+</section>
+<section id="descripitions-in-java" class="level5">
+<h5 class="anchored" data-anchor-id="descripitions-in-java">Descripitions in JAVA</h5>
+</section>
+<section id="table-description" class="level5">
+<h5 class="anchored" data-anchor-id="table-description">Table Description</h5>
+<p>type name M7 JD+ output name decomp.M7 .. ..</p>
+</section>
+</section>
+</section>
+</section>
+<section id="differences-between-v2-and-v3" class="level2">
+<h2 class="anchored" data-anchor-id="differences-between-v2-and-v3">Differences between V2 and V3</h2>
+<!-- first: focus on v3 -->
+<p>Below different lists We flag differences between v2 and v3</p>
+<!-- file from old doc GUI_Output_items.txt in Documents/JD_Quarto_Book_AUX/All_pages -->
+
+<!-- use: https://www.tablesgenerator.com/markdown_tables -->
+<p>In the remainder list of nammes Link (auto) with R dictionaries ?</p>
+</section>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+<p>stored by algo, unique concept</p>
+<section id="table-structure" class="level3">
+<h3 class="anchored" data-anchor-id="table-structure">Table structure !</h3>
+<p>as pb of width tables broken in 2 parts</p>
+<p>where are auxiliary excel files auxiliary R code all in “Documents/JD_Quarto_Book_AUX”</p>
+<section id="part-1-gui-cruncher" class="level4">
+<h4 class="anchored" data-anchor-id="part-1-gui-cruncher">part 1: GUI + cruncher</h4>
+<p>name description</p>
+</section>
+<section id="part-2-r-with-code" class="level4">
+<h4 class="anchored" data-anchor-id="part-2-r-with-code">part 2: R with code</h4>
+</section>
+</section>
+<section id="final-sa-series" class="level3">
+<h3 class="anchored" data-anchor-id="final-sa-series">Final SA series</h3>
+</section>
+<section id="preadjustement-modelling" class="level3">
+<h3 class="anchored" data-anchor-id="preadjustement-modelling">Preadjustement / modelling</h3>
+<p>identical for reg-arima and ts</p>
+</section>
+<section id="x-11-decomposition-start-1" class="level3">
+<h3 class="anchored" data-anchor-id="x-11-decomposition-start-1">X-11 decomposition (start 1)</h3>
+<!-- (moved from method chapter or left in both ?) -->
+<p>part 2</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 24%">
+<col style="width: 18%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Description</th>
+<th style="text-align: center;">GUI display (Results Panel)</th>
+<th style="text-align: center;">GUI output - input</th>
+<th style="text-align: center;">cruncher V3 output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B1</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B2</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B3</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B4</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B5</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B6</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B7</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B8</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B9</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B10</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B11</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B12</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td>B13</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td>B14</td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Description</th>
+<th style="text-align: center;">GUI display (Results Panel)</th>
+<th style="text-align: center;">GUI output - input</th>
+<th style="text-align: center;">cruncher V3 output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="odd">
+<td><a href="M-X11-decomposition.html#m-X11-output">B1</a></td>
+<td>Linearized Series</td>
+<td style="text-align: center;">Decomposition X-11 &gt; Table B</td>
+<td style="text-align: center;">decomposition.b1</td>
+<td style="text-align: center;">decomposition.b1</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seats-decomposition-2" class="level3">
+<h3 class="anchored" data-anchor-id="seats-decomposition-2">Seats decomposition (2)</h3>
+</section>
+</section>
+<section id="diagnostics" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostics">Diagnostics</h2>
+<p>obj have all the tests used in BQ and displayed in GUI</p>
+<p>stand alone tests: - in GUI - in R (rjd3toolkit)</p>
+<section id="tests-on-residuals" class="level3">
+<h3 class="anchored" data-anchor-id="tests-on-residuals">Tests on residuals</h3>
+<p>ONE TEST example : LB TEST, link to M chap what do we describe here</p>
+</section>
+<section id="seasonality-tests" class="level3">
+<h3 class="anchored" data-anchor-id="seasonality-tests">Seasonality tests</h3>
+<p>ONE TEST example : Friedman TEST, link to M chap what do we describe here</p>
+</section>
+</section>
+<section id="parameters" class="level2">
+<h2 class="anchored" data-anchor-id="parameters">Parameters</h2>
+<p>last</p>
+</section>
+<section id="cruncher-output-special" class="level2">
+<h2 class="anchored" data-anchor-id="cruncher-output-special">Cruncher Output (special)</h2>
+<p>to cruncher chap ?</p>
+</section>
+<section id="r-packages-strmodel-output" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages-strmodel-output">R packages (str(model)) output</h2>
+<p>see how it works in part R code will be in tables ?</p>
+</section>
+<section id="non-sa-related-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="non-sa-related-algorithms">Non SA related algorithms</h2>
+</section>
+<section id="r-packages-strmodel-output-1" class="level2">
+<h2 class="anchored" data-anchor-id="r-packages-strmodel-output-1">R packages (str(model)) output</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./M-revision-analysis.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Revision Analysis</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./P-Use-Cases.html" class="pagination-link">
+        <span class="nav-page-text">Use cases</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right"></div>
+  </div>
+</footer>
+
+
+
+</body></html>

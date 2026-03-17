@@ -1,0 +1,69 @@
+1) Spill over from DT to doc (to cosa work) 
+
++ doc companion to syst files (not craft) B 
+
+a)R packages chapter 
+
+- link html on prod ok 
+
+- link rjd3prod ok 
+
+- R packages chap + CRAN + LHF updates (links, v2, v3)
+
+links and order 
+obj = dont repeat read me but summarize wich 
+
+OBJ of this chapter : synthetic tables of waht is available !!!
+
+sa algo 
+bench
+revs
+
+add rjd3production !! in syn list
+
+here 
+Building a production process of SA series
+link to doc 
+
++ operation list
+
+LATER : do syhtetic tables for these categories !!!
+
+<!-- ## Time series tools {#t-r-packs-tstools} -->
+
+<!-- ### Tests {#t-r-packs-tests} -->
+
+<!-- #### Seasonality tests -->
+
+<!-- #### Tests on residuals -->
+
+ARIMA mdel wrinagling (sort of tool kit round up)
+
+EXP: use cases part 
+
+2) Output 
+
+TESTS : outline deliverables 
+
+1) test chap 
+
+questions on tests (where to config) keep available for F 
+- independency = auto corr, chnage name ? ljung box or box pierce ? conditions ? look up java code 
+- skewness in demetra M only ?
+- 
+
+
+1. Auto-correlations at seasonal lags
+NO
+2. Friedman (non parametric)
+NO
+3. Kruskal-Wallis (non parametric)
+NO
+5. Periodogram
+NO
+6. Seasonal dummies
+NO
+
+
+
+

@@ -156,11 +156,15 @@ The following plug-in was developed by the Deutsche Bundesbank (BBK). For the mo
 
 -   [Xlsx2Ws](https://bbkrd.github.io/pages/xlsx2ws): The plug-in Xlsx2Ws allows the converting of specific workspace information to a xlsx file and vice versa.
 
-### Quality report
+### Job Vacancy Survey (JVS) Quality report (version 2)
 
 The Quality Report (QR) Eurostat plug-in is available [on this GtHub page](https://github.com/Sace2015/EurostatQR): download the latest version of the \*.nbm file and proceed with installation as indicated [in this chapter](#t-plug-ins-inst)
 
+The description of the quality report is in this same GitHub repository [here](https://github.com/Sace2015/EurostatQR/blob/master/2018-10-26%20A%20PlugIn%20For%20Eurostat%20Job%20Vacancy%20Survey.docx)
+
 It is commonly used by Labor Cost Index (LCI) producers across eurosystem countries.
+
+<!-- Instructions of Use ? -->
 
 ### Data base access
 

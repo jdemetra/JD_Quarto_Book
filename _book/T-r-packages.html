@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -175,6 +141,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./G-news-v3-vs-v2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">New Features in v 3.x family</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-jd-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JDemetra+ History</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -372,6 +344,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./M-sa-hf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA of high-frequency data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./M-tests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tests</span></a>
   </div>
@@ -396,6 +374,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Output_Description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Output description</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P-Use-Cases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Use cases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-forecasting-nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting and Nowcasting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-outlier-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier detection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-refreshing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refreshing data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -415,33 +428,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#seasonal-adjustment" id="toc-seasonal-adjustment" class="nav-link" data-scroll-target="#seasonal-adjustment">Seasonal adjustment</a></li>
   <li><a href="#filtering-and-trend-estimation" id="toc-filtering-and-trend-estimation" class="nav-link" data-scroll-target="#filtering-and-trend-estimation">Filtering and Trend estimation</a></li>
-  <li><a href="#benchmarking-and-temporal-disaggregation" id="toc-benchmarking-and-temporal-disaggregation" class="nav-link" data-scroll-target="#benchmarking-and-temporal-disaggregation">Benchmarking and Temporal disaggregation</a></li>
+  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
+  <li><a href="#temporal-disaggregation" id="toc-temporal-disaggregation" class="nav-link" data-scroll-target="#temporal-disaggregation">Temporal Disaggregation:</a></li>
+  <li><a href="#reconciliation-and-multivariate-temporal-disaggregation" id="toc-reconciliation-and-multivariate-temporal-disaggregation" class="nav-link" data-scroll-target="#reconciliation-and-multivariate-temporal-disaggregation">Reconciliation and multivariate temporal disaggregation</a></li>
+  <li><a href="#calendarization" id="toc-calendarization" class="nav-link" data-scroll-target="#calendarization">Calendarization</a></li>
+  <li><a href="#nowcasting" id="toc-nowcasting" class="nav-link" data-scroll-target="#nowcasting">Nowcasting</a></li>
+  <li><a href="#revision-analysis" id="toc-revision-analysis" class="nav-link" data-scroll-target="#revision-analysis">Revision analysis</a></li>
   </ul></li>
   <li><a href="#utility-functions-available-in-r" id="toc-utility-functions-available-in-r" class="nav-link" data-scroll-target="#utility-functions-available-in-r">Utility functions available in R</a>
   <ul class="collapse">
   <li><a href="#running-the-cruncher-and-generating-a-quality-report" id="toc-running-the-cruncher-and-generating-a-quality-report" class="nav-link" data-scroll-target="#running-the-cruncher-and-generating-a-quality-report">Running the cruncher and generating a quality report</a></li>
   <li><a href="#wrangling-jd-workspaces" id="toc-wrangling-jd-workspaces" class="nav-link" data-scroll-target="#wrangling-jd-workspaces">Wrangling JD+ workspaces</a></li>
+  </ul></li>
+  <li><a href="#building-a-production-process-of-sa-series" id="toc-building-a-production-process-of-sa-series" class="nav-link" data-scroll-target="#building-a-production-process-of-sa-series">Building a production process of SA series</a></li>
   <li><a href="#generating-enhanced-output-in-sa-estimation" id="toc-generating-enhanced-output-in-sa-estimation" class="nav-link" data-scroll-target="#generating-enhanced-output-in-sa-estimation">Generating enhanced output in SA estimation</a></li>
-  </ul></li>
-  <li><a href="#general-structure" id="toc-general-structure" class="nav-link" data-scroll-target="#general-structure">General structure</a>
-  <ul class="collapse">
-  <li><a href="#t-r-packs-rjdv2-structure" id="toc-t-r-packs-rjdv2-structure" class="nav-link" data-scroll-target="#t-r-packs-rjdv2-structure">RJDemetra output structure</a></li>
-  <li><a href="#t-r-packs-rjd3x13-structure" id="toc-t-r-packs-rjd3x13-structure" class="nav-link" data-scroll-target="#t-r-packs-rjd3x13-structure">rjd3x13 output structure</a></li>
-  </ul></li>
-  <li><a href="#rjd3-suite-of-packages-overview" id="toc-rjd3-suite-of-packages-overview" class="nav-link" data-scroll-target="#rjd3-suite-of-packages-overview">rjd3 suite of packages: overview</a>
-  <ul class="collapse">
-  <li><a href="#rjd3toolkit" id="toc-rjd3toolkit" class="nav-link" data-scroll-target="#rjd3toolkit">rjd3toolkit</a></li>
-  <li><a href="#rjd3x13" id="toc-rjd3x13" class="nav-link" data-scroll-target="#rjd3x13">rjd3x13</a></li>
-  <li><a href="#rjd3tramoseats" id="toc-rjd3tramoseats" class="nav-link" data-scroll-target="#rjd3tramoseats">rjd3tramoseats</a></li>
-  <li><a href="#rjd3sts" id="toc-rjd3sts" class="nav-link" data-scroll-target="#rjd3sts">rjd3sts</a></li>
-  <li><a href="#rjd3highfreq" id="toc-rjd3highfreq" class="nav-link" data-scroll-target="#rjd3highfreq">rjd3highfreq</a></li>
-  <li><a href="#rjd3filters" id="toc-rjd3filters" class="nav-link" data-scroll-target="#rjd3filters">rjd3filters</a></li>
-  <li><a href="#rjd3x11plus" id="toc-rjd3x11plus" class="nav-link" data-scroll-target="#rjd3x11plus">rjd3x11plus</a></li>
-  <li><a href="#rjd3stl" id="toc-rjd3stl" class="nav-link" data-scroll-target="#rjd3stl">rjd3stl</a></li>
-  <li><a href="#ggdemetra3" id="toc-ggdemetra3" class="nav-link" data-scroll-target="#ggdemetra3">ggdemetra3</a></li>
-  <li><a href="#rjd3bench" id="toc-rjd3bench" class="nav-link" data-scroll-target="#rjd3bench">rjd3bench</a></li>
-  <li><a href="#rjd3revisions" id="toc-rjd3revisions" class="nav-link" data-scroll-target="#rjd3revisions">rjd3revisions</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/annasmyk/JD_Quarto_Book/edit/main/T-r-packages.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/annasmyk/JD_Quarto_Book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -467,17 +467,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="in-this-chapter" class="level2">
 <h2 class="anchored" data-anchor-id="in-this-chapter">In this chapter</h2>
-<p>Core JDemetra+ Java algorithms can be accessed in R. This chapter provides an overview of the suite of R packages related to JDemetra+: <a href="https://github.com/rjdverse">rjdverse</a>. R Help pages, Readme pages and vignettes relative to each package provide a detailed description of all available functions: objectives, arguments, output and examples. The corresponding GitHub pages are directly linked to this documentation whenever their use in a selected algorithm is mentioned. More details on specific functions are available in the relevant chapters in the <a href="P_Algorithms.html">Algorithm part</a></p>
+<p>Core JDemetra+ Java algorithms can be accessed in R. This chapter provides an overview of the suite of R packages related to JDemetra+: <a href="https://github.com/rjdverse">rjdverse</a>.</p>
+<p>Readme pages, GitHub pages and sometimes vignettes relative to each package provide a detailed description of all available functions: objectives, arguments, output and examples. They are reachable from the <a href="https://github.com/rjdverse">rjdverse</a> main page.</p>
+<p>The corresponding GitHub pages are directly linked to this documentation whenever their use in a selected algorithm is mentioned. More details on specific functions are available in the relevant chapters of the <a href="P_Algorithms.html">Algorithm part</a></p>
 </section>
 <section id="installing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing Packages</h2>
-<p>All R packages related to JDemetra+ (v2 or v3) are available from the <a href="https://github.com/rjdverse">rjdverse Github page</a>.</p>
+<p>All R packages related to JDemetra+ (v3.x or v2.x) are available from the <a href="https://github.com/rjdverse">rjdverse Github page</a>.</p>
 <p>They can be installed from - GitHub - r-universe - CRAN (for some of them)</p>
 <p>As explained in the corresponding Readme files on <a href="https://github.com/rjdverse">Github</a>.</p>
 <section id="configuration-needed" class="level3">
 <h3 class="anchored" data-anchor-id="configuration-needed">Configuration needed</h3>
 <ul>
-<li><p>To run packages based on version 3.x: Java 17 or higher: how to get a portable Java and link it with R on your computer is explained <a href="index.html#Rconfig">here</a></p></li>
+<li><p>To run packages based on version 3.x: Java 21 or higher: how to get a portable Java and link it with R on your computer is explained <a href="index.html#Rconfig">here</a></p></li>
 <li><p>To run packages based on version 2.x: Java 8 or higher</p></li>
 </ul>
 </section>
@@ -486,42 +488,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="algorithms-available-in-r">Algorithms available in R</h2>
 <section id="seasonal-adjustment" class="level3">
 <h3 class="anchored" data-anchor-id="seasonal-adjustment">Seasonal adjustment</h3>
-<section id="using-jdemetra-version-2.x" class="level4">
-<h4 class="anchored" data-anchor-id="using-jdemetra-version-2.x">Using JDemetra+ version 2.x</h4>
-<table class="table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 47%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Algorithm</th>
-<th>Package</th>
-<th>Comments</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>X-13-ARIMA</td>
-<td>RJDemetra</td>
-<td>Reg-ARIMA and X-11 decomposition available independently</td>
-</tr>
-<tr class="even">
-<td>Tramo-Seats</td>
-<td>RJDemetra</td>
-<td>Tramo available independently</td>
-</tr>
-</tbody>
-</table>
-</section>
 <section id="using-jdemetra-version-3.x" class="level4">
 <h4 class="anchored" data-anchor-id="using-jdemetra-version-3.x">Using JDemetra+ version 3.x</h4>
 <table class="table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 46%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -571,6 +544,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Version 3.x includes <a href="A-rev-policies.html">Revision Policies</a> in X-13 and Tramo-Seats.</p>
 <p>More details on functions parameters and retrieving output in the chapter dedicated to <a href="A-sa-overview.html">Seasonal Adjustment</a></p>
 </section>
+<section id="using-jdemetra-version-2.x" class="level4">
+<h4 class="anchored" data-anchor-id="using-jdemetra-version-2.x">Using JDemetra+ version 2.x</h4>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>Package</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X-13-ARIMA</td>
+<td>RJDemetra</td>
+<td>Reg-ARIMA and X-11 decomposition available independently</td>
+</tr>
+<tr class="even">
+<td>Tramo-Seats</td>
+<td>RJDemetra</td>
+<td>Tramo available independently</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="filtering-and-trend-estimation" class="level3">
 <h3 class="anchored" data-anchor-id="filtering-and-trend-estimation">Filtering and Trend estimation</h3>
@@ -593,8 +595,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="benchmarking-and-temporal-disaggregation" class="level3">
-<h3 class="anchored" data-anchor-id="benchmarking-and-temporal-disaggregation">Benchmarking and Temporal disaggregation</h3>
+<section id="benchmarking" class="level3">
+<h3 class="anchored" data-anchor-id="benchmarking">Benchmarking</h3>
 <table class="table">
 <thead>
 <tr class="header">
@@ -616,16 +618,99 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>rjd3bench</td>
 </tr>
 <tr class="even">
-<td>Temporal Disaggregation</td>
+<td>GRP (Growth Rate Preservation)</td>
 <td>rjd3bench</td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="temporal-disaggregation" class="level3">
+<h3 class="anchored" data-anchor-id="temporal-disaggregation">Temporal Disaggregation:</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chow-Lin, Fernandez and Litterman</td>
+<td>rjd3bench</td>
+</tr>
+<tr class="even">
+<td>Model-Based Denton</td>
+<td>rjd3bench</td>
+</tr>
+<tr class="odd">
+<td>Autoregressive Distributed Lag (ADL) models</td>
+<td>rjd3bench</td>
+</tr>
+<tr class="even">
+<td>Reverse regression</td>
+<td>rjd3bench</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>rjd3bench</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reconciliation-and-multivariate-temporal-disaggregation" class="level3">
+<h3 class="anchored" data-anchor-id="reconciliation-and-multivariate-temporal-disaggregation">Reconciliation and multivariate temporal disaggregation</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Multivariate Cholette</td>
+<td>rjd3bench</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calendarization" class="level3">
+<h3 class="anchored" data-anchor-id="calendarization">Calendarization</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Calendarization</td>
+<td>rjd3bench</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nowcasting" class="level3">
+<h3 class="anchored" data-anchor-id="nowcasting">Nowcasting</h3>
+<p>Nowcasting with JDemetra+ is available via the rjd3nowcasting package</p>
+<p>Documentation <a href="https://rjdverse.github.io/rjd3nowcasting/">here</a></p>
+<!-- algos à detailler -->
+<!-- ### Outlier detection  -->
+</section>
+<section id="revision-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="revision-analysis">Revision analysis</h3>
+<p>Revision analysis on vintages can be performed with rjd3revision package.</p>
+<p>Documentation <a href="https://rjdverse.github.io/rjd3revisions/">here</a> <!-- TO BE ADDED --></p>
+<!-- ## Time series tools {#t-r-packs-tstools} -->
+<!-- ### Tests {#t-r-packs-tests} -->
+<!-- #### Seasonality tests -->
+<!-- #### Tests on residuals -->
+</section>
 </section>
 <section id="utility-functions-available-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="utility-functions-available-in-r">Utility functions available in R</h2>
-<p>The packages listed below contain utility functions useful when running a production process with massive datasets.</p>
+<p>The packages listed below contain utility functions useful when running a seasonal adjustment production process.</p>
 <section id="running-the-cruncher-and-generating-a-quality-report" class="level3">
 <h3 class="anchored" data-anchor-id="running-the-cruncher-and-generating-a-quality-report">Running the cruncher and generating a quality report</h3>
 <p><a href="T-Production-tools-cruncher-QR.html">JDemetra+ cruncher</a> is an executable module designed for mass production of seasonally adjusted series .</p>
@@ -640,13 +725,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>rjwsacruncher</td>
-<td>2.x</td>
+<td>2.x and 3.x</td>
 <td>estimation update and output</td>
 </tr>
 <tr class="even">
 <td>JDCruncheR</td>
-<td>2.x</td>
-<td>all the above + Quality Report</td>
+<td>2.x and 3.x</td>
+<td>Quality Report</td>
 </tr>
 </tbody>
 </table>
@@ -656,9 +741,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A workspace is a specific JDemetra+ data format (<code>.xml</code> files) allowing to use the graphical user interface (GUI) and the cruncher.</p>
 <table class="table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 52%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -669,25 +754,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>rjdworkspace</td>
-<td>2.x</td>
-<td>update meta data, set specifications, merge workspaces</td>
-</tr>
-<tr class="even">
 <td>rjd3providers</td>
 <td>3.x</td>
-<td>update metadata</td>
+<td>manage input files, update metadata</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>rjd3workspace</td>
 <td>3.x</td>
-<td>set specifications, merge workspace</td>
+<td>set specifications, open, create, save merge workspaces</td>
+</tr>
+<tr class="odd">
+<td>rjdworkspace</td>
+<td>2.x</td>
+<td>idem</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="generating-enhanced-output-in-sa-estimation" class="level3">
-<h3 class="anchored" data-anchor-id="generating-enhanced-output-in-sa-estimation">Generating enhanced output in SA estimation</h3>
+</section>
+<section id="building-a-production-process-of-sa-series" class="level2">
+<h2 class="anchored" data-anchor-id="building-a-production-process-of-sa-series">Building a production process of SA series</h2>
+<p>rjd3production package is a wrapper with functions encompassing a whole stage of a production process</p>
+<p>Documentation <a href="https://inseefr.github.io/rjd3production/">here</a></p>
+<p>More information on production processes can be found <a href="https://saproductionwithjdemetraandr.netlify.app/">here</a></p>
+</section>
+<section id="generating-enhanced-output-in-sa-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="generating-enhanced-output-in-sa-estimation">Generating enhanced output in SA estimation</h2>
 <p>This additional packages produce enhanced plots and diagnostic outputs.</p>
 <table class="table">
 <thead>
@@ -705,13 +797,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>ggdemetra</td>
-<td>3.x</td>
-<td>plots based on ggplot</td>
+<td>2.x</td>
+<td>plots based on ggplot2</td>
 </tr>
 <tr class="odd">
 <td>ggdemetra3</td>
 <td>3.x</td>
-<td>plots based on ggplot</td>
+<td>plots based on ggplot2</td>
 </tr>
 <tr class="even">
 <td>rjdqa</td>
@@ -720,249 +812,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<!-- ## Time series tools {#t-r-packs-tstools} -->
-<!-- ### Tests {#t-r-packs-tests} -->
-<!-- #### Seasonality tests -->
-<!-- #### Tests on residuals -->
-</section>
-</section>
-<section id="general-structure" class="level2">
-<h2 class="anchored" data-anchor-id="general-structure">General structure</h2>
-<p>The R object resulting from an estimation is a list of lists containing raw data, parameters, output series and diagnostics.</p>
-<section id="t-r-packs-rjdv2-structure" class="level3">
-<h3 class="anchored" data-anchor-id="t-r-packs-rjdv2-structure">RJDemetra output structure</h3>
-<p>Organised by domain:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/sa_obj_struct.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">V2 SA structure</figcaption>
-</figure>
-</div>
-<p>To retrieve any element just navigate this list of lists.</p>
-</section>
-<section id="t-r-packs-rjd3x13-structure" class="level3">
-<h3 class="anchored" data-anchor-id="t-r-packs-rjd3x13-structure">rjd3x13 output structure</h3>
-<p>Results and specification are separated first and then organised by domain.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sa_x13_v3 <span class="ot">&lt;-</span> RJDemetra<span class="sc">::</span><span class="fu">x13</span>(y_raw, <span class="at">spec =</span> <span class="st">"RSA5"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sa_x13_v3<span class="sc">$</span>result</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sa_x13_v3<span class="sc">$</span>estimation_spec</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sa_x13_v3<span class="sc">$</span>result_spec</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sa_x13_v3<span class="sc">$</span>user_defined</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To retrieve any element just navigate this list of lists.</p>
-</section>
-</section>
-<section id="rjd3-suite-of-packages-overview" class="level2">
-<h2 class="anchored" data-anchor-id="rjd3-suite-of-packages-overview">rjd3 suite of packages: overview</h2>
-<p>The sections below provide an overview of each package based on version 3.x of JDemetra+. For detailed description refer to the package’s own R Readme file and documentation pages as linked below.</p>
-<section id="rjd3toolkit" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3toolkit">rjd3toolkit</h3>
-<p>Contains utility functions used in other <code>rjd3</code> packages and has to be systematically installed before using any other rjd3 package. From a user point of view, it allows to:</p>
-<ul>
-<li><p>customize specifications in rjd3x13 and rjd3tramoseats</p></li>
-<li><p>generate user-defined regressors for calendar correction</p></li>
-<li><p>generate auxiliary variables (outliers, ramps..)</p></li>
-<li><p>run ARIMA model estimations</p></li>
-<li><p>perform tests (seasonality, normality, white noise)</p></li>
-<li><p>access general functions such as autocorrelations, distributions</p></li>
-</ul>
-<p>Documentation <a href="https://rjdverse.github.io/rjd3toolkit">here</a></p>
-</section>
-<section id="rjd3x13" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3x13">rjd3x13</h3>
-<p><code>rjd3x13</code> gives access to X-13-ARIMA seasonal adjustment algorithm.</p>
-<ul>
-<li><p>Specification: created with <code>spec_x11_default()</code>, <code>spec_x13_default()</code>, <code>spec_regarima_default()</code> and customized with <code>rjd3toolkit</code> functions + <code>set_x11()</code></p></li>
-<li><p>Apply model with <code>x11()</code>, <code>x13()</code>, <code>fast.x13()</code>, <code>regarima()</code>, <code>fast.regarima()</code></p></li>
-<li><p>Refresh policies: <code>regarima.refresh()</code> and <code>x13.refresh()</code></p></li>
-</ul>
-<p>Documentation <a href="https://rjdverse.github.io/rjd3x13">here</a></p>
-</section>
-<section id="rjd3tramoseats" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3tramoseats">rjd3tramoseats</h3>
-<p><code>rjd3tramoseats</code> gives access to Tramo-Seats seasonal adjustment algorithm.</p>
-<ul>
-<li><p>Specification: created with <code>spec_tramoseats_default()</code>, <code>spec_tramo_default()</code> and customized with <code>rjd3toolkit</code> functions + <code>set_seats()</code></p></li>
-<li><p>Apply model with <code>tramoseats()</code>, <code>fast.tramoseats()</code>, <code>tramo()</code>, <code>fast.tramo()</code></p></li>
-<li><p>Refresh policies: <code>tramo.refresh()</code> and <code>tramoseats.refresh()</code></p></li>
-</ul>
-<p>Documentation <a href="https://rjdverse.github.io/rjd3tramoseats">here</a></p>
-</section>
-<section id="rjd3sts" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3sts">rjd3sts</h3>
-<p>Gives access to structural time series and state space models.</p>
-<p>Documentation <a href="https://rjdverse.github.io/rjd3sts">here</a></p>
-<!-- Several examples available: replace by wiki link [here](??)-->
-</section>
-<section id="rjd3highfreq" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3highfreq">rjd3highfreq</h3>
-<p>Depends on <code>rjd3sts</code></p>
-<p>Seasonal adjustment of high frequency (infra-monthly) data:</p>
-<ul>
-<li><p>fractional airline based reg-ARIMA pre-adjustment</p></li>
-<li><p>fractional and multi airline decomposition</p></li>
-</ul>
-<p>Documentation <a href="https://rjdverse.github.io/rjd3highfreq">here</a></p>
-</section>
-<section id="rjd3filters" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3filters">rjd3filters</h3>
-<p>The rjd3filters package allows to:</p>
-<ul>
-<li><p>easily create/combine/apply moving averages <code>moving_average()</code> (much more general than <code>stats::filter()</code>) and study their properties: plot coefficients (<code>plot_coef()</code>), gain (<code>plot_gain()</code>), phase-shift (<code>plot_phase()</code>) and different statics (<code>diagnostic_matrix()</code>)</p></li>
-<li><p>trend-cycle extraction with different methods to treat endpoints:</p></li>
-<li><p><code>lp_filter()</code> local polynomial filters of Proietti and Luati (2008) (including Musgrave): Henderson, Uniform, biweight, Trapezoidal, Triweight, Tricube, “Gaussian”, Triangular, Parabolic (= Epanechnikov)<br>
-</p></li>
-<li><p><code>rkhs_filter()</code> Reproducing Kernel Hilbert Space (RKHS) of Dagum and Bianconcini (2008) with same kernels<br>
-</p></li>
-<li><p><code>fst_filter()</code> FST approach of Grun-Rehomme, Guggemos, and Ladiray (2018)<br>
-</p></li>
-<li><p><code>dfa_filter()</code> derivation of AST approach of Wildi and McElroy (2019)</p></li>
-<li><p>change the filter used in X-11 for TC extraction</p></li>
-</ul>
-<section id="create-moving-averages" class="level4">
-<h4 class="anchored" data-anchor-id="create-moving-averages">Create moving averages</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"rjd3filters"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">lags =</span> <span class="dv">1</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>m1 <span class="co"># Forward MA</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">lags =</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>m2 <span class="co"># centred MA</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>m1 <span class="sc">+</span> m2</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>m1 <span class="sc">-</span> m2</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>m1 <span class="sc">*</span> m2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Can be used to create all the MA of X-11:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>e1 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">12</span>), <span class="at">lags =</span> <span class="sc">-</span><span class="dv">6</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>e1 <span class="ot">&lt;-</span> e1 <span class="sc">/</span> <span class="fu">sum</span>(e1)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>e2 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">12</span>, <span class="dv">12</span>), <span class="at">lags =</span> <span class="sc">-</span><span class="dv">5</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># used to have the 1rst estimate of the trend</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>tc_1 <span class="ot">&lt;-</span> M2X12 <span class="ot">&lt;-</span> (e1 <span class="sc">+</span> e2) <span class="sc">/</span> <span class="dv">2</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M2X12) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>si_1 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> tc_1</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>M3 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>, <span class="dv">3</span>), <span class="at">lags =</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>M3X3 <span class="ot">&lt;-</span> M3 <span class="sc">*</span> M3</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># M3X3 moving average applied to each month</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M3X3) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>M3X3_seasonal <span class="ot">&lt;-</span> <span class="fu">to_seasonal</span>(M3X3, <span class="dv">12</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(M3X3_seasonal) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>s_1 <span class="ot">&lt;-</span> M3X3_seasonal <span class="sc">*</span> si_1</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>s_1_norm <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> M2X12) <span class="sc">*</span> s_1</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>sa_1 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> s_1_norm</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>henderson_mm <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">lp_filter</span>(<span class="at">horizon =</span> <span class="dv">6</span>)<span class="sc">$</span>filters.coef[, <span class="st">"q=6"</span>],</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">lags =</span> <span class="sc">-</span><span class="dv">6</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>tc_2 <span class="ot">&lt;-</span> henderson_mm <span class="sc">*</span> sa_1</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>si_2 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> tc_2</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>M5 <span class="ot">&lt;-</span> <span class="fu">moving_average</span>(<span class="fu">rep</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="dv">5</span>, <span class="dv">5</span>), <span class="at">lags =</span> <span class="sc">-</span><span class="dv">2</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>M5X5_seasonal <span class="ot">&lt;-</span> <span class="fu">to_seasonal</span>(M5 <span class="sc">*</span> M5, <span class="dv">12</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>s_2 <span class="ot">&lt;-</span> M5X5_seasonal <span class="sc">*</span> si_2</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>s_2_norm <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> M2X12) <span class="sc">*</span> s_2</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>sa_2 <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> s_2_norm</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>tc_f <span class="ot">&lt;-</span> henderson_mm <span class="sc">*</span> sa_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mai =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="dv">0</span>))</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">layout</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_coef</span>(tc_f)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_coef</span>(sa_2, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Final TC filter"</span>, <span class="st">"Final SA filter"</span>),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"orange"</span>), <span class="at">lty =</span> <span class="dv">1</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_gain</span>(tc_f)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_gain</span>(sa_2, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_phase</span>(tc_f)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_phase</span>(sa_2, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="apply-a-moving-average" class="level4">
-<h4 class="anchored" data-anchor-id="apply-a-moving-average">Apply a moving average</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> retailsa<span class="sc">$</span>AllOtherGenMerchandiseStores</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>trend <span class="ot">&lt;-</span> y <span class="sc">*</span> tc_1</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>sa <span class="ot">&lt;-</span> y <span class="sc">*</span> sa_1</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">window</span>(<span class="fu">ts.union</span>(y, trend, sa), <span class="at">start =</span> <span class="dv">2000</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.type =</span> <span class="st">"single"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"orange"</span>, <span class="st">"lightblue"</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="rjd3x11plus" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3x11plus">rjd3x11plus</h3>
-<p>Depends on <code>rjd3filters</code></p>
-<ul>
-<li><p>Extension of X-11 decomposition with multiple non integer periodicities</p></li>
-<li><p>Trend estimation with local polynomial based filters</p></li>
-</ul>
-<p>Full documentation <a href="https://rjdverse.github.io/rjd3x11plus">here</a></p>
-</section>
-<section id="rjd3stl" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3stl">rjd3stl</h3>
-<p><code>rjd3stl</code> contains usual STL functions and an airline model based pre-adjustment module. Is also tailored to handle high-frequency data.</p>
-<p>Full documentation <a href="https://rjdverse.github.io/rjd3x11plus">here</a></p>
-<!-- Full documentation [here](https://rjdverse.github.io/rjd3stl) -->
-</section>
-<section id="ggdemetra3" class="level3">
-<h3 class="anchored" data-anchor-id="ggdemetra3">ggdemetra3</h3>
-<p>ggdemetra3 uses ggplot2 to add seasonal adjustment statistics to your plot (Like <code>ggdemetra</code> but compatible with version 3.x.). Also compatible with high-frequency methods:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggdemetra3"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>spec <span class="ot">&lt;-</span> <span class="fu">spec_x13_default</span>(<span class="st">"rsa3"</span>) <span class="sc">|&gt;</span> <span class="fu">set_tradingdays</span>(<span class="at">option =</span> <span class="st">"WorkingDays"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>p_ipi_fr <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> ipi_c_eu_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> FR)) <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="st">"SA - IPI-FR"</span>,</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>p_sa <span class="ot">&lt;-</span> p_ipi_fr <span class="sc">+</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sa</span>(</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">component =</span> <span class="st">"y_f(12)"</span>, <span class="at">linetype =</span> <span class="dv">2</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">spec =</span> spec</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sa</span>(<span class="at">component =</span> <span class="st">"sa"</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sa</span>(<span class="at">component =</span> <span class="st">"sa_f"</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="dv">2</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>p_sa</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>p_sa <span class="sc">+</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_outlier</span>(</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">geom =</span> <span class="st">"label_repel"</span>,</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">coefficients =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">65</span>), <span class="at">force =</span> <span class="dv">10</span>,</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">arrow =</span> <span class="fu">arrow</span>(</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>            <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>),</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>            <span class="at">type =</span> <span class="st">"closed"</span>, <span class="at">ends =</span> <span class="st">"last"</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">digits =</span> <span class="dv">2</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="rjd3bench" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3bench">rjd3bench</h3>
-<p>Tailored for Benchmarking and temporal disaggregation</p>
-<!-- Several examples [here](https://github.com/rjdemetra/test_rjd3bench) -->
-</section>
-<section id="rjd3revisions" class="level3">
-<h3 class="anchored" data-anchor-id="rjd3revisions">rjd3revisions</h3>
-<p>Revision analysis, more information <a href="A-revision-analysis.html">here</a></p>
-<!-- ### rjd3providers -->
-<!-- ### rjd3workspace -->
-<!-- This package allows to wrangle JDemetra+ workspaces in R with functions: -->
-<!-- -   `load_workspace` -->
-<!-- -   `save_workspace` -->
-<!-- Up coming content. -->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -177,6 +177,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">New Features in v 3.x family</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-jd-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JDemetra+ History</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./P_Algorithms.html" class="sidebar-item-text sidebar-link">
@@ -372,6 +378,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./M-sa-hf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA of high-frequency data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./M-tests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tests</span></a>
   </div>
@@ -392,6 +404,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./M-revision-analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Revision Analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Output_Description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Output description</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P-Use-Cases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Use cases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-forecasting-nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting and Nowcasting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-outlier-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier detection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-refreshing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refreshing data</span></a>
   </div>
 </li>
       </ul>
@@ -571,8 +618,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># only seasonally adjusted series ("sa") and its forecasts ("sa_f") will be exported</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="selecting-diagnostics-and-parameters-to-exoprt" class="level4">
-<h4 class="anchored" data-anchor-id="selecting-diagnostics-and-parameters-to-exoprt">Selecting diagnostics and parameters to exoprt</h4>
+<section id="selecting-diagnostics-and-parameters-to-export" class="level4">
+<h4 class="anchored" data-anchor-id="selecting-diagnostics-and-parameters-to-export">Selecting diagnostics and parameters to export</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns names of the currently exported diagnostics and parameters</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getOption</span>(<span class="st">"default_matrix_item"</span>)</span>
@@ -584,6 +631,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"likelihood.bicc"</span></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="exportable-diagnostics" class="level4">
+<h4 class="anchored" data-anchor-id="exportable-diagnostics">Exportable Diagnostics</h4>
+<p>x13</p>
+<p>tramo seats</p>
+<p>what is not relevant in each case</p>
 </section>
 </section>
 </section>
@@ -678,10 +731,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="list-of-exportable-series" class="level2">
 <h2 class="anchored" data-anchor-id="list-of-exportable-series">List of exportable series</h2>
 <p>Some available output series will be different when using X-13-ARIMA or Tramo-Seats.</p>
+<p>each concept : output name in outout chapter</p>
+<p>Here: ow to get a given concetp</p>
+<p>x13</p>
+<p>tramo seats</p>
+<p>what is not relevant in each case</p>
 </section>
 <section id="list-of-exportable-diagnostics-and-parameters" class="level2">
 <h2 class="anchored" data-anchor-id="list-of-exportable-diagnostics-and-parameters">List of exportable diagnostics and parameters</h2>
 <p>Some parameters and available diagnostics will be different when using X-13-ARIMA or Tramo-Seats.</p>
+<p>each concept : output name in outout chapter</p>
+<p>Here: ow to get a given concetp</p>
+<p>x13</p>
+<p>tramo seats</p>
+<p>what is not relevant in each case</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">default_matrix_item =</span></span>

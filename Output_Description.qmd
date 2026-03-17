@@ -2,127 +2,284 @@
 
 ## In this chapter
 
-How to navigate output
+<!-- obj add links to relevant parts  -->
+
+<!-- add link in index/user support : sa chap + another chap  -->
+
+<!-- ADD output links to readme pages / R doc  -->
+
+-   what kind of output is produced ?
+
+-   How to identify an output object given an algorithm ? what is uniquely defined
+
+-   What are the output format ?
+
+-   Where is the output available ?
+
+-   How to navigate it ?
+
+-   How to generate it ?
+
+-   List of displayed/generated series (), e.g
+
+-   List of displayed/generated diagnostics, e.g
+
+-   List of displayed/generated parameters, e.g
+
+-   R packages output specificities (str(m))
+
+in R difference between user-defined and default 
+default means : directly retrievable from sa_model 
+
+## Scope
+
+SA algorithms vs the rest
+
+here SA related output, set up specific chapter add HF to HF of SA - rjd3...: str(m) - GUI display
+
+generating output from GUI possible only when workspace withh multi-documents
+
+and add non sa related output list of algos - terror - bench and TD -
+
+how does it occur - plug ins R packages
+
+## Use Cases
+
+use case 1
+
+use case 2
+
+and search advices
+
+## SA related algorithms (HF included ?)
+
+## What is displayed or generated ?
+
+### JDemetra+ Output: 3 types of objects
+
+-   series (final and intermediate)
+
+-   parameters
+
+-   diagnostics
+
+### How to identify an output object given an algortithm
+
+what is uniquely defined
+
+-   CODE= concept\*algo
+
+ex preadjut = reg-arima or tramo
+
+Example
+
+-   diagnostic, some are general, some are algo specific ex F test vs m7
+
+-   series
+
+-   paremeter
+
+### Where is output displayed ?
+
+displayed : you have it vs generated you must act
+
+-   gui
+
+-   R packages
+
+#### How to navigate it
+
+### How can output be generated ?
+
+dictionaries
+
+<!-- maj java dicos  -->
+
+generated to files or R objects (lists of lists)
+
+-   gui
+
+Gathered in 2 data structures
+
+-   time series organised in data tables
+
+-   individual data (for each series: parameters and diagnostics)
+
+#### How to generate it
+
+How to identify an output object given an algortithm what is uniquely defined
+
+-   concept\*algo
+
+ex predajsutment = reg-arima or ttramo
+
+Example
+
+-   diagnostic
+
+-   series
+
+-   paremeter
+
+How to identify an output object given an algortithm what is uniquely defined
+
+-   concept\*algo
+
+ex predajsutment = reg-arima or ttramo
+
+Example
+
+-   diagnostic
+
+-   series
+
+-   paremeter
+
+#### Cruncher
+
+here output code, input = cruncher params, table is in cruncher chapter (link )
+
+X13-Arima
+
+-   signal what is out but not relevant
+
+Tramo seats
+
+#### R Dicos /R user defined output
+
+HERE 
+
+rjd3x13, rjd3tramoseats 
+
+link to doc in rjdverse..
+
+##### Filtering useless output 
+
+TS only in X13 and vice versa ?
+
+##### Descripitions in JAVA
+
+##### Table Description  
+type
+name M7
+JD+ output name decomp.M7
+..
+..
 
 
-<!-- Names -->
 
-<!-- Indications and example in the relevant algo or tool chapter -->
 
-<!-- Here comprehensive (target) lists -->
 
-<!-- ## What is displayed or generated ? -->
 
-<!-- Output: 3 types of objects -->
+## Differences between V2 and V3
 
-<!-- -   series (final and intermediate) -->
+<!-- first: focus on v3 -->
 
-<!-- -   parameters (automatic, user-defined or resulting from the estimation process) -->
+Below different lists We flag differences between v2 and v3
 
-<!-- -   diagnostics -->
+<!-- file from old doc GUI_Output_items.txt in Documents/JD_Quarto_Book_AUX/All_pages -->
 
-<!-- displayed -->
+<!-- use: https://www.tablesgenerator.com/markdown_tables -->
 
-<!-- -   gui -->
+In the remainder list of nammes Link (auto) with R dictionaries ?
 
-<!-- -   R packages -->
+## Series
 
-<!-- dictionaries user defined functions (deprecated) -->
+stored by algo, unique concept
 
-<!-- <!-- maj java dicos  --> -->
+### Table structure !
 
-<!-- generated to files or R objects (lists of lists) -->
+as pb of width tables broken in 2 parts 
 
-<!-- Gathered in 2 data structures -->
+where are auxiliary excel files 
+auxiliary R code 
+all in "Documents/JD_Quarto_Book_AUX"
 
-<!-- -   time series organised in data tables -->
+#### part 1: GUI + cruncher 
 
-<!-- -   individual data (for each series: parameters and diagnostics) -->
+name
+description 
 
-<!-- ## How to access it -->
+#### part 2: R with code
 
-<!-- Below different lists We flog differences between v2 and v3 -->
+### Final SA series
 
-<!-- <!-- file from old doc GUI_Output_items.txt in Documents/JD_Quarto_Book_AUX/All_pages --> -->
+### Preadjustement / modelling
 
-<!-- <!-- use: https://www.tablesgenerator.com/markdown_tables --> -->
+identical for reg-arima and ts
 
-<!-- ## Series -->
+### X-11 decomposition (start 1)
 
-<!-- fields: concept, name in the software (GUI, cruncher, R), algo used ? or by algo ? -->
+<!-- (moved from method chapter or left in both ?) -->
 
-<!-- | Concept | Name |   | -->
-<!-- |--------------------------------------|------------------|----------------| -->
-<!-- | Original series | $$y$$ |  | -->
-<!-- | Forecasts of the original series | $$y\_ f$$ |  | -->
-<!-- | Standard errors of the forecasts of the original series | $$y\_ ef$$ |  | -->
-<!-- | Interpolated series | $$y\_ c$$ |  | -->
-<!-- | Forecasts of the interpolated series | $$yc\_ f$$ |  | -->
-<!-- | Standard errors of the forecasts of the interpolated series | $$yc\_ ef$$ |  | -->
-<!-- | Linearised series (not transformed) | $$y\_ lin$$ |  | -->
-<!-- | Linearised series (transformed) | $$l$$ |  | -->
-<!-- | Series corrected for calendar effects | $${ycal}$$ |  | -->
-<!-- | Forecasts of the series corrected for calendar effects | $$ycal\_ f$$ |  | -->
-<!-- | Forecasts of the linearised series | $$l\_ f$$ |  | -->
-<!-- | Backcasts of the linearised series | $$l\_ b$$ |  | -->
-<!-- | Trend (including deterministic effects) | $$t$$ |  | -->
-<!-- | Forecasts of the trend | $$t\_ f$$ |  | -->
-<!-- | Seasonally adjusted series (including deterministic effects) | $${sa}$$ |  | -->
-<!-- | Forecasts of the seasonally adjusted series | $$sa\_ f$$ |  | -->
-<!-- | Seasonal component (including deterministic effects) | $$s$$ |  | -->
-<!-- | Forecasts of the seasonal component | $$s\_ f$$ |  | -->
-<!-- | Irregular component (including deterministic effects) | $$i$$ |  | -->
-<!-- | Forecasts of the irregular component | $$i\_ f$$ |  | -->
-<!-- | All deterministic effects | $${det}$$ |  | -->
-<!-- | Forecasts of the deterministic effects | $$det\_ f$$ |  | -->
-<!-- | Calendar effects | $${cal}$$ |  | -->
-<!-- | Forecasts of the calendar effects | $$cal\_ f$$ |  | -->
-<!-- | Trading day effect | $${tde}$$ |  | -->
-<!-- | Forecasts of the trading day effect | $$tde\_ f$$ |  | -->
-<!-- | Moving holidays effects | $${mhe}$$ |  | -->
-<!-- | Forecasts of the moving holidays effects | $$mhe\_ f$$ |  | -->
-<!-- | Easter effect | $${ee}$$ |  | -->
-<!-- | Forecasts of the Easter effect | $$ee\_ f$$ |  | -->
-<!-- | Other moving holidays effects | $${omhe}$$ |  | -->
-<!-- | Forecasts of the other moving holidays effects | $$omhe\_ f$$ |  | -->
-<!-- | All outliers effects | $${out}$$ |  | -->
-<!-- | Forecasts of all outliers effects | $$out\_ f$$ |  | -->
-<!-- | Outliers effects related to irregular (AO, TC) | $$out\_ i$$ |  | -->
-<!-- | Forecasts of outliers effects related to irregular (TC) | $$out\_ i\_ f$$ |  | -->
-<!-- | Outliers effects related to trend (LS) | $$out\_ t$$ |  | -->
-<!-- | Forecasts of outliers effects related to trend (LS) | $$out\_ t\_ f$$ |  | -->
-<!-- | Outliers effects related to seasonal (SO) | $$out\_ s$$ |  | -->
-<!-- | Forecasts of outliers effects related to seasonal (SO) | $$out\_ s\_ f$$ |  | -->
-<!-- | All other regression effects | $${reg}$$ |  | -->
-<!-- | Forecasts of all other regression effects | $$reg\_ f$$ |  | -->
-<!-- | Regression effects related to irregular | $$reg\_ i$$ |  | -->
-<!-- | Forecasts of regression effects related to irregular | $$reg\_ i\_ f$$ |  | -->
-<!-- | Regression effects related to trend | $$reg\_ t$$ |  | -->
-<!-- | Forecasts of regression effects related to trend | $$reg\_ t\_ f$$ |  | -->
-<!-- | Regression effects related to seasonal | $$reg\_ s$$ |  | -->
-<!-- | Forecasts of regression effects related to seasonal | $$reg\_ s\_ f$$ |  | -->
-<!-- | Regression effects related to seasonally adjusted series | $$reg\_ sa$$ |  | -->
-<!-- | Forecasts of regression effects related to seasonally adjusted series | $$reg\_ sa\_ f$$ |  | -->
-<!-- | Separate regression effects | $$reg\_ y$$ |  | -->
-<!-- | Forecasts of separate regression effects | $$reg\_ y\_ f$$ |  | -->
-<!-- | Full residuals of the Reg-ARIMA model | $${fullresiduals}$$ |  | -->
-<!-- | Linearised series used as input in the decomposition | $$decomposition.y\_ lin$$ |  | -->
-<!-- | Forecast of the linearised series used as input in the decomposition | $$decomposition.y\_ lin\_ f$$ |  | -->
-<!-- | Trend produced by the decomposition | $$decomposition.t\_ lin$$ |  | -->
-<!-- | Forecasts of the trend produced by the decomposition | $$decomposition.t\_ lin\_ f$$ |  | -->
-<!-- | Seasonal component produced by the decomposition | $$decomposition.s\_ lin$$ |  | -->
-<!-- | Forecasts of the Seasonal component produced by the decomposition | $$decomposition.s\_ lin\_ f$$ |  | -->
-<!-- | Irregular produced by the decomposition | $$decomposition.i\_ lin$$ |  | -->
-<!-- | Forecasts of the irregular produced by the decomposition | $$decomposition.i\_ lin\_ f$$ |  | -->
-<!-- | Seasonally adjusted series produced by the decomposition | $$decomposition.sa\_ lin$$ |  | -->
-<!-- | Forecasts of the seasonally adjusted series produced by the decomposition | $$decomposition.sa\_ lin\_ f$$ |  | -->
-<!-- | Seasonal-Irregular produced by the decomposition | $$decomposition.si\_ lin$$ |  | -->
-<!-- | For X-13ARIMA-Seats only. Series from the X-11 decomposition (x = a, b, c, d, e; y=a1...) | $$decomposition.x - tables.y$$ |  | -->
-<!-- | Benchmarked seasonally adjusted series | $${benchmarking.result}$$ |  | -->
-<!-- | Target for the benchmarking | $${benchmarking.target}$$ |  | -->
 
-<!-- ## Diagnostics -->
 
-<!-- ## Parameters -->
+part 2
 
-<!-- ## Cruncher Output -->
+| Code | Description | GUI display (Results Panel) | GUI output - input | cruncher V3 output |
+|--------------|--------------|:----------------:|:------------:|:------------:|
+| B1 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B2 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B3 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B4 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B5 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B6 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B7 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B8 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B9 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B10 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B11 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B12 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B13 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| B14 | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+
+| Code | Description | GUI display (Results Panel) | GUI output - input | cruncher V3 output |
+|------|--------------|:--------------:|:------------:|:------------:|
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+| [B1](#m-X11-output) | Linearized Series | Decomposition X-11 \> Table B | decomposition.b1 | decomposition.b1 |
+|  |  |  |  |  |
+
+### Seats decomposition (2)
+
+## Diagnostics
+
+obj have all the tests used in BQ and displayed in GUI
+
+stand alone tests: - in GUI - in R (rjd3toolkit)
+
+### Tests on residuals
+
+ONE TEST example : LB TEST, link to M chap what do we describe here
+
+### Seasonality tests
+
+ONE TEST example : Friedman TEST, link to M chap what do we describe here
+
+## Parameters
+
+last
+
+## Cruncher Output (special)
+
+to cruncher chap ?
+
+## R packages (str(model)) output
+
+see how it works 
+in part R code will be in tables ?
+
+## Non SA related algorithms
+
+## R packages (str(model)) output
+

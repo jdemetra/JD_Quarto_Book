@@ -1,0 +1,21 @@
+# Use cases {.unnumbered #part-M}
+
+This part provides detailed examples of use of JDemetra+ related tools.
+
+<!-- could be filled in when testing -->
+
+In this part: 
+
+-   [Forecasting and nowcasting examples](#u-now)
+
+-   [Several ways for detecing outliers](#u-out)
+
+-   [Refreshing a series or workspace](#u-refresh)
+
+
+
+
+
+
+
+

@@ -30,6 +30,16 @@ The latest release in version 2 family can be found [here](https://github.com/jd
 
 The highest version using Java 8 is v2.2.4.
 
+## User Support and Useful links
+
+If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
+
+For specific questions related to **production of seasonally adjusted series** you can look up [these pages](https://sa-production-with-jdemetra-and-r.netlify.app/)
+
+To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://jdemetra-universe-blog.netlify.app/)
+
+You can also [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
+
 
 ## Background
 
@@ -46,18 +56,6 @@ Key methodological explanations and state-of-the-art description and references 
 -   [Handbook on seasonal adjustment (2018)](https://ec.europa.eu/eurostat/documents/3859598/8939616/KS-GQ-18-001-EN-N.pdf) 
 
 -   [Handbook on rapid estimates (2017)](https://ec.europa.eu/eurostat/documents/3859598/8555708/KS-GQ-17-008-EN-N.pdf)
-
-
-
-
-## Useful links
-
-To get started, you can [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
-
-If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
-
-To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://jdemetra-universe-blog.netlify.app/)
-
 
 
 
@@ -93,9 +91,9 @@ You should install the latest release available denoted from now on v3.x.y
 
 - To start the application, run the file **nbdemetra64.exe** located in the following subfolder [...\\jdemetra-standalone-3.x.y-windows-x86_64\\nbdemetra\\bin]{.path}
 
-Version 3.x requires Java 17 or higher, *jdemetra-standalone-3.x.y-windows-x86_64.zip* contains a portable version of Java, so you don't have to deal with this issue on your computer.
+Version 3.x requires Java 21 or higher, *jdemetra-standalone-3.x.y-windows-x86_64.zip* contains a portable version of Java, so you don't have to deal with this issue on your computer.
 
-R packages related to version 3.x (rjd3...) also require Java 17 or higher, you can (and should) use the portable version provided with the graphical user interface to run them, this is explained [here](#Rconfig).
+R packages related to version 3.x (rjd3...) also require Java 21 or higher, you can (and should) use the portable version provided with the graphical user interface to run them, this is explained [here](#Rconfig).
 
 ### Additional Plug-ins
 
@@ -137,7 +135,7 @@ You can directly head over to this [GitHub page](https://github.com/rjdverse?vie
 
 #### Configuration needed to run rjd3 packages {#Rconfig}
 
-To use rjd3 packages in R, you need Java 17 or higher.
+To use rjd3 packages in R, you need Java 21 or higher.
 
 You can (and should) use the version of Java that comes with the Graphical User Interface (GUI). It is contained in the file **jdemetra-standalone-3.x.y-windows-x86_64.zip** available [on this page](https://github.com/jdemetra/jdplus-main/releases), in the "Assets" section, which you might have to expand to be able to see all the files.
 

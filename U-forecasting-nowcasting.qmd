@@ -1,0 +1,62 @@
+# Forecasting and Nowcasting {#u-now .unnumbered}
+
+## In this chapter
+
+## Case Study presentation
+
+Data forecasts by industry sector relating to deflated VAT turnover still unavailable for the “Flash” estimate of Belgian GDP
+Two-step methodology
+Pre-selection of a restricted number of predictors (mostly from business surveys) 
+Model selection, definition and prediction
+Use of the rjdverse packages: rjd3toolkit, rjd3workspace, rjd3providers, rjd3tramoseats, rjd3sts and rjd3nowcasting
+Types of models considered
+RegARIMA models: “supervised” TRAMO with or without predictor(s) 
+ADL(1,1), ADL(1,0) with fixed or variable coefficients (predictors)
+Structural models + regressor(s) with fixed or variable coefficients (predictors) 
+Dynamic factor models (1 factor) 
+
+## Packages relevant for nowcasting 
+
+rjd3toolkit: statistical toolkit and modelling support, for example:
+calendar_td(): generation of regressors for trading days effects
+ao_variable() / ls_variable(): generation of regressors for different types of outliers
+differencing_fast(): automatic identification of differentiation orders to achieve stationarity
+ljungbox(), jarquebera(), etc.: diagnostics on residuals
+rjd3workspace & rjd3providers: interactivity with GUI workspaces
+rjd3tramoseats : RegARIMA models
+tramo_forecast(): prediction using TRAMO
+rjd3sts: Structural / State Space models
+rjd3nowcasting: Dynamic Factor Models
+
+
+## Reg Arimla Models 
+
+Forecasting by means of a RegARIMA model (TRAMO) with rjd3tramoseats (full code: here):
+
+
+
+## GUI 
+
+Hybrid GUI/R approach for RegARIMA models (and seasonal [pre-]adjustment)
+
+## State Space 
+
+### State Space modelling: structural models, regression with variable coefficient, etc.
+
+### Prediction by means of a Basic Structural Model with regressors: code here
+
+
+## Dynamic Factor models
+
+
+## Conclusion
+
+Cross-validation shows gains in accuracy in almost all branches of activity compared with the previous methodology (“unsupervised” TRAMO, without predictor)
+Approximatively 2/3 of these gains come from switching to a “supervised” TRAMO method (without predictor)
+Importance of defining a national calendar for monthly data 
+Importance of properly defining outliers (especially during Covid period) 
+Overall, the predictive power of business surveys turns on to be relatively weak 
+However, this masks disparities and pleasant surprises (e.g. the question on weather conditions in the construction sector)
+
+
+

@@ -149,7 +149,9 @@ options(default_tsmatrix_series = c("sa", "sa_f"))
 # only seasonally adjusted series ("sa") and its forecasts ("sa_f") will be exported
 ```
 
-#### Selecting diagnostics and parameters to exoprt
+
+
+#### Selecting diagnostics and parameters to export
 
 ```{r, eval = FALSE}
 # returns names of the currently exported diagnostics and parameters
@@ -162,6 +164,16 @@ options(default_matrix_item = c(
     "likelihood.bicc"
 ))
 ```
+
+#### Exportable Diagnostics 
+
+
+x13
+
+tramo seats
+
+what is not relevant in each case 
+
 
 ## Quality Report with JDCruncheR
 
@@ -260,12 +272,35 @@ Practical steps if you want to customize the score computation (see package docu
 
 Some available output series will be different when using X-13-ARIMA or Tramo-Seats.
 
+
+each concept : output name in outout chapter
+
+Here: ow to get a given concetp 
+
+x13
+
+tramo seats
+
+what is not relevant in each case 
+
 ```{r, echo = TRUE, eval = FALSE}
 ```
 
 ## List of exportable diagnostics and parameters
 
 Some parameters and available diagnostics will be different when using X-13-ARIMA or Tramo-Seats.
+
+each concept : output name in outout chapter
+
+Here: ow to get a given concetp 
+
+x13
+
+tramo seats
+
+what is not relevant in each case 
+
+
 
 ```{r, echo = TRUE, eval = FALSE}
 options(

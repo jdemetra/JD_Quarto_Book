@@ -12,7 +12,7 @@
 <meta name="author" content="Maria Novas Filgueira">
 <meta name="author" content="Luis Sanguiao Sande">
 <meta name="author" content="Felix Aparicio Perez">
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-03-10">
 
 <title>JDemetra+ documentation</title>
 <style>
@@ -181,6 +181,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./G-news-v3-vs-v2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">New Features in v 3.x family</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./G-jd-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JDemetra+ History</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -378,6 +384,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./M-sa-hf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SA of high-frequency data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./M-tests.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tests</span></a>
   </div>
@@ -402,6 +414,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Output_Description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Output description</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P-Use-Cases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Use cases</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-forecasting-nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forecasting and Nowcasting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-outlier-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Outlier detection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./U-refreshing-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Refreshing data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -416,8 +463,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features">Main Features</a></li>
   <li><a href="#currently-available-versions" id="toc-currently-available-versions" class="nav-link" data-scroll-target="#currently-available-versions">Currently available versions</a></li>
+  <li><a href="#user-support-and-useful-links" id="toc-user-support-and-useful-links" class="nav-link" data-scroll-target="#user-support-and-useful-links">User Support and Useful links</a></li>
   <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#useful-links" id="toc-useful-links" class="nav-link" data-scroll-target="#useful-links">Useful links</a></li>
   <li><a href="#how-to-contribute" id="toc-how-to-contribute" class="nav-link" data-scroll-target="#how-to-contribute">How to contribute</a></li>
   <li><a href="#installing-the-software" id="toc-installing-the-software" class="nav-link" data-scroll-target="#installing-the-software">Installing the software</a>
   <ul class="collapse">
@@ -512,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">March 10, 2026</p>
     </div>
   </div>
   
@@ -544,6 +591,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The latest release in version 2 family can be found <a href="https://github.com/jdemetra/jdemetra-app/releases">here</a>.</p>
 <p>The highest version using Java 8 is v2.2.4.</p>
 </section>
+<section id="user-support-and-useful-links" class="level2">
+<h2 class="anchored" data-anchor-id="user-support-and-useful-links">User Support and Useful links</h2>
+<p>If you need user support, please raise an issue in this <a href="https://github.com/stace-tsa-shop/UserSupport">repository</a></p>
+<p>For specific questions related to <strong>production of seasonally adjusted series</strong> you can look up <a href="https://sa-production-with-jdemetra-and-r.netlify.app/">these pages</a></p>
+<p>To keep up with all JDemetra+ related news head over to the <a href="https://jdemetra-universe-blog.netlify.app/"><strong>JDemetra+ Universe Blog</strong></a></p>
+<p>You can also <a href="https://github.com/TanguyBarthelemy/JD_Tutorials">browse</a> and <a href="https://www.youtube.com/@TSwithJDemetraandR">watch</a> tutorials for JDemetra+. On this <a href="https://www.youtube.com/@TSwithJDemetraandR">YouTube channel</a> you will also find JDemetra+ related webinars.</p>
+</section>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>This website is under construction, in the meantime you can fill a large number of the gaps by referring to the <a href="https://jdemetradocumentation.github.io/JDemetra-documentation">previous version</a> of the on-line documentation, coordinated by Sylwia Grudkowska-Kubik (National Bank of Poland).</p>
@@ -557,12 +611,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://ec.europa.eu/eurostat/documents/3859598/8939616/KS-GQ-18-001-EN-N.pdf">Handbook on seasonal adjustment (2018)</a></p></li>
 <li><p><a href="https://ec.europa.eu/eurostat/documents/3859598/8555708/KS-GQ-17-008-EN-N.pdf">Handbook on rapid estimates (2017)</a></p></li>
 </ul>
-</section>
-<section id="useful-links" class="level2">
-<h2 class="anchored" data-anchor-id="useful-links">Useful links</h2>
-<p>To get started, you can <a href="https://github.com/TanguyBarthelemy/JD_Tutorials">browse</a> and <a href="https://www.youtube.com/@TSwithJDemetraandR">watch</a> tutorials for JDemetra+. On this <a href="https://www.youtube.com/@TSwithJDemetraandR">YouTube channel</a> you will also find JDemetra+ related webinars.</p>
-<p>If you need user support, please raise an issue in this <a href="https://github.com/stace-tsa-shop/UserSupport">repository</a></p>
-<p>To keep up with all JDemetra+ related news head over to the <a href="https://jdemetra-universe-blog.netlify.app/"><strong>JDemetra+ Universe Blog</strong></a></p>
 </section>
 <section id="how-to-contribute" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-contribute">How to contribute</h2>
@@ -591,8 +639,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Scroll down the page, download and unzip the file <em>jdemetra-standalone-3.x.y-windows-x86_64.zip</em>, if you use Windows, or the zip corresponding to your OS in the list.</p></li>
 <li><p>To start the application, run the file <strong>nbdemetra64.exe</strong> located in the following subfolder <span class="path">…\jdemetra-standalone-3.x.y-windows-x86_64\nbdemetra\bin</span></p></li>
 </ul>
-<p>Version 3.x requires Java 17 or higher, <em>jdemetra-standalone-3.x.y-windows-x86_64.zip</em> contains a portable version of Java, so you don’t have to deal with this issue on your computer.</p>
-<p>R packages related to version 3.x (rjd3…) also require Java 17 or higher, you can (and should) use the portable version provided with the graphical user interface to run them, this is explained <a href="#Rconfig">here</a>.</p>
+<p>Version 3.x requires Java 21 or higher, <em>jdemetra-standalone-3.x.y-windows-x86_64.zip</em> contains a portable version of Java, so you don’t have to deal with this issue on your computer.</p>
+<p>R packages related to version 3.x (rjd3…) also require Java 21 or higher, you can (and should) use the portable version provided with the graphical user interface to run them, this is explained <a href="#Rconfig">here</a>.</p>
 </section>
 <section id="additional-plug-ins" class="level3">
 <h3 class="anchored" data-anchor-id="additional-plug-ins">Additional Plug-ins</h3>
@@ -625,7 +673,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- general readme to build and specific to check -->
 <section id="Rconfig" class="level4">
 <h4 class="anchored" data-anchor-id="Rconfig">Configuration needed to run rjd3 packages</h4>
-<p>To use rjd3 packages in R, you need Java 17 or higher.</p>
+<p>To use rjd3 packages in R, you need Java 21 or higher.</p>
 <p>You can (and should) use the version of Java that comes with the Graphical User Interface (GUI). It is contained in the file <strong>jdemetra-standalone-3.x.y-windows-x86_64.zip</strong> available <a href="https://github.com/jdemetra/jdplus-main/releases">on this page</a>, in the “Assets” section, which you might have to expand to be able to see all the files.</p>
 <p>Once unzipped, the Java will be in located in <span class="path">C:\Software\jdemetra-standalone-3.x.y-windows-x86_64\nbdemetra\jdk-21.0.2+13-jre</span> (path to be adapted to your computer/server): this location must be declared in R.</p>
 <p>After unzipping the file:</p>
