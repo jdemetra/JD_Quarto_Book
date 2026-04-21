@@ -1,1 +1,1 @@
-Sitemap: https://jdemetra-new-documentation.netlify.app/sitemap.xml
+Sitemap: https://doc.jdemetra.org/sitemap.xml

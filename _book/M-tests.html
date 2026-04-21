@@ -503,62 +503,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- Provide links in SA chapters, link from output chapter -->
 <section id="m-tests-LB" class="level3">
 <h3 class="anchored" data-anchor-id="m-tests-LB">Ljung-Box</h3>
-<table class="table">
-<colgroup>
-<col style="width: 37%">
-<col style="width: 39%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Place</th>
-<th>Name or R code</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GUI display</td>
-<td>Main Results Node:</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Pre-processing&gt;Residuals</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Cruncher Output</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>rjd3tramoseats : display</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>retrieve</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>rjd313 display</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>retrieve</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>rjd3toolkit</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<!-- | Tool                     | Place                     | Name or R code | -->
+<!-- |--------------------------|---------------------------|----------------| -->
+<!-- | GUI display              | Main Results Node:        |                | -->
+<!-- |                          | Pre-processing\>Residuals |                | -->
+<!-- | Cruncher Output          |                           |                | -->
+<!-- | rjd3tramoseats : display |                           |                | -->
+<!-- | retrieve                 |                           |                | -->
+<!-- | rjd313 display           |                           |                | -->
+<!-- | retrieve                 |                           |                | -->
+<!-- | rjd3toolkit              |                           |                | -->
 <p>For R code estimation object is obtained as</p>
 <p>The Ljung-Box Q-statistics given by :</p>
 <p><span class="math display">\[
@@ -696,11 +650,18 @@ QS=n(n+2)\sum_{i=1}^k\frac{[\max(0, \hat\gamma_{i \cdot l})]^2}{n-i \cdot l}
 </section>
 <section id="f-test-on-seasonal-dummies" class="level3">
 <h3 class="anchored" data-anchor-id="f-test-on-seasonal-dummies">F-test on seasonal dummies</h3>
-<p>The F-test on seasonal dummies checks for the presence of deterministic seasonality. The model used here uses seasonal dummies (mean effect and 11 seasonal dummies for monthly data, mean effect and 3 for quarterly data) to describe the (possibly transformed) time series behaviour. The test statistic checks if the seasonal dummies are jointly statistically not significant. When this hypothesis is rejected, it is assumed that the deterministic seasonality is present and the test results are displayed in green.</p>
-<p>This test refers to Model-Based $^{2}$ and F-tests for Fixed Seasonal Effects proposed by LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007) that is based on the estimates of the regression dummy variables and the corresponding t-statistics of the Reg-ARIMA model, in which the ARIMA part of the model has a form (0,1,1)(0,0,0). The consequences of a misspecification of a model are discussed in LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007).</p>
-<p>For a monthly time series the Reg-ARIMA model structure is as follows:</p>
+<p>The F-test on seasonal dummies checks for the presence of deterministic seasonality. The model used here uses seasonal dummies (mean effect and 11 seasonal dummies for monthly data, mean effect and 3 for quarterly data) to describe the (possibly transformed) time series behaviour.</p>
+<p>The test statistic checks if the seasonal dummies are jointly statistically not significant. When this hypothesis is rejected, it is assumed that the deterministic seasonality is present.</p>
+<p>This test refers to Model-Based χ2 and F-tests for Fixed Seasonal Effects proposed by LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007) that is based on the estimates of the regression dummy variables and the corresponding t-statistics of the RegARIMA model, in which the SARIMA part of the model as one of the following forms:</p>
+<ul>
+<li><p>(0 1 0)(0 0 0)</p></li>
+<li><p>(1 0 0)(0 0 0)</p></li>
+<li><p>(0 0 0)(0 0 0)</p></li>
+</ul>
+<p>In that way, the model can always be quickly estimated by a simple OLS. The first form will be the default for original series and for seasonally adjusted series. The last form is reserved for tests on irregular components and on residuals. Using more complex ARIMA models does not significantly change the results.</p>
+<p>For instance, in the case of a monthly series and structure (0 1 0)(0 0 0), the RegARIMA model structure is as follows:</p>
 <p><span id="eq-1"><span class="math display">\[
-(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{11}M_{11,t}-\gamma X_{t})=\mu+(1-B)a_{t}
+(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{11}M_{11,t}-\gamma X_{t})=\mu+a_{t}
 \tag{1}\]</span></span></p>
 <p>where:</p>
 <ul>
@@ -711,19 +672,7 @@ QS=n(n+2)\sum_{i=1}^k\frac{[\max(0, \hat\gamma_{i \cdot l})]^2}{n-i \cdot l}
 <li><p><span class="math inline">\(\mu\)</span> – mean effect;</p></li>
 <li><p><span class="math inline">\(a_{t}\)</span> – white-noise variable with mean zero and a constant variance.</p></li>
 </ul>
-<p>In the case of a quarterly series the estimated model has this form:</p>
-<p><span id="eq-2"><span class="math display">\[
-(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{3}M_{3,t}-\gamma X_{t})=\mu+(1-B)a_{t}
-\tag{2}\]</span></span></p>
-<p>where:</p>
-<p><span class="math display">\[
-M_{j,t} =
-\begin{cases}
-1 &amp; \text{in quarter} j=1, \ldots, 3 \\
-- 1 &amp; \text{in the fourth quarter}\\
-0 &amp; \text{otherwise}
-\end{cases} \text{-dummy variables;}
-\]</span></p>
+<p>The consequences of a misspecification of a model are discussed in LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007).</p>
 <p>One can use the individual t-statistics to assess whether seasonality for a given month is significant, or a chi-squared test statistic if the null hypothesis is that the parameters are collectively all zero. The chi-squared test statistic is <span class="math inline">\({\widehat{\chi}}^{2}={\widehat{\beta}}^{'}{[ Var(\widehat{\beta})}^{\ })^{- 1}]{\widehat{\beta}}^{\ }\)</span> in this case compared to critical values from a <span class="math inline">\(\chi^{2}(\text{df})\)</span>-distribution, with degrees of freedom <span class="math inline">\(df=11\)</span> (monthly series) or <span class="math inline">\(df=3\)</span> (quarterly series). Since the <span class="math inline">\(Var(\widehat{\beta})\)</span> computed using the estimated variance of <span class="math inline">\(\alpha_{t}\)</span> may be very different from the actual variance in small samples, this test is corrected using the proposed <span class="math inline">\(\text{F}\)</span> statistic:</p>
 <p><span class="math display">\[
 F=\frac{{\widehat{\chi}}^{2}}{s-1} \times \frac{n-d-k}{n-d}
@@ -752,7 +701,7 @@ Q=\frac{SS_t}{SS_e}
 </section>
 <section id="moving-seasonality-test" class="level3">
 <h3 class="anchored" data-anchor-id="moving-seasonality-test">Moving seasonality test</h3>
-<p>The evolutive seasonality test is based on a two-way analysis of variance model. The model uses the values from complete years only. Depending on the decomposition type for the Seasonal/Irregular component it uses <a href="#eq-1">Equation&nbsp;<span>1</span></a> (in the case of a multiplicative model) or <a href="#eq-2">Equation&nbsp;<span>2</span></a> (in the case of an additive model):</p>
+<p>The evolutive seasonality test is based on a two-way analysis of variance model. The model uses the values from complete years only. Depending on the decomposition type for the Seasonal/Irregular component it uses <a href="#eq-1">Equation&nbsp;<span>1</span></a> (in the case of a multiplicative model) or <a href="M-SEATS-decomposition.html#eq-2">Equation&nbsp;<span>2</span></a> (in the case of an additive model):</p>
 <p><span class="math display">\[
 |\text{SI}_{\text{ij}}-1|=X_{\text{ij}}=b_{i}+m_{j}+e_{\text{ij}}
 \]</span></p>
@@ -768,7 +717,7 @@ Q=\frac{SS_t}{SS_e}
 <p>The test is based on the following decomposition:</p>
 <p><span id="eq-3"><span class="math display">\[
 S^{2}=S_{A}^{2}+S_{B}^{2}+S_{R}^{2},
-\tag{3}\]</span></span></p>
+\tag{2}\]</span></span></p>
 <p>where:</p>
 <ul>
 <li><p><span class="math inline">\(S^{2}=\sum_{j=1}^{k}{\sum_{i=1}^{N}({\overline{X}}_{\text{ij}}-{\overline{X}}_{\bullet \bullet})^{2}}\)</span> –the total sum of squares;</p></li>

@@ -50,16 +50,16 @@ This chapter provides a theoritical overview of all the tests available in JDeme
 
 ### Ljung-Box {#m-tests-LB}
 
-| Tool                     | Place                     | Name or R code |
-|--------------------------|---------------------------|----------------|
-| GUI display              | Main Results Node:        |                |
-|                          | Pre-processing\>Residuals |                |
-| Cruncher Output          |                           |                |
-| rjd3tramoseats : display |                           |                |
-| retrieve                 |                           |                |
-| rjd313 display           |                           |                |
-| retrieve                 |                           |                |
-| rjd3toolkit              |                           |                |
+<!-- | Tool                     | Place                     | Name or R code | -->
+<!-- |--------------------------|---------------------------|----------------| -->
+<!-- | GUI display              | Main Results Node:        |                | -->
+<!-- |                          | Pre-processing\>Residuals |                | -->
+<!-- | Cruncher Output          |                           |                | -->
+<!-- | rjd3tramoseats : display |                           |                | -->
+<!-- | retrieve                 |                           |                | -->
+<!-- | rjd313 display           |                           |                | -->
+<!-- | retrieve                 |                           |                | -->
+<!-- | rjd3toolkit              |                           |                | -->
 
 For R code estimation object is obtained as
 
@@ -188,14 +188,26 @@ Maravall (2012) proposes approximate the correct distribution (p-values) of the 
 
 ### F-test on seasonal dummies
 
-The F-test on seasonal dummies checks for the presence of deterministic seasonality. The model used here uses seasonal dummies (mean effect and 11 seasonal dummies for monthly data, mean effect and 3 for quarterly data) to describe the (possibly transformed) time series behaviour. The test statistic checks if the seasonal dummies are jointly statistically not significant. When this hypothesis is rejected, it is assumed that the deterministic seasonality is present and the test results are displayed in green.
+The F-test on seasonal dummies checks for the presence of deterministic seasonality. The model used here uses seasonal dummies (mean effect and 11 seasonal dummies for monthly data, mean effect and 3 for quarterly data) to describe the (possibly transformed) time series behaviour. 
 
-This test refers to Model-Based \$\chi\^{2}\$ and F-tests for Fixed Seasonal Effects proposed by LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007) that is based on the estimates of the regression dummy variables and the corresponding t-statistics of the Reg-ARIMA model, in which the ARIMA part of the model has a form (0,1,1)(0,0,0). The consequences of a misspecification of a model are discussed in LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007).
+The test statistic checks if the seasonal dummies are jointly statistically not significant. When this hypothesis is rejected, it is assumed that the deterministic seasonality is present.
 
-For a monthly time series the Reg-ARIMA model structure is as follows:
+This test refers to Model-Based χ2 and F-tests for Fixed Seasonal Effects proposed by LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007) that is based on the estimates of the regression dummy variables and the corresponding t-statistics of the RegARIMA model, in which the SARIMA part of the model as one of the following forms:
+
+-	(0 1 0)(0 0 0)
+
+- 	(1 0 0)(0 0 0)
+
+- 	(0 0 0)(0 0 0)
+
+In that way, the model can always be quickly estimated by a simple OLS.
+The first form will be the default for original series and for seasonally adjusted series. The last form is reserved for tests on irregular components and on residuals.
+Using more complex ARIMA models does not significantly change the results.
+
+For instance, in the case of a monthly series and structure (0 1 0)(0 0 0), the RegARIMA model structure is as follows: 
 
 $$
-(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{11}M_{11,t}-\gamma X_{t})=\mu+(1-B)a_{t}
+(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{11}M_{11,t}-\gamma X_{t})=\mu+a_{t}
 $$ {#eq-1}
 
 where:
@@ -212,22 +224,8 @@ where:
 
 -   $a_{t}$ -- white-noise variable with mean zero and a constant variance.
 
-In the case of a quarterly series the estimated model has this form:
+The consequences of a misspecification of a model are discussed in LYTRAS, D.P., FELDPAUSCH, R.M., and BELL, W.R. (2007).
 
-$$
-(1-B)(y_{t}-\beta_{1}M_{1,t}-\ldots-\beta_{3}M_{3,t}-\gamma X_{t})=\mu+(1-B)a_{t}
-$$ {#eq-2}
-
-where:
-
-$$
-M_{j,t} =
-\begin{cases}
-1 & \text{in quarter} j=1, \ldots, 3 \\
-- 1 & \text{in the fourth quarter}\\
-0 & \text{otherwise}
-\end{cases} \text{-dummy variables;}
-$$
 
 One can use the individual t-statistics to assess whether seasonality for a given month is significant, or a chi-squared test statistic if the null hypothesis is that the parameters are collectively all zero. The chi-squared test statistic is ${\widehat{\chi}}^{2}={\widehat{\beta}}^{'}{[ Var(\widehat{\beta})}^{\ })^{- 1}]{\widehat{\beta}}^{\ }$ in this case compared to critical values from a $\chi^{2}(\text{df})$-distribution, with degrees of freedom $df=11$ (monthly series) or $df=3$ (quarterly series). Since the $Var(\widehat{\beta})$ computed using the estimated variance of $\alpha_{t}$ may be very different from the actual variance in small samples, this test is corrected using the proposed $\text{F}$ statistic:
 

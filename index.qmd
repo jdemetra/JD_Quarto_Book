@@ -35,9 +35,9 @@ The highest version using Java 8 is v2.2.4.
 
 If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
 
-For specific questions related to **production of seasonally adjusted series** you can look up [these pages](https://sa-production-with-jdemetra-and-r.netlify.app/)
+For specific questions related to **production of seasonally adjusted series** you can look up [these pages](https://prod.jdemetra.org/)
 
-To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://jdemetra-universe-blog.netlify.app/)
+To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://blog.jdemetra.org)
 
 You can also [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
 
@@ -62,7 +62,7 @@ Key methodological explanations and state-of-the-art description and references 
 
 ## How to contribute 
 
-If you want to help us improve this book, you can [fork this repository on GitHub](https://github.com/annasmyk/JD_Quarto_Book) and create pull requests with your contributions.
+If you want to help us improve this book, you can [fork this repository on GitHub](https://github.com/jdemetra/JD_Quarto_Book) and create pull requests with your contributions.
 
 ## Installing the software
 

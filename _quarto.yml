@@ -13,7 +13,7 @@ book:
       This book was built with <a href="https://quarto.org/">Quarto</a>.
   
   repo-actions: [edit,issue]
-  site-url: https://jdemetra-new-documentation.netlify.app/
+  site-url: https://doc.jdemetra.org/
   repo-url: https://github.com/jdemetra/JD_Quarto_Book
   repo-branch: main
   # cover-image: resources/logo-utilitr.png
@@ -70,7 +70,7 @@ book:
           city: Madrid
           url: "https://www.ine.es/"
       role: "Collaborator"
-  date: "03/26/2026"
+  date: "04/21/2026"
   page-navigation: true
   chapters:
     - index.qmd
