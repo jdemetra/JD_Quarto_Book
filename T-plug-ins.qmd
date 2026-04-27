@@ -4,11 +4,11 @@ JDemetra+ Graphical User Interface can be extended with plug-ins, which are comp
 
 In this chapter, we cover
 
--   Algorithms available via plug-ins
+- Algorithms available via plug-ins
 
--   [Utility plug-ins](#t-plug-ins-ut): data providers, data formatting
+- [Utility plug-ins](#t-plug-ins-ut): data providers, data formatting
 
--   Installation [procedure](#t-plug-ins-inst) which consists of downloading the appropriate "\*.nbm" file and installation it with the GUI.
+- Installation [procedure](#t-plug-ins-inst) which consists of downloading the appropriate "\*.nbm" file and installation it with the GUI.
 
 ## Algorithms available with plug-ins {#t-plug-ins-algs}
 
@@ -18,53 +18,53 @@ Here is an overview of the algorithms which can be added by installing additiona
 
 For low frequency (monthly, quarterly, half-yearly, quadri-monthly) data the following additional algorithms are available with plug-ins. Corresponding files are located in the [Incubator](https://github.com/jdemetra/jdplus-incubator) ([latest releases](https://github.com/jdemetra/jdplus-incubator/releases)). Installation of auxiliary plug-in "jdplus-advancedsa-desktop-plugin-x.y.z.nbm" also located in the incubator is required.
 
-+-------------------------------------------------------------------------------------------------------+-----------------------------------------+------------------------------------------+
-| Algorithm                                                                                             | Plugin File Name                        | Documentation pages                      |
-+=======================================================================================================+=========================================+==========================================+
-| X12+                                                                                                  | jdplus-x12plus-desktop-plugin-x.y.z.nbm | Usage in GUI described [here](#a-sa-x12) |
-|                                                                                                       |                                         |                                          |
-| Airline based pre-adjustment and extended X11 decomposition                                           |                                         |                                          |
-+-------------------------------------------------------------------------------------------------------+-----------------------------------------+------------------------------------------+
-| STL+                                                                                                  | jdplus-stl-desktop-plugin-x.y.z.nbm     | Usage in GUI described [here](#a-sa-stl) |
-|                                                                                                       |                                         |                                          |
-| Airline based pre-adjustment and STL (Loess) decomposition                                            |                                         |                                          |
-+-------------------------------------------------------------------------------------------------------+-----------------------------------------+------------------------------------------+
-| STS+                                                                                                  | jdplus-sts-desktop-plugin-x.y.z.nbm     | Usage in GUI described [here](#a-sa-bsm) |
-|                                                                                                       |                                         |                                          |
-| Airline based pre-adjustment for outlier detection and calendar estimation, followed by BSM modelling |                                         |                                          |
-+-------------------------------------------------------------------------------------------------------+-----------------------------------------+------------------------------------------+
-| Seats+                                                                                                | upcoming                                | upcoming                                 |
-|                                                                                                       |                                         |                                          |
-| Airline based pre-adjustment and Seats decomposition                                                  |                                         |                                          |
-+-------------------------------------------------------------------------------------------------------+-----------------------------------------+------------------------------------------+
++-------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+
+| Algorithm                                                                                             | Plugin File Name                        | Documentation pages |
++=======================================================================================================+=========================================+=====================+
+| X12+                                                                                                  | jdplus-x12plus-desktop-plugin-x.y.z.nbm | upcoming            |
+|                                                                                                       |                                         |                     |
+| Airline based pre-adjustment and extended X11 decomposition                                           |                                         |                     |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+
+| STL+                                                                                                  | jdplus-stl-desktop-plugin-x.y.z.nbm     | upcoming            |
+|                                                                                                       |                                         |                     |
+| Airline based pre-adjustment and STL (Loess) decomposition                                            |                                         |                     |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+
+| STS+                                                                                                  | jdplus-sts-desktop-plugin-x.y.z.nbm     | upcoming            |
+|                                                                                                       |                                         |                     |
+| Airline based pre-adjustment for outlier detection and calendar estimation, followed by BSM modelling |                                         |                     |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+
+| Seats+                                                                                                | upcoming                                | upcoming            |
+|                                                                                                       |                                         |                     |
+| Airline based pre-adjustment and Seats decomposition                                                  |                                         |                     |
++-------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+
 
 ### Seasonal Adjustment of High-Frequency data
 
 For low frequency (monthly, quarterly, half-yearly, quadri-monthly) data the following algorithms are available with plug-ins. Corresponding files are located in the [Incubator](https://github.com/jdemetra/jdplus-incubator) ([latest releases](https://github.com/jdemetra/jdplus-incubator/releases) ). Installation of auxiliary plug-in "jdplus-advancedsa-desktop-plugin-x.y.z.nbm" also located in the incubator is required.
 
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
-| Algorithm                                                  | Plugin File Name                         | Repo / Comments             |
-+============================================================+==========================================+=============================+
-| Extended Airline Estimation                                | jdplus-highfreq-desktop-plugin-x.y.z.nbm | Usage in GUI described here |
-|                                                            |                                          |                             |
-| (Reg-ARIMA Modelling)                                      |                                          |                             |
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
-| Extended Airline Decomposition                             | jdplus-highfreq-desktop-plugin-x.y.z.nbm | Usage in GUI described here |
-|                                                            |                                          |                             |
-| (Extended Seats)                                           |                                          |                             |
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
-| MX12+                                                      | upcoming                                 | upcoming                    |
-|                                                            |                                          |                             |
-| Extended Airline Estimation and Extended X11 Decomposition |                                          |                             |
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
-| MSTL+                                                      | upcoming                                 | upcoming                    |
-|                                                            |                                          |                             |
-| Extended Airline Estimation and STL Decomposition          |                                          |                             |
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
-| MSTS                                                       | upcoming                                 | upcoming                    |
-|                                                            |                                          |                             |
-| Basic Structural Models                                    |                                          |                             |
-+------------------------------------------------------------+------------------------------------------+-----------------------------+
++------------------------------------------------------------+------------------------------------------+-----------------+
+| Algorithm                                                  | Plugin File Name                         | Repo / Comments |
++============================================================+==========================================+=================+
+| Extended Airline Estimation                                | jdplus-highfreq-desktop-plugin-x.y.z.nbm | upcoming        |
+|                                                            |                                          |                 |
+| (Reg-ARIMA Modelling)                                      |                                          |                 |
++------------------------------------------------------------+------------------------------------------+-----------------+
+| Extended Airline Decomposition                             | jdplus-highfreq-desktop-plugin-x.y.z.nbm | upcoming        |
+|                                                            |                                          |                 |
+| (Extended Seats)                                           |                                          |                 |
++------------------------------------------------------------+------------------------------------------+-----------------+
+| MX12+                                                      | upcoming                                 | upcoming        |
+|                                                            |                                          |                 |
+| Extended Airline Estimation and Extended X11 Decomposition |                                          |                 |
++------------------------------------------------------------+------------------------------------------+-----------------+
+| MSTL+                                                      | jdplus-stl-desktop-plugin-x.y.z.nbm      | upcoming        |
+|                                                            |                                          |                 |
+| Extended Airline Estimation and STL Decomposition          |                                          |                 |
++------------------------------------------------------------+------------------------------------------+-----------------+
+| MSTS                                                       | upcoming                                 | upcoming        |
+|                                                            |                                          |                 |
+| Basic Structural Models                                    |                                          |                 |
++------------------------------------------------------------+------------------------------------------+-----------------+
 
 ### Advanced Seasonal adjustment features for v 2.x
 
@@ -86,14 +86,21 @@ In version 3.x, the plug-in file ("jdplus-benchmarking-desktop-plugin-x.y.z.nbm"
 
 In version 2.x, the plug-in file ("nbdemetra-benchmarking-2.2.2.nbm") is available [here](https://github.com/nbbrd/jdemetra-benchmarking) for download. Usage in GUI is described in [this chapter](#a-bench).
 
++------------------------+-----------------------+-----------------------+
 | Method                 | Plug-in for Version 2 | Plug-in for version 3 |
-|------------------------|-----------------------|-----------------------|
++========================+=======================+=======================+
 | Denton                 | ✔                     | ✔                     |
++------------------------+-----------------------+-----------------------+
 | Cholette               | ✔                     | ✔                     |
++------------------------+-----------------------+-----------------------+
 | Cholette Multi-variate | ✔                     | ✖                     |
++------------------------+-----------------------+-----------------------+
 | Cubic Splines          | ✖                     | ✔                     |
++------------------------+-----------------------+-----------------------+
 | Grp                    | ✖                     | ✔                     |
++------------------------+-----------------------+-----------------------+
 | Calendarization        | ✔                     | ✖                     |
++------------------------+-----------------------+-----------------------+
 
 ### Temporal Disaggregation
 
@@ -130,31 +137,31 @@ In version 2.x, the plug-in file ("jdplus-sdmx-desktop-plugin-x.y.z.nbm") is ava
 
 The following plug-in was developed by the Deutsche Bundesbank (BBK). For the moment it is only available for version 2.x.
 
--   [CompRes](https://bbkrd.github.io/pages/compres/): The plug-in CompRes supports the controlled current adjustment approach. It pro the storage of the current components and offers graphical tools to compare forecasted and re-estimated figures. Furthermore, a pre-defined summary of the output containing the most important quality measures can be exported to HTML files.
+- [CompRes](https://bbkrd.github.io/pages/compres/): The plug-in CompRes supports the controlled current adjustment approach. It pro the storage of the current components and offers graphical tools to compare forecasted and re-estimated figures. Furthermore, a pre-defined summary of the output containing the most important quality measures can be exported to HTML files.
 
 ### Chain linked Indices
 
 The following plug-ins were developed by the Deutsche Bundesbank (BBK). For the moment they are only available for version 2.x.
 
--   [KIX](https://bbkrd.github.io/pages/kix): The plug-in KIX (German for chain-linked index) has been designed to facilitate the handling of this index type. It offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth.
+- [KIX](https://bbkrd.github.io/pages/kix): The plug-in KIX (German for chain-linked index) has been designed to facilitate the handling of this index type. It offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth.
 
--   [KIX2.0](https://bbkrd.github.io/pages/kix/kix2): KIX 2.0 offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth following the concept of annual overlap. Contributions to growth are calculated with the partial contribution to growth approach.
+- [KIX2.0](https://bbkrd.github.io/pages/kix/kix2): KIX 2.0 offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth following the concept of annual overlap. Contributions to growth are calculated with the partial contribution to growth approach.
 
--   [KIXE](https://bbkrd.github.io/pages/kix/kixe): KIX_E offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth following the concept of one-period overlap. Contributions to growth are calculated with the aid of the Ribe (1999) contribution to growth approach.
+- [KIXE](https://bbkrd.github.io/pages/kix/kixe): KIX_E offers addition and subtraction of two or more chain-linked time series as well as the computation of contributions of growth following the concept of one-period overlap. Contributions to growth are calculated with the aid of the Ribe (1999) contribution to growth approach.
 
--   [KIX](https://bbkrd.github.io/pages/kix/kixcc): The program KIX-CC offers for continuously chain-linked indices the aggregation or disaggregation of two or more indices, or the calculation of contributions to growth.
+- [KIX](https://bbkrd.github.io/pages/kix/kixcc): The program KIX-CC offers for continuously chain-linked indices the aggregation or disaggregation of two or more indices, or the calculation of contributions to growth.
 
 ### Calendar regressors wrangling
 
 The following plug-in was developed by the Deutsche Bundesbank (BBK). For the moment it is only available for version 2.x.
 
--   [TransReg](https://bbkrd.github.io/pages/transreg): The plug-in TransReg allows the user to carry out grouping and centring of user-defined regression variables in JD+.
+- [TransReg](https://bbkrd.github.io/pages/transreg): The plug-in TransReg allows the user to carry out grouping and centring of user-defined regression variables in JD+.
 
 ### Specification conversion
 
 The following plug-in was developed by the Deutsche Bundesbank (BBK). For the moment it is only available for version 2.x.
 
--   [Xlsx2Ws](https://bbkrd.github.io/pages/xlsx2ws): The plug-in Xlsx2Ws allows the converting of specific workspace information to a xlsx file and vice versa.
+- [Xlsx2Ws](https://bbkrd.github.io/pages/xlsx2ws): The plug-in Xlsx2Ws allows the converting of specific workspace information to a xlsx file and vice versa.
 
 ### Job Vacancy Survey (JVS) Quality report (version 2)
 
@@ -170,7 +177,7 @@ It is commonly used by Labor Cost Index (LCI) producers across eurosystem countr
 
 The following plug-ins was developed by the National bank of Belgium (NBB). It is only available for version 2.x.
 
--   [Access](https://github.com/nbbrd/jdemetra-access)This JDemetra+ extension is a pure java library for reading time series from [MS Access databases](https://en.wikipedia.org/wiki/Microsoft_Access). It currently supports versions 2000-2016 read/write and 97 read-only.Being a pure Java library, you don't need MS Access installed in order to read Access files.
+- [Access](https://github.com/nbbrd/jdemetra-access)This JDemetra+ extension is a pure java library for reading time series from [MS Access databases](https://en.wikipedia.org/wiki/Microsoft_Access). It currently supports versions 2000-2016 read/write and 97 read-only.Being a pure Java library, you don't need MS Access installed in order to read Access files.
 
 ## Installation procedure {#t-plug-ins-inst}
 
@@ -180,10 +187,10 @@ menu\>tools\> plug-ins
 
 The *Plugins* window includes five panels: *Updates*, *Available plugins*, *Downloaded*, *Installed* and *Settings*, some of them however are not operational in the current version of the software.
 
--   The *Updates* panel offers the user the option to manually check if some updates of the already installed plugins are available. This functionality, however, is currently not operational for the JDemetra+ plugins.
--   The *Available plugins* panel allows the downloading of all plugins that are related to JDemetra+. This functionality, however, is currently not operational for the JDemetra+ plugins.
--   The *Downloaded* panel is designed for the installation of new plugins from a local machine. This process in explained in more detail below.
--   The *Settings* panel is designated for adding update centres, which are the locations that hold plugins. For each centre the user can specify proxy settings and a time interval to automatically check for any updates. At the moment this functionality is not operational for the JDemetra+ plugins.
+- The *Updates* panel offers the user the option to manually check if some updates of the already installed plugins are available. This functionality, however, is currently not operational for the JDemetra+ plugins.
+- The *Available plugins* panel allows the downloading of all plugins that are related to JDemetra+. This functionality, however, is currently not operational for the JDemetra+ plugins.
+- The *Downloaded* panel is designed for the installation of new plugins from a local machine. This process in explained in more detail below.
+- The *Settings* panel is designated for adding update centres, which are the locations that hold plugins. For each centre the user can specify proxy settings and a time interval to automatically check for any updates. At the moment this functionality is not operational for the JDemetra+ plugins.
 
 Installation of the new plugins from the local machine can be done from the *Plugin* functionality activated from the *Tools* menu.
 
@@ -247,11 +254,11 @@ The list of all installed plugins is displayed in the fourth panel. To modify th
 
 The following options are available:
 
--   **Activate** -- activates the marked plugin if it is currently inactive. The option is available for inactive plugins (see the picture below);
+- **Activate** -- activates the marked plugin if it is currently inactive. The option is available for inactive plugins (see the picture below);
 
--   **Deactivate** -- deactivates the marked plugin if it is currently active. The option is available for active plugins (see the picture below);
+- **Deactivate** -- deactivates the marked plugin if it is currently active. The option is available for active plugins (see the picture below);
 
--   **Uninstall** -- uninstalls the marked plugin.
+- **Uninstall** -- uninstalls the marked plugin.
 
 Inactive plugins can be activated or uninstalled.
 
@@ -295,18 +302,29 @@ Plug-ins-default-v3.png
 
 ### Default Plugins in v 2.2.4
 
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Name**                       | **Category**       | **Description**                                                                                                                                              |
-|--------------------------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
++================================+====================+==============================================================================================================================================================+
 | NbDemetra -- Anomaly detection | SA core algorithms | Identification of outliers                                                                                                                                   |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- Spreadsheet       | IO (Input/output)  | Time series providers for spreadsheet (Excel, OpenOffice)                                                                                                    |
-| NbDemetra -- Common            | IO (Input/output)  | Common time series providers, like `.xml` and `.txt`                                                                                                               |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NbDemetra -- Common            | IO (Input/output)  | Common time series providers, like `.xml` and `.txt`                                                                                                         |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- JDBC              | IO (Input/output)  | Time series provider for the JDBC sources                                                                                                                    |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- ODBC              | IO (Input/output)  | Time series provider for the ODBC sources                                                                                                                    |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- SDMX              | IO (Input/output)  | Time series provider for SDMX files                                                                                                                          |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- Core              | SA core algorithms | Encapsulation of the core algorithms                                                                                                                         |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- UI                | SA core algorithms | Basic graphical components                                                                                                                                   |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- Branding          | SA core algorithms |                                                                                                                                                              |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | NbDemetra -- SA                | SA core algorithms | Default SA framework, including Tramo-Seats and X-13ARIMA-Seats. This implementation can lead to small differences in comparison with the original programs. |
++--------------------------------+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 This list is displayed in the *Installed* panel. This panel is available from the *Plugin* functionality and it is activated from the *Tools* menu.
 
