@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>JDemetra+ documentation - New Features in v 3.x family</title>
+<title>JDemetra+ documentation - Output from X13-Arima</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./G-jd-history.html" rel="next">
-<link href="./G-how-to-use-this-book.html" rel="prev">
+<link href="./P_Methods.html" rel="next">
+<link href="./P-Output.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -95,8 +61,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -110,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./G-news-v3-vs-v2.html">New Features in v 3.x family</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./P-Output.html">Output description</a></li><li class="breadcrumb-item"><a href="./O-X13-ARIMA-Output.html">Output from X13-Arima</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./G-news-v3-vs-v2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./G-news-v3-vs-v2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">New Features in v 3.x family</span></a>
   </div>
 </li>
@@ -349,14 +313,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./P-Output.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Output description</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./O-X13-ARIMA-Output.html" class="sidebar-item-text sidebar-link">
+  <a href="./O-X13-ARIMA-Output.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Output from X13-Arima</span></a>
   </div>
 </li>
@@ -438,30 +402,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#in-this-chapter" id="toc-in-this-chapter" class="nav-link active" data-scroll-target="#in-this-chapter">In this chapter</a></li>
-  <li><a href="#seasonal-adjustment-and-modelling" id="toc-seasonal-adjustment-and-modelling" class="nav-link" data-scroll-target="#seasonal-adjustment-and-modelling">Seasonal Adjustment and Modelling</a>
+  <li><a href="#how-to-generate-output" id="toc-how-to-generate-output" class="nav-link" data-scroll-target="#how-to-generate-output">How to generate output ?</a>
   <ul class="collapse">
-  <li><a href="#v3-vs-v2-sa" id="toc-v3-vs-v2-sa" class="nav-link" data-scroll-target="#v3-vs-v2-sa">Seasonal adjustment algorithms</a></li>
-  <li><a href="#modelling-algorithms" id="toc-modelling-algorithms" class="nav-link" data-scroll-target="#modelling-algorithms">Modelling Algorithms</a></li>
+  <li><a href="#from-graphical-user-interface" id="toc-from-graphical-user-interface" class="nav-link" data-scroll-target="#from-graphical-user-interface">From Graphical User Interface</a></li>
+  <li><a href="#using-the-cruncher" id="toc-using-the-cruncher" class="nav-link" data-scroll-target="#using-the-cruncher">Using the Cruncher</a></li>
+  <li><a href="#with-rjd3x13" id="toc-with-rjd3x13" class="nav-link" data-scroll-target="#with-rjd3x13">With rjd3x13</a></li>
+  <li><a href="#description-details" id="toc-description-details" class="nav-link" data-scroll-target="#description-details">Description details</a></li>
   </ul></li>
-  <li><a href="#new-sa-mass-production-possibilities" id="toc-new-sa-mass-production-possibilities" class="nav-link" data-scroll-target="#new-sa-mass-production-possibilities">New SA (mass) production possibilities</a>
+  <li><a href="#series" id="toc-series" class="nav-link" data-scroll-target="#series">Series</a>
   <ul class="collapse">
-  <li><a href="#new-r-tools-for-wrangling-workspaces" id="toc-new-r-tools-for-wrangling-workspaces" class="nav-link" data-scroll-target="#new-r-tools-for-wrangling-workspaces">New R Tools for wrangling workspaces</a></li>
-  <li><a href="#production-fully-in-r" id="toc-production-fully-in-r" class="nav-link" data-scroll-target="#production-fully-in-r">Production fully in R</a></li>
+  <li><a href="#final-series-from-seasonal-adjustment-process" id="toc-final-series-from-seasonal-adjustment-process" class="nav-link" data-scroll-target="#final-series-from-seasonal-adjustment-process">Final series from Seasonal Adjustment Process</a></li>
+  <li><a href="#final-series-with-x-11-style-names" id="toc-final-series-with-x-11-style-names" class="nav-link" data-scroll-target="#final-series-with-x-11-style-names">Final series with X-11 style names</a></li>
+  <li><a href="#robustified-final-series" id="toc-robustified-final-series" class="nav-link" data-scroll-target="#robustified-final-series">Robustified final series</a></li>
+  <li><a href="#pre-processing-series" id="toc-pre-processing-series" class="nav-link" data-scroll-target="#pre-processing-series">Pre-processing series</a></li>
+  <li><a href="#pre-processing-series-in-x11-a-table" id="toc-pre-processing-series-in-x11-a-table" class="nav-link" data-scroll-target="#pre-processing-series-in-x11-a-table">Pre-processing series in X11 A-Table</a></li>
   </ul></li>
-  <li><a href="#time-series-general-purpose-tools" id="toc-time-series-general-purpose-tools" class="nav-link" data-scroll-target="#time-series-general-purpose-tools">Time series general purpose tools</a>
+  <li><a href="#diagnostics" id="toc-diagnostics" class="nav-link" data-scroll-target="#diagnostics">Diagnostics</a>
   <ul class="collapse">
-  <li><a href="#canova-hansen-test-to-identify-multiple-seasonal-patterns" id="toc-canova-hansen-test-to-identify-multiple-seasonal-patterns" class="nav-link" data-scroll-target="#canova-hansen-test-to-identify-multiple-seasonal-patterns">Canova-Hansen test to identify multiple seasonal patterns</a></li>
+  <li><a href="#tests-on-residuals" id="toc-tests-on-residuals" class="nav-link" data-scroll-target="#tests-on-residuals">Tests on residuals</a></li>
+  <li><a href="#seasonality-tests" id="toc-seasonality-tests" class="nav-link" data-scroll-target="#seasonality-tests">Seasonality tests</a></li>
   </ul></li>
-  <li><a href="#underway-developments" id="toc-underway-developments" class="nav-link" data-scroll-target="#underway-developments">Underway developments</a></li>
+  <li><a href="#parameters-and-other-estimation-results" id="toc-parameters-and-other-estimation-results" class="nav-link" data-scroll-target="#parameters-and-other-estimation-results">Parameters and other estimation results</a>
+  <ul class="collapse">
+  <li><a href="#char" id="toc-char" class="nav-link" data-scroll-target="#char">char</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jdemetra/JD_Quarto_Book/edit/main/G-news-v3-vs-v2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jdemetra/JD_Quarto_Book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jdemetra/JD_Quarto_Book/edit/main/O-X13-ARIMA-Output.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jdemetra/JD_Quarto_Book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="v3-vs-v2" class="quarto-section-identifier">New Features in v 3.x family</span></h1>
+<h1 class="title"><span id="output-chap" class="quarto-section-identifier">Output from X13-Arima</span></h1>
 </div>
 
 
@@ -478,199 +451,877 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="in-this-chapter" class="level2">
 <h2 class="anchored" data-anchor-id="in-this-chapter">In this chapter</h2>
-<p>This chapter provides an overview of the new features in version 3.x as well as significant modification of display or content for features already available in v 2.2.4. Compared to its predecessor, version 3.x provides:</p>
+<p>The output of X13-Arima procedure is detailed (Reg-Arima pre-processing, and X11 Decomposition).</p>
+<p>(pre-processing or pre-adjustment or pre-treatment are used interchangeably)</p>
+<p>This presentation is broken down by categories to make navigation easier</p>
 <ul>
-<li><p>Additional Algorithms for Seasonal Adjustment (SA), Benchmarking and Temporal Disaggregation (TD), Nowcasting, Revision Analysis</p></li>
-<li><p>More stand alone time series tools</p></li>
-<li><p>More “acceptable” frequencies in SA</p></li>
-<li><p>New SA (mass) production possibilities</p></li>
+<li><p>series</p>
+<ul>
+<li><p>final series resulting from a complete SA process, typically final series include re-allocated pre-adjustment effects</p></li>
+<li><p>pre-adjustment series</p></li>
+<li><p>decomposition series (based on the linearized series without pre-adjustment effects)</p></li>
+</ul></li>
+<li><p>parameters from</p>
+<ul>
+<li><p>pre-processing</p></li>
+<li><p>decomposition</p></li>
+</ul></li>
+<li><p>diagnostics on</p>
+<ul>
+<li><p>pre-processing (eg: tests on Reg-arima model residuals)</p></li>
+<li><p>decomposition (M Statistics)</p></li>
+<li><p>SA process: tests for residual, seasonality, residual Trading Days effects…</p></li>
+</ul></li>
 </ul>
-<!-- ## New modular structure  -->
-</section>
-<section id="seasonal-adjustment-and-modelling" class="level2">
-<h2 class="anchored" data-anchor-id="seasonal-adjustment-and-modelling">Seasonal Adjustment and Modelling</h2>
-<section id="v3-vs-v2-sa" class="level3">
-<h3 class="anchored" data-anchor-id="v3-vs-v2-sa">Seasonal adjustment algorithms</h3>
-<p><img src="All_images/SA_Algos.png" class="img-fluid"></p>
-<section id="improvements-on-historical-algorithms" class="level4">
-<h4 class="anchored" data-anchor-id="improvements-on-historical-algorithms">Improvements on historical algorithms</h4>
-<p>Improvements X-13-ARIMA and Tramo-Seats (historical JD+)</p>
-<ul>
-<li><p>New acceptable data frequencies for seasonal adjustment and modelling of low frequency data:</p>
-<pre><code>- In v3.x Low frequency data: $p$ in ${2,3,4,6,12}$ is admissible in all
-algorithms (historical and new)
+<!-- NAME =...if different to be signaled -->
 
-- In version 2, only Tramo-Seats supported all these frequencies, whereas
-X-13-ARIMA was restricted to $p$ in ${2,4,12}$</code></pre></li>
-<li><p>outlier correction taken into account when selecting decomposition scheme</p></li>
-<li><p>ex-ante leap year correction added to Tramo-Seats (like in X-13)</p></li>
-<li><p>automatic trading day regressors selection from pre-defined sets built, according to groups of days</p></li>
-<li><p>specification: split into two distinct concepts, which can be directly manipulated by the user:</p>
-<ul>
-<li><p>reference (or domain) specification: a global set of constraints inside of which estimation will be performed</p></li>
-<li><p>point (or estimation) specification: contains all parameter choices resulting from estimation</p></li>
-</ul></li>
-</ul>
-<p>The user can transform a given “estimation specification” in a user defined specification.</p>
+<!-- IN TBLES  GUI display :if all the same place: indicate above the table -->
+<!-- Table structure ! -->
+<!-- as pb of width tables broken in 2 parts  -->
+<!-- where are auxiliary excel files  -->
+<!-- auxiliary R code  -->
+<!-- all in "Documents/JD_Quarto_Book_AUX" -->
+<!-- - part 1: GUI + cruncher  -->
+<!-- name -->
+<!-- description  -->
+<!-- - part 2: R with code avec $ sign -->
 </section>
-<section id="new-algorithms-in-v3.x" class="level4">
-<h4 class="anchored" data-anchor-id="new-algorithms-in-v3.x">New algorithms in v3.x</h4>
-<p>Tramo-Seats and X-13-ARIMA share a very similar and sophisticated pre-adjustment process for the ARIMA model selection phase.</p>
-<p>For new algorithms, the philosophy is to offer</p>
-<ul>
-<li><p>a simplified pre-adjustment on the ARIMA modelling side, reduced to airline model</p></li>
-<li><p>several enhanced decomposition options</p>
-<ul>
-<li><p>stl+ (“+” stands for airline based pre-adjustment)</p></li>
-<li><p>x12+: airline based pre-adjustment + new trend estimation filters (Local Polynomials)</p></li>
-<li><p>seats+ (to come in the target v3 version): airline based pre-adjustment + AMB decomposition</p></li>
-</ul></li>
-</ul>
+<section id="how-to-generate-output" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-generate-output">How to generate output ?</h2>
+<section id="from-graphical-user-interface" class="level3">
+<h3 class="anchored" data-anchor-id="from-graphical-user-interface">From Graphical User Interface</h3>
 </section>
-<section id="sa-with-basic-structural-models-bsm-available-in-gui" class="level4">
-<h4 class="anchored" data-anchor-id="sa-with-basic-structural-models-bsm-available-in-gui">SA with Basic Structural Models (BSM) available in GUI</h4>
-<p>In version 3.x, SA with Basic Structural Models is a fully integrated process with outlier detection, calendar correction and options on external regressors.</p>
-<p>Fundamentally it is a one-step estimation, performing pre-adjustment and decomposition (with explicit components) in the same run</p>
-<p>This makes regression variable selection more complicated:</p>
-<ul>
-<li><p>first step: a variable selection is performed with a Tramo like airline model regression</p></li>
-<li><p>second: the entire structural model is estimated</p></li>
-</ul>
-<p>In version 3.x this process is available from the graphical user interface.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/SA_bsm_model.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">BSM output view in GUI</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/SA_BSM_spec.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">BSM specification box</figcaption>
-</figure>
-</div>
+<section id="using-the-cruncher" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-cruncher">Using the Cruncher</h3>
 </section>
-<section id="sa-algorithms-extended-for-high-frequency-data" class="level4">
-<h4 class="anchored" data-anchor-id="sa-algorithms-extended-for-high-frequency-data">SA algorithms extended for high-frequency data</h4>
-<p>All algorithms are available via an R package and will be available in GUI (in target v 3.x version)</p>
-<ul>
-<li><p>Extended Airline estimation, reg-ARIMA like (<code>rjd3highfreq</code> and GUI )</p></li>
-<li><p>Extended Airline Decomposition, Seats like (<code>rjd3highfreq</code> and GUI )</p></li>
-<li><p>MX12+ (<code>rjd3x11plus</code>, GUI upcoming)</p></li>
-<li><p>MSTL+ (<code>rjd3stl</code> and in GUI)</p></li>
-<li><p>MSTS (<code>rjd3sts</code>, GUI upcoming)</p></li>
-</ul>
+<section id="with-rjd3x13" class="level3">
+<h3 class="anchored" data-anchor-id="with-rjd3x13">With rjd3x13</h3>
+</section>
+<section id="description-details" class="level3">
+<h3 class="anchored" data-anchor-id="description-details">Description details</h3>
+<p>Name: name: is name in… unless difference is signalled</p>
+<p>Fullname and how to parametrize (?)</p>
+<!-- in R (ex rjd3) x13: here user defined output -->
+<!-- - how to generate it -->
+<!-- also visible in print / summary -->
+<!-- and in default output in the model see: estimation object documentation (str) -->
 </section>
 </section>
-<section id="modelling-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="modelling-algorithms">Modelling Algorithms</h3>
+<section id="series" class="level2">
+<h2 class="anchored" data-anchor-id="series">Series</h2>
+
+<!-- tables enhancing -->
+<!-- - vertical lines ? -->
+
+<!-- - spacing in tables, next line -->
+<section id="final-series-from-seasonal-adjustment-process" class="level3">
+<h3 class="anchored" data-anchor-id="final-series-from-seasonal-adjustment-process">Final series from Seasonal Adjustment Process</h3>
+<!-- contain effects from preadjustment  -->
+<!-- link to allocation part  -->
 <table class="table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 20%">
-<col style="width: 29%">
-<col style="width: 25%">
+<col style="width: 22%">
+<col style="width: 31%">
+<col style="width: 22%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Algorithm</th>
-<th>Access in GUI</th>
-<th>Access in R (v2)</th>
-<th>Access in R (v3)</th>
+<th>Name</th>
+<th>Description</th>
+<th>GUI display</th>
+<th>Fullname</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Reg-ARIMA</td>
-<td>✔️</td>
-<td>RJDemetra</td>
-<td>rjd3x13</td>
+<td>y</td>
+<td>Original series</td>
+<td>Main Results &gt; Table</td>
+<td>y</td>
 </tr>
 <tr class="even">
-<td>Tramo</td>
-<td>✔️</td>
-<td>RJDemetra</td>
-<td>rjd3tramoseats</td>
+<td>y_f</td>
+<td>Forecasts of original series</td>
+<td>Main Results &gt; Table</td>
+<td>y_f(?)</td>
 </tr>
 <tr class="odd">
-<td>Extended Airline</td>
-<td>✔️ (v3 only)</td>
-<td>✖</td>
-<td>rjd3highfreq</td>
+<td>y_ef</td>
+<td>Forecasts errors of original series</td>
+<td>Main Results &gt; Table</td>
+<td>y_ef(?)</td>
 </tr>
 <tr class="even">
-<td>STS</td>
-<td>✔️ (v3 only)</td>
-<td>rjdsts (deprecated)</td>
-<td>rjd3sts</td>
+<td>y_b</td>
+<td>Backcasts of original series</td>
+<td>Main Results &gt; Table</td>
+<td>y_b(?)</td>
+</tr>
+<tr class="odd">
+<td>y_eb</td>
+<td>Backcasts errors of original series</td>
+<td>Main Results &gt; Table</td>
+<td>y_eb(?)</td>
+</tr>
+<tr class="even">
+<td>sa</td>
+<td>Seasonally adjusted series</td>
+<td>Main Results &gt; Table</td>
+<td>sa</td>
+</tr>
+<tr class="odd">
+<td>sa_f</td>
+<td>Forecasts of seasonally adjusted series</td>
+<td>Main Results &gt; Table</td>
+<td>sa_f</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td>Trend component</td>
+<td>Main Results &gt; Table</td>
+<td>t</td>
+</tr>
+<tr class="odd">
+<td>t_f</td>
+<td>Forecasts of trend</td>
+<td>Main Results &gt; Table</td>
+<td>t_f</td>
+</tr>
+<tr class="even">
+<td>s</td>
+<td>Seasonal component</td>
+<td>Main Results &gt; Table</td>
+<td>s</td>
+</tr>
+<tr class="odd">
+<td>s_f</td>
+<td>Forecasts of seasonal component</td>
+<td>Main Results &gt; Table</td>
+<td>s_f</td>
+</tr>
+<tr class="even">
+<td>i</td>
+<td>Irregular component</td>
+<td>Main Results &gt; Table</td>
+<td>i</td>
+</tr>
+<tr class="odd">
+<td>i_f</td>
+<td>Forecasts of irregular component</td>
+<td>Main Results &gt; Table</td>
+<td>i_f</td>
+</tr>
+<tr class="even">
+<td>ycal</td>
+<td>series corrected for calendar effects: y_cal = yc-/cal</td>
+<td>Pre-Processing &gt; Pre-adjustment series</td>
+<td>ycal</td>
+</tr>
+<tr class="odd">
+<td>ycal_f</td>
+<td>forecasts of the series corrected for calendar effects</td>
+<td>Pre-Processing &gt; Pre-adjustment series</td>
+<td>ycal_f(?)</td>
+</tr>
+<tr class="even">
+<td>ycal_b</td>
+<td>backcasts of the series corrected for calendar effects</td>
+<td>Pre-Processing &gt; Pre-adjustment series</td>
+<td>ycal_b(?)</td>
+</tr>
+<tr class="odd">
+<td>benchmarking.original</td>
+<td>Unbenchmarked sa series</td>
+<td>No</td>
+<td>benchmarking.original</td>
+</tr>
+<tr class="even">
+<td>benchmarking.target</td>
+<td>Series used to compute annual targets</td>
+<td>No</td>
+<td>benchmarking.target</td>
+</tr>
+<tr class="odd">
+<td>benchmarking.result</td>
+<td>Final benchmarked sa series</td>
+<td>No</td>
+<td>benchmarking.result</td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="final-series-with-x-11-style-names" class="level3">
+<h3 class="anchored" data-anchor-id="final-series-with-x-11-style-names">Final series with X-11 style names</h3>
+<p>Backcasts of final series can be retrieved only from this table.</p>
+<p>GUI display: Decomposition (X11)&gt;D-Final-Table</p>
+
+<!-- suppress GUI display colum, illustration under the table with image -->
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>finals.d11</td>
+<td>Seasonally adjusted series (=sa)</td>
+</tr>
+<tr class="even">
+<td>finals.d12</td>
+<td>Trend component (=t)</td>
+</tr>
+<tr class="odd">
+<td>finals.d13</td>
+<td>Irregular component (=i)</td>
+</tr>
+<tr class="even">
+<td>finals.d16</td>
+<td>Seasonal component (=s)</td>
+</tr>
+<tr class="odd">
+<td>finals.d18</td>
+<td>Calendar effects (=cal)</td>
+</tr>
+<tr class="even">
+<td>finals.d11a</td>
+<td>Forecasts of seasonally adjusted series (=sa_f)</td>
+</tr>
+<tr class="odd">
+<td>finals.d12a</td>
+<td>Forecasts of trend (=t_f)</td>
+</tr>
+<tr class="even">
+<td>finals.d16a</td>
+<td>Forecasts of seasonal component (=s_f)</td>
+</tr>
+<tr class="odd">
+<td>finals.d18a</td>
+<td>Forecasts of the calendar effects (=cal_f)</td>
+</tr>
+<tr class="even">
+<td>finals.d11b</td>
+<td>Backcasts of seasonally adjusted series</td>
+</tr>
+<tr class="odd">
+<td>finals.d12b</td>
+<td>Backcasts of trend</td>
+</tr>
+<tr class="even">
+<td>finals.d16b</td>
+<td>Backcasts seasonal component</td>
+</tr>
+<tr class="odd">
+<td>finals.d18b</td>
+<td>Backcasts of the calendar effects (=cal_b)</td>
+</tr>
+</tbody>
+</table>
+<!-- #### rjd3x13 output  -->
+<!-- here user defined output -->
+<!-- generated as  -->
+<!-- also available in  -->
 </section>
-<section id="new-sa-mass-production-possibilities" class="level2">
-<h2 class="anchored" data-anchor-id="new-sa-mass-production-possibilities">New SA (mass) production possibilities</h2>
-<!-- (provide links) -->
-<section id="new-r-tools-for-wrangling-workspaces" class="level3">
-<h3 class="anchored" data-anchor-id="new-r-tools-for-wrangling-workspaces">New R Tools for wrangling workspaces</h3>
-<p>With functions for</p>
+<section id="robustified-final-series" class="level3">
+<h3 class="anchored" data-anchor-id="robustified-final-series">Robustified final series</h3>
+
+<!-- suppress GUI display colum, illustration under the table with image -->
+<p>GUI display: Decomposition (X11)&gt; E-Table</p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>finals.e1</td>
+<td>Original series corrected for most important outliers</td>
+</tr>
+<tr class="even">
+<td>finals.e2</td>
+<td>Final seasonally adjusted series corrected for most important outliers</td>
+</tr>
+<tr class="odd">
+<td>finals.e3</td>
+<td>Final Irregular corrected for most important outliers</td>
+</tr>
+<tr class="even">
+<td>finals.e11</td>
+<td>Robust estimation of final seasonally adjusted series</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pre-processing-series" class="level3">
+<h3 class="anchored" data-anchor-id="pre-processing-series">Pre-processing series</h3>
+<!-- repaste with updated names (backcasts, foreacast) + update Java dico -->
+<p>GUI display: Pre-Processing &gt; Pre-adjustment series</p>
+<p>attention couper à la fin series not displaed in GUI ? generable in GUI output ?</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 63%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>Fullname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>yc</td>
+<td>interpolated series. Untransformed</td>
+<td>yc</td>
+</tr>
+<tr class="even">
+<td>yc_f</td>
+<td>forecasts of the interpolated series</td>
+<td>yc_f(?)</td>
+</tr>
+<tr class="odd">
+<td>yc_b</td>
+<td>backcasts of the interpolated series</td>
+<td>yc_b(?)</td>
+</tr>
+<tr class="even">
+<td>ylin</td>
+<td>linearized series (series without pre-processing and regression effects). l=yc-/det. Untransformed</td>
+<td>ylin</td>
+</tr>
+<tr class="odd">
+<td>ylin_f</td>
+<td>forcasts of the linearized series. Untransformed</td>
+<td>ylin_f(?)</td>
+</tr>
+<tr class="even">
+<td>ylin_b</td>
+<td>backcasts of the linearized series. Untransformed</td>
+<td>ylin_b(?)</td>
+</tr>
+<tr class="odd">
+<td>det</td>
+<td>all deterministic effects (including pre-processing, but without trend polynomial effect). Untransformed</td>
+<td>det</td>
+</tr>
+<tr class="even">
+<td>det_f</td>
+<td>forcasts of all deterministic effects (including pre-processing, but without trend polynomial effect). Untransformed</td>
+<td>det_f(?)</td>
+</tr>
+<tr class="odd">
+<td>det_b</td>
+<td>backcasts of all deterministic effects (including pre-processing, but without trend polynomial effect). Untransformed</td>
+<td>det_b(?)</td>
+</tr>
+<tr class="even">
+<td>cal</td>
+<td>all calendar effects (including pre-processings). cal=tde+*mhe. Untransformed</td>
+<td>cal</td>
+</tr>
+<tr class="odd">
+<td>cal_f</td>
+<td>forecasts of all calendar effects. Untransformed</td>
+<td>cal_f(?)</td>
+</tr>
+<tr class="even">
+<td>cal_b</td>
+<td>backcasts of all calendar effects. Untransformed</td>
+<td>cal_b(?)</td>
+</tr>
+<tr class="odd">
+<td>ycal</td>
+<td>series corrected for calendar effects: y_cal = yc-/cal. Untransformed</td>
+<td>ycal</td>
+</tr>
+<tr class="even">
+<td>ycal_f</td>
+<td>forecasts of the series corrected for calendar effects. Untransformed</td>
+<td>ycal_f(?)</td>
+</tr>
+<tr class="odd">
+<td>ycal_b</td>
+<td>backcasts of the series corrected for calendar effects. Untransformed</td>
+<td>ycal_b(?)</td>
+</tr>
+<tr class="even">
+<td>tde</td>
+<td>trading days effects (including leap year/length of period, including pre-processings). Untransformed</td>
+<td>tde</td>
+</tr>
+<tr class="odd">
+<td>tde_f</td>
+<td>forecasts of the trading days effects. Untransformed</td>
+<td>tde_f(?)</td>
+</tr>
+<tr class="even">
+<td>tde_b</td>
+<td>backcasts of the trading days effects. Untransformed</td>
+<td>tde_b(?)</td>
+</tr>
+<tr class="odd">
+<td>ee</td>
+<td>Easter effects. Untransformed</td>
+<td>ee</td>
+</tr>
+<tr class="even">
+<td>ee_f</td>
+<td>forecasts of the Easter effects. Untransformed</td>
+<td>ee_f(?)</td>
+</tr>
+<tr class="odd">
+<td>ee_b</td>
+<td>backcasts of the Easter effects. Untransformed</td>
+<td>ee_b(?)</td>
+</tr>
+<tr class="even">
+<td>omhe</td>
+<td>other mothing holidays effects. Untransformed</td>
+<td>omhe</td>
+</tr>
+<tr class="odd">
+<td>omhe_f</td>
+<td>forecasts of the other mothing holidays effects. Untransformed</td>
+<td>omhe_f(?)</td>
+</tr>
+<tr class="even">
+<td>omhe_b</td>
+<td>backcasts of the other mothing holidays effects. Untransformed</td>
+<td>omhe_b(?)</td>
+</tr>
+<tr class="odd">
+<td>mhe</td>
+<td>all moving holidays effects. mhe=ee+*rmde+*omhe. Untransformed</td>
+<td>mhe</td>
+</tr>
+<tr class="even">
+<td>mhe_f</td>
+<td>forecats of all moving holidays effects. mhe=ee+*rmde+*omhe. Untransformed</td>
+<td>mhe_f(?)</td>
+</tr>
+<tr class="odd">
+<td>mhe_b</td>
+<td>backcasts of all moving holidays effects. mhe=ee+*rmde+*omhe. Untransformed</td>
+<td>mhe_b(?)</td>
+</tr>
+<tr class="even">
+<td>out</td>
+<td>all outliers effects. Untransformed</td>
+<td>out</td>
+</tr>
+<tr class="odd">
+<td>out_f</td>
+<td>forecasts of all outliers effects. Untransformed</td>
+<td>out_f(?)</td>
+</tr>
+<tr class="even">
+<td>out_b</td>
+<td>backcasts of all outliers effects. Untransformed</td>
+<td>out_b(?)</td>
+</tr>
+<tr class="odd">
+<td>reg</td>
+<td>all other regression effects (outside outliers and calendars). Untransformed</td>
+<td>reg</td>
+</tr>
+<tr class="even">
+<td>reg_f</td>
+<td>forecasts of all other regression effects (outside outliers and calendars). Untransformed</td>
+<td>reg_f(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_b</td>
+<td>backcasts of all other regression effects (outside outliers and calendars). Untransformed</td>
+<td>reg_b(?)</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>linearized series (transformed series without pre-processing and regression effects). Transformed)</td>
+<td>l</td>
+</tr>
+<tr class="odd">
+<td>l_f</td>
+<td>forecasts of the linearized series. Transformed)</td>
+<td>l_f(?)</td>
+</tr>
+<tr class="even">
+<td>l_b</td>
+<td>backcasts of the linearized series. Transformed)</td>
+<td>l_b(?)</td>
+</tr>
+<tr class="odd">
+<td>full_res</td>
+<td>full residuals</td>
+<td>full_res</td>
+</tr>
+<tr class="even">
+<td>out_t</td>
+<td>outliers effects associated to the trend</td>
+<td>out_t</td>
+</tr>
+<tr class="odd">
+<td>out_s</td>
+<td>outliers effects associated to the seasonal</td>
+<td>out_s</td>
+</tr>
+<tr class="even">
+<td>out_i</td>
+<td>outliers effects associated to the irregular</td>
+<td>out_i</td>
+</tr>
+<tr class="odd">
+<td>reg_t</td>
+<td>other regression effects associated to the trend</td>
+<td>reg_t</td>
+</tr>
+<tr class="even">
+<td>reg_s</td>
+<td>other regression effects associated to the seasonal</td>
+<td>reg_s</td>
+</tr>
+<tr class="odd">
+<td>reg_i</td>
+<td>other regression effects associated to the irregular</td>
+<td>reg_i</td>
+</tr>
+<tr class="even">
+<td>reg_sa</td>
+<td>other regression effects associated to the sa</td>
+<td>reg_sa</td>
+</tr>
+<tr class="odd">
+<td>reg_u</td>
+<td>other undefined regression effects (split between the components</td>
+<td>reg_u</td>
+</tr>
+<tr class="even">
+<td>reg_y</td>
+<td>other regression effects removed from the series (not in the components</td>
+<td>reg_y</td>
+</tr>
+<tr class="odd">
+<td>det_t</td>
+<td>all regression effects associated to the trend</td>
+<td>det_t</td>
+</tr>
+<tr class="even">
+<td>det_s</td>
+<td>all regression effects associated to the seasonal</td>
+<td>det_s</td>
+</tr>
+<tr class="odd">
+<td>det_i</td>
+<td>all regression effects associated to the irregular</td>
+<td>det_i</td>
+</tr>
+<tr class="even">
+<td>out_t_f</td>
+<td>outliers effects associated to the trend</td>
+<td>out_t_f(?)</td>
+</tr>
+<tr class="odd">
+<td>out_s_f</td>
+<td>outliers effects associated to the seasonal</td>
+<td>out_s_f(?)</td>
+</tr>
+<tr class="even">
+<td>out_i_f</td>
+<td>outliers effects associated to the irregular</td>
+<td>out_i_f(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_t_f</td>
+<td>other regression effects associated to the trend</td>
+<td>reg_t_f(?)</td>
+</tr>
+<tr class="even">
+<td>reg_s_f</td>
+<td>other regression effects associated to the seasonal</td>
+<td>reg_s_f(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_i_f</td>
+<td>other regression effects associated to the irregular</td>
+<td>reg_i_f(?)</td>
+</tr>
+<tr class="even">
+<td>reg_sa_f</td>
+<td>other regression effects associated to the sa</td>
+<td>reg_sa_f(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_u_f</td>
+<td>other undefined regression effects (split between the components</td>
+<td>reg_u_f(?)</td>
+</tr>
+<tr class="even">
+<td>reg_y_f</td>
+<td>other regression effects removed from the series (not in the components</td>
+<td>reg_y_f(?)</td>
+</tr>
+<tr class="odd">
+<td>det_t_f</td>
+<td>all regression effects associated to the trend</td>
+<td>det_t_f(?)</td>
+</tr>
+<tr class="even">
+<td>det_s_f</td>
+<td>all regression effects associated to the seasonal</td>
+<td>det_s_f(?)</td>
+</tr>
+<tr class="odd">
+<td>det_i_f</td>
+<td>all regression effects associated to the irregular</td>
+<td>det_i_f(?)</td>
+</tr>
+<tr class="even">
+<td>out_t_b</td>
+<td>outliers effects associated to the trend</td>
+<td>out_t_b(?)</td>
+</tr>
+<tr class="odd">
+<td>out_s_b</td>
+<td>outliers effects associated to the seasonal</td>
+<td>out_s_b(?)</td>
+</tr>
+<tr class="even">
+<td>out_i_b</td>
+<td>outliers effects associated to the irregular</td>
+<td>out_i_b(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_t_b</td>
+<td>other regression effects associated to the trend</td>
+<td>reg_t_b(?)</td>
+</tr>
+<tr class="even">
+<td>reg_s_b</td>
+<td>other regression effects associated to the seasonal</td>
+<td>reg_s_b(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_i_b</td>
+<td>other regression effects associated to the irregular</td>
+<td>reg_i_b(?)</td>
+</tr>
+<tr class="even">
+<td>reg_sa_b</td>
+<td>other regression effects associated to the sa</td>
+<td>reg_sa_b(?)</td>
+</tr>
+<tr class="odd">
+<td>reg_u_b</td>
+<td>other undefined regression effects (split between the components</td>
+<td>reg_u_b(?)</td>
+</tr>
+<tr class="even">
+<td>reg_y_b</td>
+<td>other regression effects removed from the series (not in the components</td>
+<td>reg_y_b(?)</td>
+</tr>
+<tr class="odd">
+<td>det_t_b</td>
+<td>all regression effects associated to the trend</td>
+<td>det_t_b(?)</td>
+</tr>
+<tr class="even">
+<td>det_s_b</td>
+<td>all regression effects associated to the seasonal</td>
+<td>det_s_b(?)</td>
+</tr>
+<tr class="odd">
+<td>det_i_b</td>
+<td>all regression effects associated to the irregular</td>
+<td>det_i_b(?)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pre-processing-series-in-x11-a-table" class="level3">
+<h3 class="anchored" data-anchor-id="pre-processing-series-in-x11-a-table">Pre-processing series in X11 A-Table</h3>
+<p>GUI display: Decomposition (X11)&gt;A-Table</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 59%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>GUI dsiplay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>preadjustment.a1</td>
+<td>original series</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a1a</td>
+<td>forecasts of the original series (=y_f)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a1b</td>
+<td>backcasts of the original series (=y_b)</td>
+<td>no</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a6</td>
+<td>trading days effects (=tde)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a7</td>
+<td>moving holidays effects (including easter) (=tde+ee)</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a8</td>
+<td>outliers effects (=out)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a8t</td>
+<td>outliers effects associated to the trend (=out_t)</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a8i</td>
+<td>outliers effects associated to the irregular (=out_i)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a8s</td>
+<td>outliers effects associated to the seasonal (=out_s)</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a9</td>
+<td>other regression effects (=reg)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a9cal</td>
+<td>other regression effects, associated to the calendar component</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a9u</td>
+<td>other regression effects, split in the different components (allocation = “undefined”)</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td>preadjustment.a9sa</td>
+<td>other regression effects, associated to the SA series (allocation= “sa”)</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>preadjustment.a9ser</td>
+<td>other regression effects, removed from the series and not integrated in the final components (allocation =“series”)</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><p>changing raw data path</p></li>
-<li><p>customizing specifications</p></li>
-<li><p>merging workspaces by series names, as you would do with a data table</p></li>
+<li>allocation: brief explanation and link</li>
 </ul>
-<p>These functions are in <code>rjd3providers</code> and <code>rjd3workspace</code> packages, (already in a v 2.x stable precursor <code>rjdworkspace</code>)</p>
-</section>
-<section id="production-fully-in-r" class="level3">
-<h3 class="anchored" data-anchor-id="production-fully-in-r">Production fully in R</h3>
-<p>without a workspace structure</p>
-<ul>
-<li><p>TS objects and full flexibility for customizing specifications</p></li>
-<li><p>new R functions enabling to apply revision policies (<code>rjd3x13::refresh</code> and <code>rjd3tramoseats::refresh</code>), with even more flexibility on data spans</p></li>
-</ul>
-<p>Inherent shortcoming: data no readable by GUI, depriving of more sophisticated and visual feedback (compared to R) for manual fine tuning.</p>
-<p>Solution : new R functions to create GUI readable dynamic workspaces on the fly (in aforementioned packages).</p>
-<p>In the target 3.x, additional algorithms (X12+, STL+, BSM) will also be usable in production with a workspace and cruncher (on low frequency data)</p>
 </section>
 </section>
-<section id="time-series-general-purpose-tools" class="level2">
-<h2 class="anchored" data-anchor-id="time-series-general-purpose-tools">Time series general purpose tools</h2>
-<p>Version 3.x offers more stand alone tools (mainly in <code>rjd3toolkit</code>)</p>
-<ul>
-<li><p>Tests (seasonality, auto-correlation, normality, randomness…)</p></li>
-<li><p>(Fast) ARIMA Modelling</p></li>
-<li><p>Flexible Calendar regressors generation</p></li>
-<li><p>Auxiliary variables for pre-adjustment</p></li>
-<li><p>Spectral analysis (in GUI)</p></li>
-<li><p>Detection of multiple seasonal patterns (Canova-Hansen test)</p></li>
-<li><p>State space frame work as a toolbox (<code>rjd3sts</code>)</p></li>
-</ul>
-<section id="canova-hansen-test-to-identify-multiple-seasonal-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="canova-hansen-test-to-identify-multiple-seasonal-patterns">Canova-Hansen test to identify multiple seasonal patterns</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rjd3toolkit<span class="sc">::</span><span class="fu">seasonality_canovahansen</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> df_daily<span class="sc">$</span>births,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">p0 =</span> <span class="fu">min</span>(ch.sp),</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">p1 =</span> <span class="fu">max</span>(ch.sp),</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">np =</span> <span class="fu">max</span>(ch.sp) <span class="sc">-</span> <span class="fu">min</span>(ch.sp) <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/FB_Canova.png" class="img-fluid figure-img" width="250"></p>
-<figcaption class="figure-caption">Canova Hansen seasonality test</figcaption>
-</figure>
-</div>
+<section id="diagnostics" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostics">Diagnostics</h2>
+<!-- obj have all the tests used in BQ and displayed in GUI -->
+<p>remark: stand alone tests: - in GUI - in R (rjd3toolkit)</p>
+<section id="tests-on-residuals" class="level3">
+<h3 class="anchored" data-anchor-id="tests-on-residuals">Tests on residuals</h3>
+<p>ONE TEST example : LB TEST, link to M chap what do we describe here</p>
+</section>
+<section id="seasonality-tests" class="level3">
+<h3 class="anchored" data-anchor-id="seasonality-tests">Seasonality tests</h3>
+<p>ONE TEST example : Friedman TEST, link to M chap what do we describe here</p>
 </section>
 </section>
-<section id="underway-developments" class="level2">
-<h2 class="anchored" data-anchor-id="underway-developments">Underway developments</h2>
-<ul>
-<li><p>Moving Trading Days module integrated in all SA algorithms (for low and high frequency data), with two implementations one based on rolling windows and one on state space modelling</p></li>
-<li><p>Using Cubic Splines for smoother seasonal factors estimation of long periodicities (<span class="math inline">\(p=365,25\)</span>)</p></li>
-</ul>
+<section id="parameters-and-other-estimation-results" class="level2">
+<h2 class="anchored" data-anchor-id="parameters-and-other-estimation-results">Parameters and other estimation results</h2>
+<section id="char" class="level3">
+<h3 class="anchored" data-anchor-id="char">char</h3>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 57%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Description</th>
+<th>GUI display</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>period</td>
+<td>number of observations per year</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>span.start</td>
+<td>start date of SA estimation</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>span.end</td>
+<td>end date of SA estimation</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>span.n</td>
+<td>number of observations in the original series</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>span.missing</td>
+<td>number of missing values in the original series</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>regression.espan.start</td>
+<td>start date of pre-processing model estimation</td>
+<td>Main Results and Pre-processing</td>
+</tr>
+<tr class="odd">
+<td>regression.espan.end</td>
+<td>end date of pre-processing model estimation</td>
+<td>Main Results and Pre-processing</td>
+</tr>
+<tr class="even">
+<td>regression.espan.n</td>
+<td>number of observations in pre-processing model estimation</td>
+<td>Main Results and Pre-processing</td>
+</tr>
+<tr class="odd">
+<td>regression.espan.missing</td>
+<td>number of missing values in series used for pre-processing model estimation</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -909,13 +1560,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./G-how-to-use-this-book.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How to use this book</span>
+      <a href="./P-Output.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Output description</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./G-jd-history.html" class="pagination-link">
-        <span class="nav-page-text">JDemetra+ History</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./P_Methods.html" class="pagination-link">
+        <span class="nav-page-text">Methods</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

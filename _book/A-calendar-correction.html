@@ -209,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./A-sa-pre-treatment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">wrap: 72</span></span></a>
+ <span class="menu-text">SA: Pre-Treatment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -347,13 +347,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./P_Methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Methods</span></a>
+            <a href="./P-Output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Output description</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./O-X13-ARIMA-Output.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Output from X13-Arima</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./P_Methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Methods</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./M-spectral-analysis.html" class="sidebar-item-text sidebar-link">
@@ -462,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>In this chapter, the calendar correction used in JDemetra+ is discussed.</p>
 <p>This chapter is divided in two parts. The first one (theory) outlines the rationale for calendar correction and the underlying modelling. The second part (practice) describes how relevant regressors for calendar correction are built in JDemetra+.</p>
-<p>As calendar effects are deterministic, they can be corrected with a regression model. In the algorithms X-13-ARIMA and Tramo-Seats it boils down to adding suitable regressors to the <a href="A-sa-pre-treatment.html#sa-pre-t">pre-treatment phase</a>). This chapter will describe how to generate a set of regressors corresponding to the desired correction, which will happen according to the following steps:</p>
+<p>As calendar effects are deterministic, they can be corrected with a regression model. In the algorithms X-13-ARIMA and Tramo-Seats it boils down to adding suitable regressors to the <a href="A-sa-pre-treatment.html">pre-treatment phase</a>). This chapter will describe how to generate a set of regressors corresponding to the desired correction, which will happen according to the following steps:</p>
 <ul>
 <li><p>step 1: generate a calendar (usually national calendar of interest). If this step is skipped a default calendar, not taking into account country-specific holidays will be used.</p></li>
 <li><p>step 2: generate regressors based on the above defined calendar</p></li>
@@ -474,9 +491,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Most of the functions are designed for quarterly and monthly data. What applies to daily and weekly data will be highlighted.</p>
 <p>Regressors are corrected for deterministic seasonality through a long-term mean correction</p>
 <ul>
-<li>step 3: these regressors have to be plugged-in in pre-adjustment phase of a seasonal adjustment estimation. How to do this is detailed in chapters on <a href="A-sa-pre-treatment.html#sa-pre-t">pre-treatment</a> and <a href="A-sa-hf.html">SA of High-Frenquency data</a>.</li>
+<li>step 3: these regressors have to be plugged-in in pre-adjustment phase of a seasonal adjustment estimation. How to do this is detailed in chapters on <a href="A-sa-pre-treatment.html">pre-treatment</a> and <a href="A-sa-hf.html">SA of High-Frenquency data</a>.</li>
 </ul>
-<p>How to generate other types of regressors is described <a href="A-outlier-detection.html">here</a> and how to plug them into Reg-ARIMA models is detailed <a href="A-sa-pre-treatment.html#sa-pre-t">here</a></p>
+<p>How to generate other types of regressors is described <a href="A-outlier-detection.html">here</a> and how to plug them into Reg-ARIMA models is detailed <a href="A-sa-pre-treatment.html">here</a></p>
 <!-- ## Tools Map -->
 <!-- up coming content -->
 <section id="rationale-for-calendar-correction" class="level2">
