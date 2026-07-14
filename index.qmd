@@ -1,7 +1,7 @@
 # What is JDemetra+? {.unnumbered}
 
 [JDemetra+](https://github.com/jdemetra) is an open source software for **seasonal adjustment and time series analysis**, developed by the National Bank of Belgium with the support of the Bundesbank, Insee and the partners of the [COSA](#COSA-abstract), (**CO**fidentiality **S**easonal **A**djustment and time series), project co-founded by Eurostat. JDemetra+ has been officially recommended by Eurostat to the members of the European Statistical System since 2015. It is unique in its combination of very fast Java routines, a [**Graphical User Interface**](#t-gui-overview) and an [**ecosystem of R packages (rjdverse)**](https://github.com/rjdverse?view_as=public). The graphical interface provides structured visual feedback suitable for refined analysis and training. R tools allow to combine the capabilities of JDemetra+ with the versatility of the R world, be it for statistical functions or data wrangling.
-A pdf version of this documentation is available [here](https://github.com/jdemetra/JD_Quarto_Book/blob/main/_book/JDemetra%2B-documentation.pdf)
+A **pdf version** of this documentation is available [here](https://github.com/jdemetra/JD_Quarto_Book/blob/main/_book/JDemetra%2B-documentation.pdf)
 
 
 ![](All_images/logo_COSA-TSA_ligne.png)
@@ -31,38 +31,6 @@ The latest release in version 2 family can be found [here](https://github.com/jd
 
 The highest version using Java 8 is v2.2.4.
 
-## User Support and Useful links
-
-If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
-
-For specific questions related to **production of seasonally adjusted series** you can look up [these pages](https://prod.jdemetra.org/)
-
-To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://blog.jdemetra.org)
-
-You can also [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
-
-
-## Background
-
-This website is under construction, in the meantime you can fill a large number of the gaps by referring to the [previous version](https://jdemetradocumentation.github.io/JDemetra-documentation) of the on-line documentation, coordinated by Sylwia Grudkowska-Kubik (National Bank of Poland).
-
-Eurostat's recommendations on the statistical processes described in this documentation are outlined in:
-
--   [Eurostat's Guidelines on seasonal adjustment (2024)](https://ec.europa.eu/eurostat/product?code=KS-GQ-24-012)
-
--   [Eurostat's Guidelines on temporal disaggregation, benchmarking and reconcilation (2018)](https://ec.europa.eu/eurostat/documents/3859598/9441376/KS-06-18-355-EN.pdf)
-
-Key methodological explanations and state-of-the-art description and references can be found in:
-
--   [Handbook on seasonal adjustment (2018)](https://ec.europa.eu/eurostat/documents/3859598/8939616/KS-GQ-18-001-EN-N.pdf) 
-
--   [Handbook on rapid estimates (2017)](https://ec.europa.eu/eurostat/documents/3859598/8555708/KS-GQ-17-008-EN-N.pdf)
-
-
-
-## How to contribute 
-
-If you want to help us improve this book, you can [fork this repository on GitHub](https://github.com/jdemetra/JD_Quarto_Book) and create pull requests with your contributions.
 
 ## Installing the software
 
@@ -73,18 +41,7 @@ The sections below detail how to install JDemetra+ (Graphical user interface and
 
 You can find the latest releases 
 
-- in the v2.x family: [here](https://github.com/jdemetra/jdemetra-app/releases)
-
-To install [v2.2.4](https://github.com/jdemetra/jdemetra-app/releases/tag/v2.2.4):
-
-- Scroll down the page, download and unzip the file *jdemetra-2.2.4-bin.zip*.
-
-- To start the application, run the file **nbdemetra64.exe** located in the following subfolder [...\\jdemetra-2.2.4-bin\\nbdemetra\\bin]{.path}
- 
-Remark: You can create shortcuts to the executable files if you want to launch them from another folder (Desktop, project folder...).
-
-
-- in the v3.x family: [here](https://github.com/jdemetra/jdplus-main/releases)
+- for the v3.x family: [here](https://github.com/jdemetra/jdplus-main/releases)
 
 You should install the latest release available denoted from now on v3.x.y 
 
@@ -95,6 +52,16 @@ You should install the latest release available denoted from now on v3.x.y
 Version 3.x requires Java 21 or higher, *jdemetra-standalone-3.x.y-windows-x86_64.zip* contains a portable version of Java, so you don't have to deal with this issue on your computer.
 
 R packages related to version 3.x (rjd3...) also require Java 21 or higher, you can (and should) use the portable version provided with the graphical user interface to run them, this is explained [here](#Rconfig).
+
+- for the v2.x family: [here](https://github.com/jdemetra/jdemetra-app/releases)
+
+To install [v2.2.4](https://github.com/jdemetra/jdemetra-app/releases/tag/v2.2.4):
+
+- Scroll down the page, download and unzip the file *jdemetra-2.2.4-bin.zip*.
+
+- To start the application, run the file **nbdemetra64.exe** located in the following subfolder [...\\jdemetra-2.2.4-bin\\nbdemetra\\bin]{.path}
+ 
+Remark: You can create shortcuts to the executable files if you want to launch them from another folder (Desktop, project folder...).
 
 ### Additional Plug-ins
 
@@ -166,19 +133,46 @@ or
 
 Follow R packages installation procedure and run basic examples from the readme files of each package.
 They are all listed on [this page](https://github.com/rjdverse?view_as=public) 
+
+## User Support and Useful links
+
+If you need user support, please raise an issue in this [repository](https://github.com/stace-tsa-shop/UserSupport)
+
+For specific questions related to **production of seasonally adjusted series** you can look up [these pages](https://prod.jdemetra.org/)
+
+To keep up with all JDemetra+ related news head over to the [**JDemetra+ Universe Blog**](https://blog.jdemetra.org)
+
+You can also [browse](https://github.com/TanguyBarthelemy/JD_Tutorials) and [watch](https://www.youtube.com/@TSwithJDemetraandR) tutorials for JDemetra+. On this [YouTube channel](https://www.youtube.com/@TSwithJDemetraandR) you will also find JDemetra+ related webinars.
+
+
+## Background
+
+This website is under construction, in the meantime you can fill a large number of the gaps by referring to the [previous version](https://jdemetradocumentation.github.io/JDemetra-documentation) of the on-line documentation, coordinated by Sylwia Grudkowska-Kubik (National Bank of Poland).
+
+Eurostat's recommendations on the statistical processes described in this documentation are outlined in:
+
+-   [Eurostat's Guidelines on seasonal adjustment (2024)](https://ec.europa.eu/eurostat/product?code=KS-GQ-24-012)
+
+-   [Eurostat's Guidelines on temporal disaggregation, benchmarking and reconcilation (2018)](https://ec.europa.eu/eurostat/documents/3859598/9441376/KS-06-18-355-EN.pdf)
+
+Key methodological explanations and state-of-the-art description and references can be found in:
+
+-   [Handbook on seasonal adjustment (2018)](https://ec.europa.eu/eurostat/documents/3859598/8939616/KS-GQ-18-001-EN-N.pdf) 
+
+-   [Handbook on rapid estimates (2017)](https://ec.europa.eu/eurostat/documents/3859598/8555708/KS-GQ-17-008-EN-N.pdf)
+
     
 ## COSA project {#COSA-abstract}
 
-The COSA (**CO**fidentiality **S**easonal **A**djustment and time series) project is composed of two Centres of Excellence (CoE): one on Time Series Analysis (TSA), coordinated by Insee, and one on Statistical Disclosure Control (SDC) coordinated by CBS. In a context of development of common tools and methods within the ESS, this action will carry on the work of the STACE project (2020-2024) around three pillars: knowledge sharing and support to practitioners, development and maintenance of bespoke software (JDemetra+ for TSA, τ-ARGUS and sdcMicro for SDC) and methodological guidance (Handbooks, Guidelines, research papers). The overarching goals is to provide user friendly, efficient and technically up-to date tools for statistical production in both fields. 
+JDemetra+ is developed and maintained in the framework of the Eurostat co-founded COSA (**CO**fidentiality **S**easonal **A**djustment and time series) project. 
 
-In the previous project JDemetra+ has undergone a major refactoring with the development of version 3.x providing extensions of TSA algorithms, e.g. seasonal adjustment of high frequency data. The current action will aim at consolidating and completing this new version, by further extending some algorithms, improving technical and user-documentation, uploading R packages on CRAN and adapting JDemetra+ to new IT environments, like cloud infrastructure. 
+It is composed of two Centres of Excellence (CoE): one on **Time Series Analysis (TSA)**, coordinated by Insee (France), and one on Statistical Disclosure Control (SDC) coordinated by CBS (Netherlands). In a context of development of common tools and methods within the ESS, this action will carry on the work of the STACE project (2020-2024) around three pillars: knowledge sharing and support to practitioners, development and maintenance of bespoke software (JDemetra+ for TSA, τ-ARGUS and sdcMicro for SDC) and methodological guidance (Handbooks, Guidelines, research papers). The overarching goals is to provide user friendly, efficient and technically up-to date tools for statistical production in both fields. 
 
-Τ-ARGUS is considered to be the standard software for table protection. However, τ-ARGUS urgently needs to be modernized. The current project will make a start with developing/designing a modern software architecture for and apply some of the ideas in a proof of concept. The other SDC tools as well as the “old” τ-ARGUS needs to be supported.
+More information  on the project's website [https://cosa-grant.org/](https://cosa-grant.org/)
 
-Eleven institutions (Insee, CBS, NBB, Istat, INE, Destatis, SURS, HSO, Statistic Austria, Iceland and Norway) are beneficiaries from this grant and will contribute in the aforementioned directions with the collaboration of the Deutsche Bundesbank in TSA. Additional 
-institutions will be involved as members of user-groups and observers (ECB, ABS, OECD...).
 
-Results will be presented at workshops and conferences and developments can be followed on dedicated Github repositories.
+## How to contribute 
 
+If you want to help us improve this book, you can [fork this repository on GitHub](https://github.com/jdemetra/JD_Quarto_Book) and create pull requests with your contributions.
 
 

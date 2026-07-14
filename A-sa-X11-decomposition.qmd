@@ -315,13 +315,14 @@ The following parameters have default values, which will not be changed in the e
 
 <!-- can be log additive if multiplicative in the pre adj: re check and modify -->
 
-```         
--   Undefined: automatically chosen between Multiplicative and Additive Options available only if no pre-processing:
+-   Undefined: automatically chosen between Multiplicative and Additive 
+
+Options available only if no pre-processing:
 -   Additive: $Y=T+S+I$, $SA =Y-S=T+I$
 -   Multiplicative $Y=T*S*I$, $SA =Y/S=T*I$
 -   LogAdditive $Log(Y) = T + S + I$, $SA=exp(T+I)=Y/exp(S)$
 -   PseudoAdditive $Y=T*(S+I-1)$, $SA=T*I$
-```
+
 
 If X11 decomposition comes after a pre-processing, **mode** is set to undefined and will correspond to decomposition choice made in the [pre-treatment](#sa-pre-t-mode): multiplicative if series log- transformed, additive otherwise.
 
