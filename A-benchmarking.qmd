@@ -34,6 +34,7 @@ using the [GUI](#t-gui-overview) with a [plug-in](#t-plug-ins) or
 | GRP (Growth Rate Preservation)           | ✔      | ✔    |
 | **RECONCILIATION AND MULTIVARIATE TEMPORAL DISAGGREGATION** |        |      |
 | Cholette Multivariate                   | ✖      | ✔    |
+| Chow-Lin and Fernandez Multivariate                   | ✖      | ✔    |
 | **TEMPORAL DISAGGREGATION and INTERPOLATION**              |        |      |
 | Regression Models*                       | ✔      | ✔    |
 | Reverse regression                       | ✖      | ✔    |
@@ -200,7 +201,7 @@ See below for a description of the available options on Denton method:
 
 4.  **Differencing**: Number of regular differences. By default 1.
 
-5.  **Default frequency**: it is the frequency of the output data.
+5.  **Default frequency**: it is the annual frequency of the output data.
 
 #### Cholette {#a-bench-high-low-cholette}
 
@@ -370,15 +371,17 @@ output <- rjd3bench::grp(
 )
 ```
 
-### Reconciliation and multivariate temporal disaggregation {#a-bench-multi}  
+## Reconciliation and multivariate temporal disaggregation {#a-bench-multi}  
 
 While standard benchmarking methods consider one target series at a time, reconciliation techniques aim to restore consistency in a system of time series with regards to both contemporaneous and temporal constraints. Reconciliation techniques are typically needed when the total and its components are estimated independently (the so-called direct approach). 
  
-#### In R with `rjd3bench` {#a-bench-multi-r}
+### In R with `rjd3bench` {#a-bench-multi-r}
+
+#### Multivariate Cholette
 
 This is a multivariate extension of the Cholette benchmarking method which can be used for the purpose of reconciliation. 
 
-To perform Cholette Multi-variate method use the function `rjd3bench::multivariatecholette` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/multivariatecholette.html).
+To perform multivariate Cholette method use the function `rjd3bench::multivariatecholette` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/multivariatecholette.html).
 
 ```{r, echo = TRUE, eval = FALSE}
 output <- rjd3bench::multivariatecholette(
@@ -390,7 +393,31 @@ output <- rjd3bench::multivariatecholette(
 )
 ```
 
-To get started and learn more about this method, browse the
+#### Multivariate Chow-Lin and Fernandez
+
+This is a multivariate extension of the Chow-Lin model which performs simultaneous temporal disaggregation of a system of low frequency time series into higher frequency series. When the $\rho = 1$, the random walk method (Fernandez) is implemented.
+
+To perform multivariate Chow-Lin or Fernandez method use the function `rjd3bench::multivariatechowlin` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/multivariatechowlin.html).
+
+```{r, echo = TRUE, eval = FALSE}
+output <- rjd3bench::multivariatechowlin(
+  series,
+  constant = FALSE,
+  trend = FALSE,
+  indicators = NULL,
+  ccseries = NULL,
+  ccdefinition = NULL,
+  freq = 4L,
+  rho = 1,
+  var = c("fromUnivariate", "allEquals", "userDefined"),
+  var.includeCov = FALSE,
+  var.shrinkCov = FALSE,
+  var.matrix = NULL,
+  rescale.variance = FALSE
+)
+```
+
+To get started and learn more about these methods, browse the
 [vignette](https://rjdverse.github.io/rjd3bench/articles/rjd3bench.html).
 
 ## Temporal Disaggregation and Interpolation {#a-bench-tempd}
@@ -470,7 +497,7 @@ See below for a description of the available options on Regression Model method:
 
 6.  **Average**: The average conversion is used if selected; otherwise, the additive conversion is applied.
 
-7.  **Default frequency**: It is the frequency of the output series.
+7.  **Default frequency**: It is the annual frequency of the output series.
 
 8.  **Advanced options**: These parameters are related to state space
     model and the algorithm used to obtain the estimations.
@@ -718,11 +745,11 @@ output <- rjd3bench::adl_disaggregation(
 ```
 
 
-### Calendarization {#a-calendarization}
+## Calendarization {#a-calendarization}
 
 Calendarization is the process of transforming the values of a flow time series observed over varying time intervals into values that cover given calendar intervals such as month, quarter or year. The process involves two steps. At first, a state-space representation of the Denton proportional first difference (PFD) method is considered to perform a temporal disaggregation of the observed data into daily values. After that, the resulting daily values are aggregated into the desired calendar reference periods.
 
-#### In R with `rjd3bench` {#a-calendarization-r}
+### In R with `rjd3bench` {#a-calendarization-r}
 
 To perform Calendarization method use the function `rjd3bench::calendarization` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/calendarization.html).
 
