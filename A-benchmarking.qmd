@@ -34,7 +34,7 @@ using the [GUI](#t-gui-overview) with a [plug-in](#t-plug-ins) or
 | GRP (Growth Rate Preservation)           | ✔      | ✔    |
 | **RECONCILIATION AND MULTIVARIATE TEMPORAL DISAGGREGATION** |        |      |
 | Cholette Multivariate                   | ✖      | ✔    |
-| Chow-Lin Multivariate                   | ✖      | ✔    |
+| Chow-Lin and Fernandez Multivariate                   | ✖      | ✔    |
 | **TEMPORAL DISAGGREGATION and INTERPOLATION**              |        |      |
 | Regression Models*                       | ✔      | ✔    |
 | Reverse regression                       | ✖      | ✔    |
@@ -393,11 +393,11 @@ output <- rjd3bench::multivariatecholette(
 )
 ```
 
-#### Multivariate Chow-Lin
+#### Multivariate Chow-Lin and Fernandez
 
-This is a multivariate extension of the Chow-Lin model which performs simultaneous temporal disaggregation of a system of low frequency time series into higher frequency series.
+This is a multivariate extension of the Chow-Lin model which performs simultaneous temporal disaggregation of a system of low frequency time series into higher frequency series. When the $\rho = 1$, the random walk method (Fernandez) is implemented.
 
-To perform multivariate Chow-Lin method use the function `rjd3bench::multivariatechowlin` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/multivariatechowlin.html).
+To perform multivariate Chow-Lin or Fernandez method use the function `rjd3bench::multivariatechowlin` documented on this [GitHub page](https://rjdverse.github.io/rjd3bench/reference/multivariatechowlin.html).
 
 ```{r, echo = TRUE, eval = FALSE}
 output <- rjd3bench::multivariatechowlin(

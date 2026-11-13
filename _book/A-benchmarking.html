@@ -571,7 +571,7 @@ window.Quarto = {
 <td>✔</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Chow-Lin Multivariate</td>
+<td style="text-align: left;">Chow-Lin and Fernandez Multivariate</td>
 <td>✖</td>
 <td>✔</td>
 </tr>
@@ -895,10 +895,10 @@ window.Quarto = {
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="multivariate-chow-lin" class="level4">
-<h4 class="anchored" data-anchor-id="multivariate-chow-lin">Multivariate Chow-Lin</h4>
-<p>This is a multivariate extension of the Chow-Lin model which performs simultaneous temporal disaggregation of a system of low frequency time series into higher frequency series.</p>
-<p>To perform multivariate Chow-Lin method use the function <code>rjd3bench::multivariatechowlin</code> documented on this <a href="https://rjdverse.github.io/rjd3bench/reference/multivariatechowlin.html">GitHub page</a>.</p>
+<section id="multivariate-chow-lin-and-fernandez" class="level4">
+<h4 class="anchored" data-anchor-id="multivariate-chow-lin-and-fernandez">Multivariate Chow-Lin and Fernandez</h4>
+<p>This is a multivariate extension of the Chow-Lin model which performs simultaneous temporal disaggregation of a system of low frequency time series into higher frequency series. When the <span class="math inline">\(\rho = 1\)</span>, the random walk method (Fernandez) is implemented.</p>
+<p>To perform multivariate Chow-Lin or Fernandez method use the function <code>rjd3bench::multivariatechowlin</code> documented on this <a href="https://rjdverse.github.io/rjd3bench/reference/multivariatechowlin.html">GitHub page</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>output <span class="ot">&lt;-</span> rjd3bench<span class="sc">::</span><span class="fu">multivariatechowlin</span>(</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  series,</span>
