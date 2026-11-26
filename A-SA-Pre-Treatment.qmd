@@ -261,18 +261,18 @@ user_spec_1 <- tramoseats_spec(
 
 #### Parameters
 
-##### Transformation
+##### Transformation {#sa-pre-t-transform}
 A test is performed to choose between an additive decomposition (no transformation, the series is modelled in its original scale) and a multiplicative decomposition (the series is log-transformed, it is modelled on a logarithmic scale).
 
 **Function**
 
 Specifies the transformation applied to the series:
 
-- *None*: no transformation.
+- *None:* no transformation.
 
-- *Log*: logarithmic transformation.
+- *Log:* logarithmic transformation.
 
-- *Auto*: automatically selects between level and log specifications using an algorithm-specific procedure.
+- *Auto:* automatically selects between level and log specifications using an algorithm-specific procedure.
 
 The default is `Auto` that enable automatic selection.
 
@@ -286,17 +286,18 @@ In Tramo **Fct** controls the automatic log/level pre-test. **Fct** \> 1 favours
 
 Specifies the **proportional adjustment** applied for calendar-period length effects when `Function = Log`:
 
-- *None*: no adjustment.
+- *None:* no adjustment.
 
-- *LeapYear*: adjusts for the leap-year effect in monthly or quarterly data.
+- *LeapYear:* adjusts for the leap-year effect in monthly or quarterly data.
 
-- *LengthOfPeriod*: adjusts for the length of the month or quarter.
+- *LengthOfPeriod:* adjusts for the length of the month or quarter.
 
 The default is `None`.
 
 **Set in GUI**
 
 ![Model span setting](All_images/SA_REGA_transfo.png)
+![Model span setting](All_images/Transformation_adjust.jpg)
 
 **Set in R**
 
@@ -338,45 +339,49 @@ JDemetra+ offers two default options for calendar correction working days regres
 
 #### Available Options
 
-##### Trading days and working 
+##### Trading days and working days
 
-"Trading Days" has two meanings: general calendar correction process (here without easter effect) and one of the options of this correction (see below)
+**Options** parameter determines how calendar regressors are defined:
 
-```         
--    "None": no correction for trading days and working days effects
+- *None:* no built-in trading-day or working-day regressors are included.
 
--    "Default": JDemetra+ built in regressors (working days or trading days)
+- *Default:* uses the built-in regressors (working days, or trading days) based on the default calendar, without country-specific holidays.
 
--    "Holidays": same as above but taking into account a national calendar, available only in GUI, R interface requires direct use of pre-built regressors 
+- *Holidays:* same as above but taking into account a national calendar using country-specific holidays, available only in GUI, R interface requires direct use of pre-built regressors.
 
--    "UserDefined": user-defined trading days regressors (see below)
+- *UserDefined:* user-defined trading days regressors (see below)
 
--    (if NONE) indicating the day of the month when inventories and other stock are reported (to denote the last day of the month, set the variable to 31). 
-```
+- (if NONE) indicating the day of the month when inventories and other stock are reported (to denote the last day of the month, set the variable to 31). 
+
+When *Default* or *Holidays* is selected, the **td** parameter specifies the type of regressors, such as TradingDays or WorkingDays, where supported. See more [here](A-calendar-correction.qmd).
+
+The *test** parameter controls whether the regressors are tested for inclusion in the model based on the AICC:
+
+- *Add:* the regressors are initially excluded and may be added following the test.
+
+- *Remove:* the regressors are initially included and may be removed following the test.
+
+- *None:* no pre-test is performed.
 
 ##### Leap Year effect
 
+Calendar-period length effects can be handled either through pre-adjustment or through regression variables in the model. These approaches should not be confused.
+
 **Autoadjust**
 
-If enabled, the program corrects automatically for the leap year effect. When this option is available, modifications to this variable are taken into account only when `transform.function` is set to `"Auto"`. ***
+When enabled, the program automatically handles the leap-year effect through pre-adjustment. This option is relevant when transform.function is set to 'Auto'. See [Transformation](A-SA-Pre-Treatment.qmd#sa-pre-t-transform) for details.
 
-**Leapyear**
+**Regression-based adjustment**
 
-We can specify whether or not to include the leap-year effect regressor in the model:
+Specifies the length-of-period effect to be modelled through regression:
 
-- "LeapYear": leap year effect is either tested or included.
+- *LeapYear:* includes a leap-year effect regressor.
 
-- "LengthOfPeriod": the correction for the length of months or the length of quarters is either tested or included.
+- *LengthOfPeriod:* includes a regressor for the length of the month or quarter.
 
-- "None" = no effect included.
+- *None:* = no length-of-period regressor is included.
 
-The leap-year effect can be pre-specified in the model only if:
-
-- the input series hasn't been pre-adjusted (transform.adjust set to "None") and if the automatic correction for the leap-year effect isn't selected (tradingdays.autoadjust set to FALSE, not checked).
-
-#### Test
-
-**Test**: defines the pre-tests for the significance of the trading day regression variables based on the AICC statistics: "Add" = the trading day variables are not included in the initial regression model but can be added to the Reg-ARIMA model after the test; "Remove" = the trading day variables belong to the initial regression model but can be removed from the Reg-ARIMA model after the test; "None" = the trading day variables are not pre-tested and are included in the model.
+A regression-based length-of-period effect should not be specified simultaneously with an automatic proportional adjustment for the same effect. The leap-year effect can be pre-specified in the model only if the input series hasn't been pre-adjusted (transform.adjust set to "None") and if the automatic correction for the leap-year effect isn't selected (tradingdays.autoadjust set to FALSE, not checked). See more in [Transformation](A-SA-Pre-Treatment.qmd#sa-pre-t-transform).
 
 ##### Easter
 
