@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Graphical User Interface (GUI): Overview – JDemetra+ documentation</title>
+<title>JDemetra+ documentation - Graphical User Interface (GUI): Overview</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,29 +32,22 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./T-GUI-Data-Viz-TS-Tools.html" rel="next">
 <link href="./P_Tools.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3aef4b2d643115ce5f848d001a640571.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -69,58 +56,29 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./P_Tools.html">Tools</a></li><li class="breadcrumb-item"><a href="./T-GUI-Overview.html">Graphical User Interface (GUI): Overview</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./P_Tools.html">Tools</a></li><li class="breadcrumb-item"><a href="./T-GUI-Overview.html">Graphical User Interface (GUI): Overview</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -130,30 +88,30 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">JDemetra+ documentation</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/jdemetra/JD_Quarto_Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-              <i class="bi bi-facebook pe-1"></i>
+              <i class="bi bi-bi-facebook pe-1"></i>
             Facebook
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-twitter pe-1"></i>
+              <i class="bi bi-bi-twitter pe-1"></i>
             Twitter
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-linkedin pe-1"></i>
+              <i class="bi bi-bi-linkedin pe-1"></i>
             LinkedIn
             </a>
           </li>
@@ -197,7 +155,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./P_Algorithms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Algorithms</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -304,7 +262,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./P_Tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tools</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -357,7 +315,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./P_Methods.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methods</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -421,7 +379,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -467,12 +425,12 @@ window.Quarto = {
   <li><a href="#other-panels" id="toc-other-panels" class="nav-link" data-scroll-target="#other-panels">Other panels</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jdemetra/JD_Quarto_Book/edit/main/T-GUI-Overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdemetra/JD_Quarto_Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jdemetra/JD_Quarto_Book/edit/main/T-GUI-Overview.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jdemetra/JD_Quarto_Book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./P_Tools.html">Tools</a></li><li class="breadcrumb-item"><a href="./T-GUI-Overview.html">Graphical User Interface (GUI): Overview</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span id="t-gui-overview" class="quarto-section-identifier">Graphical User Interface (GUI): Overview</span></h1>
 </div>
@@ -487,9 +445,7 @@ window.Quarto = {
   </div>
   
 
-
 </header>
-
 
 <section id="in-this-chapter" class="level2">
 <h2 class="anchored" data-anchor-id="in-this-chapter">In this chapter</h2>
@@ -510,7 +466,7 @@ window.Quarto = {
 <section id="available-algorithms" class="level3">
 <h3 class="anchored" data-anchor-id="available-algorithms">Available algorithms</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>The Graphical User Interface in the 2.x family gives access to:</p>
@@ -557,7 +513,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/RunningJDemetra.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Launching JDemetra+</strong></figcaption>
+<figcaption class="figure-caption"><strong>Launching JDemetra+</strong></figcaption>
 </figure>
 </div>
 <p>If the launching of JDemetra+ fails, you can try the following operations:</p>
@@ -601,7 +557,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref5.jpg" class="image img-fluid figure-img"></p>
-<figcaption><strong>The <em>Providers</em> window</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Providers</em> window</strong></figcaption>
 </figure>
 </div>
 <p>By default, JDemetra+ supports the following data sources:</p>
@@ -626,24 +582,19 @@ window.Quarto = {
 <p>These details vary according to data providers.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/KYBcKx1e8ys" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Spreadsheet</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href=""><code>.txt</code> or <code>.csv</code> file</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Spreadsheet</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><code>.txt</code> or <code>.csv</code> file</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Import_spreadsheet.gif" class="img-fluid figure-img"></p>
-<figcaption><strong>An example of importing process for the Excel file :</strong></figcaption>
+<figcaption class="figure-caption"><strong>An example of importing process for the Excel file :</strong></figcaption>
 </figure>
 </div>
 <p>The example below show how to import the data from an Excel file.</p>
 <ol type="1">
 <li><p>From the <em>Providers</em> window <strong>right-click</strong> on the <em>Spreadsheets</em> branch and choose <em>Open</em> option.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/Aimage6.jpeg" class="img-fluid figure-img"></p>
-<figcaption><strong>Data provider available by default</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/Aimage6.jpeg" class="img-fluid" alt="Data provider available by default"></li>
 <li><p>The <em>Open data source</em> window contains the following options:</p>
 <ul>
 <li><p><strong>Spreadsheet file</strong> – a path to access the Excel file.</p></li>
@@ -653,39 +604,19 @@ window.Quarto = {
 <li><p><strong>Clean missing</strong> <a id="clean-missing"></a> – erases missing values at the start of the series.</p></li>
 </ul>
 <p>Next, in the <em>Source</em> section click the grey “…” button to open the file.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/Aimage7.jpeg" class="img-fluid figure-img"></p>
-<figcaption><strong>Data source window</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/Aimage7.jpeg" class="img-fluid" alt="Data source window"></li>
 <li><p>Choose a file and click <em>OK</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/Aimage8.jpeg" class="img-fluid figure-img"></p>
-<figcaption><strong>Choice of an Excel spreadsheet</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/Aimage8.jpeg" class="img-fluid" alt="Choice of an Excel spreadsheet"></li>
 <li><p>The user may specify <em>Data format</em>, <em>Frequency</em> and <em>Aggregation type</em>, however this step is not compulsory. When these options are specified JDemetra+ is able to convert the time series frequency. Otherwise, the functionality that enables the time series frequency to be converted will not be available.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/Aimage9.jpeg" class="img-fluid figure-img"></p>
-<figcaption><strong>Options for importing data</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/Aimage9.jpeg" class="img-fluid" alt="Options for importing data"></li>
 <li><p>The data are organized in a tree structure.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/Aimage10.jpeg" class="img-fluid figure-img"></p>
-<figcaption><strong>Dataset structure</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/Aimage10.jpeg" class="img-fluid" alt="Dataset structure"></li>
 </ol>
 <p>Once imported, your s is visible as a “node” structure</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref6.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>A structure of a dataset</strong></figcaption>
+<figcaption class="figure-caption"><strong>A structure of a dataset</strong></figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled" title="Accepted formats">
@@ -694,7 +625,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Accepted formats
+Accepted formats
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -703,12 +634,12 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="How to set-up your spreadsheet">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How to set-up your spreadsheet
+How to set-up your spreadsheet
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -724,7 +655,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/excel_spreadcheet.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Example of an Excel spreadsheet that can be imported to JDemetra+</strong></figcaption>
+<figcaption class="figure-caption"><strong>Example of an Excel spreadsheet that can be imported to JDemetra+</strong></figcaption>
 </figure>
 </div>
 <p>In Excel files, series are identified by their names (colnames) in the file.</p>
@@ -736,12 +667,7 @@ window.Quarto = {
 <p>The example below show how to import the data from an Excel file.</p>
 <ol type="1">
 <li><p>From the <em>Providers</em> window <strong>right-click</strong> on the <em>Txt files</em> branch and choose <em>Open</em> option.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/provider-txt-files.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Data provider available by default</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/provider-txt-files.png" class="img-fluid" alt="Data provider available by default"></li>
 <li><p>The <em>Open data source</em> window contains the following options:</p>
 <ul>
 <li><p><strong><code>.txt</code> file</strong> – a path to access the file.</p></li>
@@ -757,34 +683,19 @@ window.Quarto = {
 <li><p><strong>Partial aggregation</strong> – Allow partial aggregation (only with average and sum aggregation).</p></li>
 </ul>
 <p>Next, in the <em>Source</em> section click the grey “…” button to open the file.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/provider-open-txt-files.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Data source window</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/provider-open-txt-files.png" class="img-fluid" alt="Data source window"></li>
 <li><p>Choose a file and click <em>OK</em>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/provider-open-file.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Choice of an Excel spreadsheet</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/provider-open-file.png" class="img-fluid" alt="Choice of an Excel spreadsheet"></li>
 <li><p>The data are organized in a tree structure.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="All_images/provider-txt-file-structure.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Options for importing data</strong></figcaption>
-</figure>
-</div></li>
+<img src="All_images/provider-txt-file-structure.png" class="img-fluid" alt="Options for importing data"></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="How to set up you `.txt` or `.csv` file">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How to set up you <code>.txt</code> or <code>.csv</code> file
+How to set up you <code>.txt</code> or <code>.csv</code> file
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -800,7 +711,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/excel_spreadcheet.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Example of an Excel spreadsheet that can be imported to JDemetra+</strong></figcaption>
+<figcaption class="figure-caption"><strong>Example of an Excel spreadsheet that can be imported to JDemetra+</strong></figcaption>
 </figure>
 </div>
 <p>In text files, series are identified by their position in the file.</p>
@@ -843,14 +754,14 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/add_star.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Create a new favorite</strong></figcaption>
+<figcaption class="figure-caption"><strong>Create a new favorite</strong></figcaption>
 </figure>
 </div>
 <p>A favorite file will have a little star on top right of the logo:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/favorite_file.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Example of a favorite file</strong></figcaption>
+<figcaption class="figure-caption"><strong>Example of a favorite file</strong></figcaption>
 </figure>
 </div>
 <p>To remove a favorite:</p>
@@ -861,7 +772,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/remove_star.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Remove a favorite</strong></figcaption>
+<figcaption class="figure-caption"><strong>Remove a favorite</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -878,7 +789,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref7.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Example of a workspace created by JDemetra+.</strong></figcaption>
+<figcaption class="figure-caption"><strong>Example of a workspace created by JDemetra+.</strong></figcaption>
 </figure>
 </div>
 <p>The workspace can be shared with other users, which eases the burden of work with defining specifications, modelling and seasonal adjustment processes.</p>
@@ -893,7 +804,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/ws_structure.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Structure of a workspace</strong></figcaption>
+<figcaption class="figure-caption"><strong>Structure of a workspace</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -929,7 +840,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref10.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The main menu with selected drop-down menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The main menu with selected drop-down menu</strong></figcaption>
 </figure>
 </div>
 <p>The functions available in the main application menu are:</p>
@@ -961,7 +872,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/File menu.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>File</em> menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>File</em> menu</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -975,7 +886,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Statistical methods menu anomaly detection.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Anomaly detection</em> tab.</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Anomaly detection</em> tab.</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -984,7 +895,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Statistical methods menu modelling.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Modelling</em> tab.</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Modelling</em> tab.</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -999,11 +910,11 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Statistical methods menu.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Seasonal adjustment</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Seasonal adjustment</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p>In v2, the <em>Tools</em> sub-tabs contains 2 functionalities:</p>
@@ -1014,7 +925,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Statistical methods menu_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Seasonal adjustment</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Seasonal adjustment</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1028,7 +939,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Statistical methods menu_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Seasonal adjustment</em> tab in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Seasonal adjustment</em> tab in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1040,7 +951,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Tools menu.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Tools</em> menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Tools</em> menu</strong></figcaption>
 </figure>
 </div>
 <p>The following functionalities are available from the <em>Tools</em> menu:</p>
@@ -1059,7 +970,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/Container tools.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Container</em> menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Container</em> menu</strong></figcaption>
 </figure>
 </div>
 <p>detailed in data visualization part (link to set up)</p>
@@ -1071,7 +982,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref36.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Tools for spectral analysis</strong></figcaption>
+<figcaption class="figure-caption"><strong>Tools for spectral analysis</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -1091,7 +1002,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref40.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Spreadsheet Profiler</em> window</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Spreadsheet Profiler</em> window</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -1112,7 +1023,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/View menu.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>View</em> menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>View</em> menu</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -1122,7 +1033,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref51.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Window</em> menu</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Window</em> menu</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1168,13 +1079,13 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref41.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>Main sections of the <em>Options</em> window</strong></figcaption>
+<figcaption class="figure-caption"><strong>Main sections of the <em>Options</em> window</strong></figcaption>
 </figure>
 </div>
 <section id="options-demetra-panel" class="level3">
 <h3 class="anchored" data-anchor-id="options-demetra-panel">Demetra panel</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <p>By default, the <em>Demetra</em> panel is shown. It is divided into seven tabs:</p>
@@ -1190,7 +1101,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/demetra_panel_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Demetra panel in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>Demetra panel in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1204,7 +1115,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/demetra_panel_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Demetra panel in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>Demetra panel in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1215,7 +1126,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref42.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Behavior</em> tab</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Behavior</em> tab</strong></figcaption>
 </figure>
 </div>
 <p>The tab <em>Behaviour</em> defines the default reaction of JDemetra+ to some of the actions performed by the user.</p>
@@ -1225,7 +1136,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options_demetra_behaviour_providers.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Providers</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Providers</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1234,7 +1145,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-behaviour-persistence.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Persistence</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Persistence</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1243,7 +1154,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-behaviour-threading.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Threading</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Threading</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1252,7 +1163,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-behaviour-timeseries.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Time Series</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Time Series</strong></figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Low-level options">
@@ -1261,7 +1172,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Low-level options
+Low-level options
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1269,7 +1180,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-show_low_level_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Low level options on ARIMA specification</strong></figcaption>
+<figcaption class="figure-caption"><strong>Low level options on ARIMA specification</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1278,14 +1189,14 @@ window.Quarto = {
 <section id="demetra-ui-commonui-tab" class="level4">
 <h4 class="anchored" data-anchor-id="demetra-ui-commonui-tab">Demetra UI / CommonUI tab</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p>In v2, this panel is called <strong>Demetra UI</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref43.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Demetra UI</em> tab</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Demetra UI</em> tab</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1294,7 +1205,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI.png" class="img-fluid figure-img"></p>
-<figcaption><strong>CommonUI tab in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>CommonUI tab in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1307,7 +1218,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI-charts.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Charts</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Charts</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1316,7 +1227,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI-data_format.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Data format</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Data format</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1325,7 +1236,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI-growth-charts.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Growth rates</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Growth rates</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1334,7 +1245,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI-pre_specified_outliers.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Pre-specified Outliers</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Pre-specified Outliers</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1343,7 +1254,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-commonUI-context_menus.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The option Context Menus</strong></figcaption>
+<figcaption class="figure-caption"><strong>The option Context Menus</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -1351,13 +1262,13 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="demetra-path-tab">Demetra path tab</h4>
 <p><em>Demetra Paths</em> allows the user to specify the relative location of the folders where the data can be found. In this way, the application can access data from different computers. Otherwise, the user would need to have access to the exact path where the data is located. To add a location, select the data provider, click the “<strong>+</strong>” button and specify the location.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-demetra_paths_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Demetra Paths</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Demetra Paths</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1365,7 +1276,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-demetra_paths_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Demetra Paths</em> tab in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Demetra Paths</em> tab in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1375,13 +1286,13 @@ window.Quarto = {
 <section id="options-statistics" class="level4">
 <h4 class="anchored" data-anchor-id="options-statistics">Statistics tab</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Statistics tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>Statistics tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1389,7 +1300,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA-General_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>SA panel</strong></figcaption>
+<figcaption class="figure-caption"><strong>SA panel</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1400,13 +1311,13 @@ window.Quarto = {
 <li>The number of years used for spectral analysis and for model stability (<strong>Default Number of Last Years</strong>);</li>
 </ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics-nbr_last_years_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Default Number of Last Years option in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>Default Number of Last Years option in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1414,7 +1325,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA-General-nbr_last_years_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Default Number of Last Years option in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>Default Number of Last Years option in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1426,7 +1337,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics-seasonnal-adjustment.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Seasonal Adjustment option</strong></figcaption>
+<figcaption class="figure-caption"><strong>Seasonal Adjustment option</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1440,7 +1351,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics-revision_history.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Revision History option in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>Revision History option in v2</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1451,7 +1362,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics-default_component.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Default components</em> section on the <em>Statistics</em> tab</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Default components</em> section on the <em>Statistics</em> tab</strong></figcaption>
 </figure>
 </div>
 <ul>
@@ -1459,13 +1370,13 @@ window.Quarto = {
 </ul></li>
 </ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-statistics-diagnostics_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Diagnostics</em> section in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Diagnostics</em> section in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1474,13 +1385,13 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA-TramoSeats_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Settings for the quality measures and tests in Tramoseats in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>Settings for the quality measures and tests in Tramoseats in v3</strong></figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA-X-13_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Settings for the quality measures and tests in X-13 in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>Settings for the quality measures and tests in X-13 in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1492,28 +1403,28 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref45.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The panel for modification of the settings for the tests in the <em>Basic checks</em> section</strong></figcaption>
+<figcaption class="figure-caption"><strong>The panel for modification of the settings for the tests in the <em>Basic checks</em> section</strong></figcaption>
 </figure>
 </div>
 <p>The users can customize the diagnostics and they can specify the default settings for different outputs. Their preferences are saved between different sessions of JDemetra+. This new feature is accessible in the <em>Statistics</em> tab of the <em>Options</em> panel.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref46.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The settings of the output files</strong></figcaption>
+<figcaption class="figure-caption"><strong>The settings of the output files</strong></figcaption>
 </figure>
 </div>
 </section>
 <section id="data-transfer-tab" class="level4">
 <h4 class="anchored" data-anchor-id="data-transfer-tab">Data Transfer tab</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
 <p>The <em>Data Transfer</em> tab contains multiple options that define the behaviour of the drag and drop and copy-paste actions. To change the default settings, double click on the selected item. Once the modifications are introduced, confirm them with the <strong>OK</strong> button.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref47.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Data Transfer</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Data Transfer</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1526,14 +1437,14 @@ window.Quarto = {
 <section id="procdocumentitems-tab" class="level4">
 <h4 class="anchored" data-anchor-id="procdocumentitems-tab">ProcDocumentItems tab</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-11-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-11-1-tab">
 <p><em>ProcDocumentItems</em> includes a list of all reports available for processed documents like seasonal adjustment.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-ProcDocumentItems_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>ProcDocumentItems</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>ProcDocumentItems</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1546,14 +1457,14 @@ window.Quarto = {
 <section id="interchange-tab" class="level4">
 <h4 class="anchored" data-anchor-id="interchange-tab">Interchange tab</h4>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-12-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-1" role="tab" aria-controls="tabset-12-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-12-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-12-2" role="tab" aria-controls="tabset-12-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-12-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-12-1-tab">
 <p>The <em>Interchange</em> tab lists the protocols that can be used to export/import information like calendars, specifications, etc.. For the time being, the user cannot customize the way the standard exchanges are done. However, such features could be implemented in plug-ins.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-demetra-Interchange_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The content of the <em>Interchange</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The content of the <em>Interchange</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1570,7 +1481,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/A_Ref49.jpg" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>General</em> tab</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>General</em> tab</strong></figcaption>
 </figure>
 </div>
 </section>
@@ -1578,13 +1489,13 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="keymap-panel">Keymap panel</h3>
 <p><em>Keymap</em> provides a list of default key shortcuts to access some of the functionalities and it allows the user to edit them and to define additional shortcuts.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset content-visible" data-when-format="html">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true" href="">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false" href="">v3</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-13-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-1" role="tab" aria-controls="tabset-13-1" aria-selected="true">v2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-13-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-13-2" role="tab" aria-controls="tabset-13-2" aria-selected="false">v3</a></li></ul>
 <div class="tab-content content-visible" data-when-format="html">
 <div id="tabset-13-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-13-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-keymap_v2.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Keymap</em> tab in v2</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Keymap</em> tab in v2</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1592,7 +1503,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-keymap_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>The <em>Keymap</em> tab in v3</strong></figcaption>
+<figcaption class="figure-caption"><strong>The <em>Keymap</em> tab in v3</strong></figcaption>
 </figure>
 </div>
 </div>
@@ -1605,7 +1516,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>SA panel</strong></figcaption>
+<figcaption class="figure-caption"><strong>SA panel</strong></figcaption>
 </figure>
 </div>
 <section id="general-tab" class="level4">
@@ -1617,7 +1528,7 @@ window.Quarto = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="All_images/options-SA-TramoSeats_v3.png" class="img-fluid figure-img"></p>
-<figcaption><strong>Tramoseats tab</strong></figcaption>
+<figcaption class="figure-caption"><strong>Tramoseats tab</strong></figcaption>
 </figure>
 </div>
 <p>The TramoSeats and X-13 tabs correspond to the settings for the quality measures and tests used in a diagnostic procedure in v2.</p>
@@ -1633,58 +1544,43 @@ window.Quarto = {
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -1692,354 +1588,202 @@ window.Quarto = {
       }
       return codeEl.innerText;
     }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/doc\.jdemetra\.org\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
       }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
     };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
         });
       }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
     }
-  });
-  </script>
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./P_Tools.html" class="pagination-link" aria-label="Tools">
+      <a href="./P_Tools.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tools</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./T-GUI-Data-Viz-TS-Tools.html" class="pagination-link" aria-label="GUI: data visualization and time series tools">
+      <a href="./T-GUI-Data-Viz-TS-Tools.html" class="pagination-link">
         <span class="nav-page-text">GUI: data visualization and time series tools</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -2047,20 +1791,13 @@ window.Quarto = {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>   
+    <div class="nav-footer-left">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jdemetra/JD_Quarto_Book/edit/main/T-GUI-Overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jdemetra/JD_Quarto_Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-<li>
-<a href="https://github.com/jdemetra/JD_Quarto_Book" target="blank">Code source</a>
-</li>
-</div>
+    </div>
+    <div class="nav-footer-right"></div>
   </div>
 </footer>
-
 
 
 
